@@ -6,7 +6,7 @@ function AppContent() {
   const router = createBrowserRouter([
   {
     path: '/',
-    element: <h1 className='text-red-500 font-bold'>Start Project</h1>
+    element: <h1 className='text-primary-300 bg-primary'>Start Project</h1>
   },
   {
     path: '/product',
@@ -19,7 +19,9 @@ function AppContent() {
   ])
 
   return (
-    <RouterProvider router={router}/>
+    <div className='min-h-[90vh]'>
+      <RouterProvider router={router}/>
+    </div>
   )
 }
 
