@@ -14,9 +14,7 @@ function App() {
 
   return (<>
   <MyCart.Provider value={itemList}>
-    <Navbar/>
     <AppContent/>
-    <Footer/>
   </MyCart.Provider>
   </>)
 }

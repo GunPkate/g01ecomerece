@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default function Navbar(){
 
@@ -13,22 +13,24 @@ export default function Navbar(){
             <div className="flex flex-inline justify-between ">
                 <div>
                     <span className="flex inline-flex ml-2">
-                        <a href={`/`} >
+                        <Link to={`/`} >
                             Home
-                        </a>
+                        </Link>
                     </span>
                     {categories.length > 0 ? categories.filter(y=>y!=='Home').map( (x,id) =>
                         <span key={id} className="flex inline-flex ml-2">
-                            <a href={`/${x.toLocaleLowerCase()}`} >
+                            <Link to={`/${x.toLocaleLowerCase()}`} >
                                 {x}
-                            </a>
+                            </Link>
                         </span>
                         ):<></>}
 
                 </div>
 
                 <div>
+                    <Link to={"/login"}>
                     Login
+                    </Link>
                 </div>
             </div>
         </div>
