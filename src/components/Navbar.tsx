@@ -28,9 +28,15 @@ export default function Navbar(){
                 </div>
 
                 <div>
-                    <Link to={"/login"}>
-                    Login
-                    </Link>
+                    {localStorage.getItem('userCredentail') !== null || localStorage.getItem('userCredentail') !== ''?
+                        <Link to={"/login"}>
+                            Log In
+                        </Link>
+                        :<button>
+                            Log out
+                        </button>
+
+                    }
                 </div>
             </div>
         </div>

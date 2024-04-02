@@ -5,14 +5,16 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
 function AppContent() {
-  const [count, setCount] = useState(0)
+  const contentBodyStyle = 'min-h-[90vh]'
   const router = createBrowserRouter([
   {
     path: '/',
     element:
     <>
       <Navbar/>
-        <h1 className='text-primary-300 bg-primary'>Start Project</h1>
+        <div  className={ contentBodyStyle }>
+          <h1 className='text-primary-300 bg-primary'>Start Project</h1>
+        </div>
       <Footer/>
     </> 
   },
@@ -21,7 +23,9 @@ function AppContent() {
     element: 
     <>
       <Navbar/>
-        <h1 className='text-blue-500 font-bold'>new Product</h1>
+        <div  className={ contentBodyStyle }>
+          <h1 className='text-blue-500 font-bold'>new Product</h1>
+        </div>
       <Footer/>
     </>
   },
@@ -30,7 +34,9 @@ function AppContent() {
     element: 
     <>
       <Navbar/>
-        <h1 className='text-blue-500 font-bold'>new Product</h1>
+        <div  className={ contentBodyStyle }>
+          <h1 className='text-blue-500 font-bold'>new Product</h1>
+        </div>
       <Footer/>
     </>
   },
@@ -46,8 +52,10 @@ function AppContent() {
   ])
 
   return (<>
-        <div className='min-h-[90vh]'>
-          <RouterProvider router={router}/>
+        <div>
+
+            <RouterProvider router={router}/>
+
         </div>
     </>
   )

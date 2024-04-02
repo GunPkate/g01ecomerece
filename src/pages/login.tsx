@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { auth } from "../firebase"
-import { createUserWithEmailAndPassword } from "firebase/auth"
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
 import { FirebaseError } from "firebase/app"
 
 interface User  {
@@ -38,8 +38,29 @@ export default function Login(){
         }
     }
 
-    const handleLogin = (e: ButtonEvent) => {
+    const handleLogin =async (e: ButtonEvent) => {
         e.preventDefault();
+        let userbody: User = {user:'', password: ''}
+        userbody.user = user;
+        userbody.password = password;
+        console.log(userbody)
+        
+        try {
+            const userCredentail: any = await signInWithEmailAndPassword(auth, userbody.user, userbody.password)
+            // console.log('userCredentail',userCredentail)
+            // console.log('userCredentail',JSON.stringify(userCredentail))
+            // console.log(userCredentail._tokenResponse.localId)
+            if(userCredentail._tokenResponse.localId){
+                setValidate('');
+                localStorage.setItem('userCredentail',userCredentail._tokenResponse.localId);
+                navigator
+            }
+        } catch (error :unknown) {
+            if(error instanceof FirebaseError){
+                console.log('error',error.code)
+                setValidate(error.code)
+            }
+        }
     }
     return (<>
         <div className="min-h-[90vh] flex justify-center">
