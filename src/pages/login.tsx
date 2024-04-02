@@ -1,21 +1,45 @@
-import { useState } from "react"
+import React, { useState } from "react"
+import { auth } from "../firebase"
+import { createUserWithEmailAndPassword } from "firebase/auth"
+import { FirebaseError } from "firebase/app"
 
 interface User  {
     user: string,
     password: string,
 }
 
+type InputEvent = React.ChangeEvent<HTMLInputElement>;
+type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
+
 export default function Login(){
 
     const [user,setUser] = useState('')
     const [password,setPassword] = useState('')
+    const [validate,setValidate] = useState('')
 
-    const handleLogin = (e) =>{
+    const handleRegister = async (e: ButtonEvent): Promise<void> =>{
         e.preventDefault();
         let userbody: User = {user:'', password: ''}
         userbody.user = user;
         userbody.password = password;
         console.log(userbody)
+
+        try {
+            const userCredentail: any =  await createUserWithEmailAndPassword(auth, userbody.user, userbody.password)
+            console.log('userCredentail',userCredentail)
+            if(userCredentail.accessToken){
+                setValidate('');
+            }
+        } catch (error :unknown) {
+            if(error instanceof FirebaseError){
+                console.log('error',error.code)
+                setValidate(error.code)
+            }
+        }
+    }
+
+    const handleLogin = (e: ButtonEvent) => {
+        e.preventDefault();
     }
     return (<>
         <div className="min-h-[90vh] flex justify-center">
@@ -24,6 +48,7 @@ export default function Login(){
                 <h1 className="text-center">
                     Member Login
                 </h1>
+                <h1 className="text-red-400">{validate}</h1>
                 <div className="bg-zinc-300 rounded-full py-2 pl-2">
 
                     {/* <label>
@@ -47,7 +72,7 @@ export default function Login(){
       
                 </div>
 
-                <button className="rounded-full bg-success w-full py-2" onClick={(e)=>{handleLogin(e)}}>Sign up</button>
+                <button className="rounded-full bg-success w-full py-2" onClick={(e)=>{handleRegister(e)}}>Sign up</button>
             </form>
         </div>
         </div>
