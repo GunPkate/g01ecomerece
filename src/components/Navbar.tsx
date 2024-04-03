@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { UserTokenContextType } from "../types/usertoken";
 import { UserTokenContext } from "./context/UserTokenContext";
 import { useContext } from "react";
+import { auth } from "../firebase";
+import { signOut } from "firebase/auth";
 
 
 export default function Navbar(){
@@ -12,7 +14,17 @@ export default function Navbar(){
     interface navProps{
     value: string[]
     }
-    console.log("xxx",JSON.stringify(userTokens))
+
+    
+    async function handleLogOut() {
+        try {
+            updateUserToken('','')
+            const userLogOut = await signOut(auth);
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
     <>
         <div className="bg-black min-h-[50px] text-white">
@@ -34,7 +46,8 @@ export default function Navbar(){
                 </div>
 
                 <div>
-                    {localStorage.getItem('userCredentail') !== null || localStorage.getItem('userCredentail') !== ''?
+                    {/* {userTokens[0].email.length } */}
+                    {userTokens[0].email.length  === 0  ?
                         <><Link to={"/login"}>
                                 Log In
                             </Link>
@@ -43,7 +56,7 @@ export default function Navbar(){
                                 {/* <span> &nbsp; {userTokens.length > 0 ? userTokens[0].email : "x"}</span> */}
                             </>
                         </>
-                        :<button>
+                        :<button onClick={()=>{ handleLogOut() }}>
                             Log out
                         </button>
 
