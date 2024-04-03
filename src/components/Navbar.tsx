@@ -19,7 +19,7 @@ export default function Navbar(){
     async function handleLogOut() {
         try {
             updateUserToken('','')
-            const userLogOut = await signOut(auth);
+            await signOut(auth);
         } catch (error) {
             console.log(error)
         }
@@ -61,6 +61,11 @@ export default function Navbar(){
                         </button>
 
                     }
+                    <span>
+                        <Link to={"/mycart"}>
+                            Mycart
+                        </Link>
+                    </span>
                 </div>
             </div>
         </div>
