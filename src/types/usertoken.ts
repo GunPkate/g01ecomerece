@@ -1,9 +1,9 @@
-export interface userToken {
+export interface UserToken {
     id: string;
     email: string;
   }
 
-  export type userTokenContextType = {
-    userTokens: userToken[];
+  export type UserTokenContextType = {
+    userTokens: UserToken[];
     updateUserToken: (id: string, email:string) => void;
   };

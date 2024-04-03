@@ -1,26 +1,30 @@
-import { userToken, userTokenContextType } from "../../types/usertoken";
+import { UserToken, UserTokenContextType } from "../../types/usertoken";
 import React from "react";
 
 
 
-export const userTokenContext = React.createContext<userTokenContextType | null>(null);
+export const UserTokenContext = React.createContext<UserTokenContextType | null>(null);
 
-const userTokenProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {
-  const [userTokens, setuserTokens] = React.useState<userToken[]>([
-    {
-      id: '',
-      email: '',
-    },
-  ]);
+const defaultUsertoken = [
+  {
+    id: '',
+    email: '',
+  }
+] as UserToken[]
+
+const UserTokenProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {
+  const [userTokens, setuserTokens] = React.useState<UserToken[]>(
+    defaultUsertoken
+  );
 
   const updateUserToken = (id: string, email: string) => {
-    userTokens.filter((userToken: userToken) => {
+    userTokens.filter((userToken: UserToken) => {
         userToken.email = email
         userToken.id = id
         setuserTokens([...userTokens]);
     });
   };
-  return <userTokenContext.Provider value={{ userTokens, updateUserToken: updateUserToken }}>{children}</userTokenContext.Provider>;
+  return <UserTokenContext.Provider value={{ userTokens, updateUserToken: updateUserToken }}>{children}</UserTokenContext.Provider>;
 };
 
-export default userTokenProvider;
+export default UserTokenProvider;

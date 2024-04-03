@@ -1,8 +1,8 @@
-import { createContext, useState } from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Login from './pages/Login'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import UserTokenProvider from './components/context/UserTokenContext'
 
 function AppContent() {
   const contentBodyStyle = 'min-h-[90vh]'
@@ -53,8 +53,9 @@ function AppContent() {
 
   return (<>
         <div>
-
+        <UserTokenProvider>
             <RouterProvider router={router}/>
+        </UserTokenProvider>
 
         </div>
     </>

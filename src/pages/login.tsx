@@ -2,16 +2,27 @@ import React, { useState } from "react"
 import { auth } from "../firebase"
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
 import { FirebaseError } from "firebase/app"
+import { UserTokenContextType, UserToken } from "../../src/types/usertoken";
+import { UserTokenContext } from "../components/context/UserTokenContext";
+
 
 interface User  {
     user: string,
     password: string,
 }
 
+
+type Props = {
+    userToken: UserToken;
+    updateUserToken: (id: string) => void;
+};
+
+
 type InputEvent = React.ChangeEvent<HTMLInputElement>;
 type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
 
 export default function Login(){
+    const { userTokens, updateUserToken } = React.useContext(UserTokenContext) as UserTokenContextType;
 
     const [user,setUser] = useState('')
     const [password,setPassword] = useState('')
@@ -53,7 +64,7 @@ export default function Login(){
             if(userCredentail._tokenResponse.localId){
                 setValidate('');
                 localStorage.setItem('userCredentail',userCredentail._tokenResponse.localId);
-                navigator
+                updateUserToken(userCredentail._tokenResponse.localId, userbody.user)
             }
         } catch (error :unknown) {
             if(error instanceof FirebaseError){
@@ -67,7 +78,7 @@ export default function Login(){
         <div className=" bg-blue-300 rounded-lg my-auto min-h-[60vh] min-w-[60vw] flex justify-center">
             <form className="min-h-[100%] mt-10 mx-auto" action="">
                 <h1 className="text-center">
-                    Member Login
+                    Member Login 
                 </h1>
                 <h1 className="text-red-400">{validate}</h1>
                 <div className="bg-zinc-300 rounded-full py-2 pl-2">
