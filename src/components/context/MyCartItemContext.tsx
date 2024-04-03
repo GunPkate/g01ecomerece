@@ -1,5 +1,5 @@
 import { FC, createContext, useState } from "react";
-import { MyCartItem, MyCartItemContextType } from "../../types/MyCart";
+import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem";
 
 
 
