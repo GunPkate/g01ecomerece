@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import UserTokenProvider from './components/context/UserTokenContext'
 import MyCart from './pages/MyCart/MyCart'
 import MyCartItemProvider from './components/context/MyCartItemContext'
+import Admin from './pagesAdmin/Admin'
 
 function AppContent() {
   const contentBodyStyle = 'min-h-[90vh]'
@@ -60,6 +61,17 @@ function AppContent() {
       <Navbar/>
         <div  className={ contentBodyStyle }>
           <Login/>
+        </div>
+      <Footer/>
+    </>
+  },
+  {
+    path: '/admin',
+    element: 
+    <>
+      <Navbar/>
+        <div  className={ contentBodyStyle }>
+          <Admin/>
         </div>
       <Footer/>
     </>
