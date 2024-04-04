@@ -1,10 +1,10 @@
 import { useState } from "react"
 import { collection, addDoc } from "firebase/firestore"; 
 import { db } from "../firebase"
-import * as categories from '../skuData/categories.json';
-import * as collections from '../skuData/collections.json';
-import * as product from '../skuData/product.json';
-import * as productByPermarlink from '../skuData/productByPermarlink.json';
+// import  categories from '../skuData/categories.json';
+// import  collections from '../skuData/collections.json';
+// import  product from '../skuData/product.json';
+// import  productByPermarlink from '../skuData/productByPermarlink.json';
 
 export default function Admin(){
     
@@ -14,12 +14,22 @@ export default function Admin(){
 
 
 
-    function getDatabase(e) {
+    function getDatabase(e: ButtonEvent) {
         e.preventDefault();
-        console.log("categories",categories); 
-        console.log("collections",collections); 
-        console.log("product",product); 
-        console.log("productByPermarlink",productByPermarlink); 
+
+        // categories.forEach(async x=> {
+        //     await addDoc(collection(db, "/categories"), x);
+        // } )
+        // collections.forEach(async x=> {
+        //     console.log("collections",x)
+        //     await addDoc(collection(db, "/collections"), x);
+        // } )
+        // product.data.forEach(async x=> {
+        //     await addDoc(collection(db, "/product"), x);
+        // } )
+        // productByPermarlink.forEach(async x=> {
+        //     await addDoc(collection(db, "/productByPermarlink"), x);
+        // } )
     }
 
     interface Category  {

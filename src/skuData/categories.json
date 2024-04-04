@@ -1,48 +1,47 @@
 [
     {
-        "id": "3DcueksC7RJh4JQ04Xzo",
         "name": "Shoes",
         "permalink": "men-shoes",
         "parentId": "S3KdVZ5If3xwqpwSMZ6w"
     },
     {
-        "id": "GRQxaPUDDrXWT88Wi8Vd",
+
         "name": "Shirts",
         "permalink": "men-shirts",
         "parentId": "S3KdVZ5If3xwqpwSMZ6w"
     },
     {
-        "id": "S3KdVZ5If3xwqpwSMZ6w",
+
         "name": "Men",
         "permalink": "all-men",
         "parentId": null
     },
     {
-        "id": "eo5WNStXUFj87sL1TZAl",
+
         "name": "Ladies",
         "permalink": "all-ladies",
         "parentId": null
     },
     {
-        "id": "lLRLqGwqQDsGZk9NQt5f",
+
         "name": "Shirts",
         "permalink": "ladies-shirts",
         "parentId": "eo5WNStXUFj87sL1TZAl"
     },
     {
-        "id": "y2pUts8S83sMnNAGyW7b",
+
         "name": "Accessories",
         "permalink": "men-accessories",
         "parentId": "S3KdVZ5If3xwqpwSMZ6w"
     },
     {
-        "id": "yY8cfcLGyoVQq5Zk2dX9",
+
         "name": "Accessories",
         "permalink": "ladies-accessories",
         "parentId": "eo5WNStXUFj87sL1TZAl"
     },
     {
-        "id": "yZ5YAEwAQY5VjzSfwpFW",
+
         "name": "Shoes",
         "permalink": "ladies-shoes",
         "parentId": "eo5WNStXUFj87sL1TZAl"
