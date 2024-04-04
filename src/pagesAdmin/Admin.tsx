@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { collection, addDoc } from "firebase/firestore"; 
+import { db } from "../firebase"
 
 export default function Admin(){
     
@@ -10,12 +12,23 @@ export default function Admin(){
         permalink: string,
     }
 
-    function handleAddData(e){
+    // type InputEvent = React.ChangeEvent<HTMLInputElement>;
+    type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
+
+    async function handleAddData(e: ButtonEvent){
         e.preventDefault();
+        try {
         let catbody: Category = {categoryName:'', permalink: ''}
         catbody.categoryName = categoryName;
         catbody.permalink = permalink;
-        console.log(catbody)
+
+            const docRef = await addDoc(collection(db, "/categories"), catbody);
+            console.log("Document written with ID: ", docRef.id);
+            console.log(catbody)
+          } catch (e) {
+            console.error("Error adding document: ", e);
+          }
+
     }
 
     return (<>

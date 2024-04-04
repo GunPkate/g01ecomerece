@@ -18,7 +18,7 @@ type Props = {
 };
 
 
-type InputEvent = React.ChangeEvent<HTMLInputElement>;
+// type InputEvent = React.ChangeEvent<HTMLInputElement>;
 type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
 
 export default function Login(){
