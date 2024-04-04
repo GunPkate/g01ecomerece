@@ -9,11 +9,19 @@ export const MyCartItemContext = createContext<MyCartItemContextType | null>(nul
 const defaultMyCartItem = [
     {
         id: "asd1",
-        name: "xxx",
+        name: "xxx11",
         color: "Red",
         size: "XL",
         quantity: 10,
         price: 2000
+      },
+    {
+        id: "asd2",
+        name: "xxx22",
+        color: "Blue",
+        size: "XL",
+        quantity: 20,
+        price: 3000
       },
 ] as MyCartItem[]
 

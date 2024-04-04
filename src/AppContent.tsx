@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import UserTokenProvider from './components/context/UserTokenContext'
 import MyCart from './pages/MyCart/MyCart'
+import MyCartItemProvider from './components/context/MyCartItemContext'
 
 function AppContent() {
   const contentBodyStyle = 'min-h-[90vh]'
@@ -67,9 +68,11 @@ function AppContent() {
 
   return (<>
         <div>
+        <MyCartItemProvider>
         <UserTokenProvider>
             <RouterProvider router={router}/>
         </UserTokenProvider>
+        </MyCartItemProvider>
 
         </div>
     </>
