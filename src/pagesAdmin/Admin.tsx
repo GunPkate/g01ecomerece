@@ -1,11 +1,26 @@
 import { useState } from "react"
 import { collection, addDoc } from "firebase/firestore"; 
 import { db } from "../firebase"
+import * as categories from '../skuData/categories.json';
+import * as collections from '../skuData/collections.json';
+import * as product from '../skuData/product.json';
+import * as productByPermarlink from '../skuData/productByPermarlink.json';
 
 export default function Admin(){
     
     const [categoryName,setCategoryName] = useState('')
     const [permalink,setPermalink] = useState('')
+
+
+
+
+    function getDatabase(e) {
+        e.preventDefault();
+        console.log("categories",categories); 
+        console.log("collections",collections); 
+        console.log("product",product); 
+        console.log("productByPermarlink",productByPermarlink); 
+    }
 
     interface Category  {
         categoryName: string,
@@ -61,6 +76,9 @@ export default function Admin(){
                 </div>
 
                 <button className="rounded-full bg-success w-full py-2" onClick={(e)=>{handleAddData(e)}}>Add Data</button>
+
+
+                <button className="rounded-full bg-success w-full py-2" onClick={(e)=>{getDatabase(e)}}>Gen Data</button>
             </form>
         </div>
         </div>

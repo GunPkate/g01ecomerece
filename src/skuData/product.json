@@ -1,0 +1,888 @@
+{
+    "data": [
+        {
+            "id": "dBt7jOQ9qnKvs8aWrxb5",
+            "name": "Abstratct Printed Scarf",
+            "skuCode": "A09004",
+            "permalink": "accessories-abstratct-printed-scarf",
+            "description": "Soft fabric, vibrant prints, versatile styling options.",
+            "price": 1990,
+            "promotionalPrice": 1990,
+            "categories": [
+                "all-ladies",
+                "ladies-accessories"
+            ],
+            "collection": "",
+            "ratings": 4.1,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FdBt7jOQ9qnKvs8aWrxb5%2F_images%2FtrWAP3Q0eBJTUjhmP683-Gemini%20Generated%20(8).jpeg?alt=media&token=cf7b47de-a656-4608-98a7-96a6b0cc7a2c",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FdBt7jOQ9qnKvs8aWrxb5%2F_images%2FgoquKCU3fvbDahQPM3Zw-Gemini%20Generated%20Image%20(5).jpeg?alt=media&token=04c0b4fb-e504-4eb5-bc58-b8f9378cf038",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FdBt7jOQ9qnKvs8aWrxb5%2F_images%2FCDm0y5YKJNIYhEEqqrQ4-Gemini%20Generated%20Image%20(4).jpeg?alt=media&token=ae33d771-6728-410a-8477-076edb15d8eb",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FdBt7jOQ9qnKvs8aWrxb5%2F_images%2Fflx7yN8mj5Pc0LumhBzV-Gemini%20(1).jpeg?alt=media&token=c88231a0-346c-46fe-8eb0-52e61f0e15d1",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FdBt7jOQ9qnKvs8aWrxb5%2F_images%2FWcplN7199exEqvwtmBjv-Gemini%20Generated%20Image%20(6).jpeg?alt=media&token=6f070a53-587a-4c9e-a212-9319074274c7"
+            ]
+        },
+        {
+            "id": "6FYslqo6hFuvdIpffL9t",
+            "name": "Athletic Mesh Slip-On Sneakers",
+            "skuCode": "S09001",
+            "permalink": "shoes-athletic-mesh-slip-on-sneakers",
+            "description": "Breathable mesh, elasticized fit, perfect for workouts or casual wear.",
+            "price": 990,
+            "promotionalPrice": 990,
+            "categories": [
+                "all-ladies",
+                "ladies-shoes"
+            ],
+            "collection": "",
+            "ratings": 3.4,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6FYslqo6hFuvdIpffL9t%2F_images%2F3mbrln243CBzwKICFivJ-Gemini%20Generated%20Image%20(15).jpeg?alt=media&token=bc6c2db4-b5b6-4f4b-994a-a20a5d184565",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6FYslqo6hFuvdIpffL9t%2F_images%2Fqcsy2kpwoi1TgVjYEprr-Gemini%20Generated%20(19).jpeg?alt=media&token=8593f0f9-7e74-4cc0-a9e3-4d88e2178afd",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6FYslqo6hFuvdIpffL9t%2F_images%2FSs193BUsh8qGB3xMIDdn-Gemini%20Generated%20(20).jpeg?alt=media&token=891c9a17-61fc-426b-9bc4-ae4473cd587b",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6FYslqo6hFuvdIpffL9t%2F_images%2FiaIRhc8IROJSXMpPt0xL-Gemini%20Generated%20(1).jpeg?alt=media&token=45aa2ad1-8a8a-4c4d-8006-6ab58b58ac15",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6FYslqo6hFuvdIpffL9t%2F_images%2FyWlHAWr26F68tathEghQ-Gemini%20Generated%20(21).jpeg?alt=media&token=dd6361bf-757c-41a8-be38-cef510347ee2"
+            ]
+        },
+        {
+            "id": "1zhvksJ5VCf7s90bgypG",
+            "name": "Backpacks",
+            "skuCode": "A04005",
+            "permalink": "men-accessories-backpacks",
+            "description": "A compact and versatile backpack, perfect for everyday use or carrying light essentials. Daypacks typically range from 15 to 25 liters in capacity. ",
+            "price": 1490,
+            "promotionalPrice": 1490,
+            "categories": [
+                "all-men",
+                "men-accessories"
+            ],
+            "collection": "",
+            "ratings": 1.5,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F1zhvksJ5VCf7s90bgypG%2F_images%2FTXqLuweN9DMwWgwrxzUF-Gemini_Generated_Image%20(56).jpeg?alt=media&token=c5edc110-5752-4eda-9305-8a1b75f676b8",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F1zhvksJ5VCf7s90bgypG%2F_images%2FLgG3AbAvCeCMfAxaDJM6-Gemini_Generated_Image%20(54).jpeg?alt=media&token=7ef08268-032b-4971-9545-dc31fa3d48eb",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F1zhvksJ5VCf7s90bgypG%2F_images%2FFTIh8V64wMczYideLd7L-Gemini_Generated_Image%20(55).jpeg?alt=media&token=fcc924bd-d51c-4121-a0a4-0bc2bec28906",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F1zhvksJ5VCf7s90bgypG%2F_images%2FwJDBw7EjrPSl6FSgC34Q-Gemini_Generated_Image%20(57).jpeg?alt=media&token=5eb99635-5056-49b9-b0f4-b1c77efd4d5e",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F1zhvksJ5VCf7s90bgypG%2F_images%2FErLe4UIlq6jWPjosdmU8-Gemini_Generated_Image%20(53).jpeg?alt=media&token=d14a06e7-7693-4464-a069-4bb6fcf0532e"
+            ]
+        },
+        {
+            "id": "O1erGDgmrAUX3eBqsi6W",
+            "name": "Baseball caps",
+            "skuCode": "A04002",
+            "permalink": "men-accessories-baseball-caps",
+            "description": "Baseball caps can be dressed up or down and can be worn with a variety of outfits.",
+            "price": 990,
+            "promotionalPrice": 990,
+            "categories": [
+                "all-men",
+                "men-accessories"
+            ],
+            "collection": "",
+            "ratings": 3.4,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FO1erGDgmrAUX3eBqsi6W%2F_images%2FwiaAKs8XxaliD6xqSv6e-Gemini_Generated_Image%20(36).jpeg?alt=media&token=9525b523-019a-4a36-89e3-483385bbe83f",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FO1erGDgmrAUX3eBqsi6W%2F_images%2FcXV0dGsMSsBpevtAS1Uc-Gemini_Generated_Image%20(39).jpeg?alt=media&token=4700b5de-3934-4b8c-9d85-cf6980415f15",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FO1erGDgmrAUX3eBqsi6W%2F_images%2FKz4e5sQmgOhOmzO8b3iB-Gemini_Generated_Image%20(37).jpeg?alt=media&token=e2d4f701-2461-42a6-9a8c-51b0435aade0",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FO1erGDgmrAUX3eBqsi6W%2F_images%2F5Aewrkktlse2YRI1OCVW-Gemini_Generated_Image%20(38).jpeg?alt=media&token=fc72d855-7a8a-4b3c-bd0a-b072d719de02",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FO1erGDgmrAUX3eBqsi6W%2F_images%2F1yNEvGatkJzy9HWlwViQ-Gemini_Generated_Image%20(40).jpeg?alt=media&token=afac750e-7169-446b-bff9-1492788bbf3c"
+            ]
+        },
+        {
+            "id": "k9bNB3P99m3zBsHgvpfZ",
+            "name": "Belts",
+            "skuCode": "A04003",
+            "permalink": "men-accessories-belts",
+            "description": "A timeless classic, leather belts come in various finishes like smooth, textured, or pebbled. They exude sophistication and can be dressed up or down depending on the occasion.",
+            "price": 590,
+            "promotionalPrice": 590,
+            "categories": [
+                "all-men",
+                "men-accessories"
+            ],
+            "collection": "",
+            "ratings": 3.5,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fk9bNB3P99m3zBsHgvpfZ%2F_images%2FszlTyvPOzhbud8xyLfTd-Gemini_Generated_Image%20(42).jpeg?alt=media&token=4251be75-1f24-4044-8fbf-dbe4b474ba5a",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fk9bNB3P99m3zBsHgvpfZ%2F_images%2Fb2D8ockzKqPvoY3TMHvp-Gemini_Generated_Image%20(44).jpeg?alt=media&token=5568cb0c-9511-4d9d-933e-e67e268a3d55",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fk9bNB3P99m3zBsHgvpfZ%2F_images%2F78tNl1Jfqigw0wmeKt5h-Gemini_Generated_Image%20(41).jpeg?alt=media&token=f6061cbc-e8b7-450f-bff9-15a7e2bf9ccd",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fk9bNB3P99m3zBsHgvpfZ%2F_images%2FApKYfrcfgPu40alagjyF-Gemini_Generated_Image%20(43).jpeg?alt=media&token=312c9688-8350-4b08-b829-b474d5a84c14",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fk9bNB3P99m3zBsHgvpfZ%2F_images%2FT1x0nYzWZxHJZKrOKnu5-Gemini_Generated_Image%20(45).jpeg?alt=media&token=71bfcf50-a16c-4a93-b0d3-d7571f130923"
+            ]
+        },
+        {
+            "id": "t7uRtRNRQOhKJHWnWIDY",
+            "name": "Boxy Tailored Jacket",
+            "skuCode": "C09006",
+            "permalink": "shirts-boxy-tailored-jacket",
+            "description": "Our wool-blend coat is a winter essential, providing both warmth and style with its tailored silhouette and faux-fur collar.",
+            "price": 2990,
+            "promotionalPrice": 2990,
+            "categories": [
+                "all-ladies",
+                "ladies-shirts"
+            ],
+            "collection": "",
+            "ratings": 2.4,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Ft7uRtRNRQOhKJHWnWIDY%2F_images%2FSknj6SRVaDh94bLTLIS3-stylish-woman-model-in-studio-in-coat-autumn-fash-2023-11-27-04-59-28-utc.png?alt=media&token=961d6211-c471-4ab9-9e6d-6678962648ad",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Ft7uRtRNRQOhKJHWnWIDY%2F_images%2FCU2kYXeJmzA5YjQOq8YB-stylish-woman-model-in-studio-in-coat-autumn-fash-2023-11-27-05-36-02-utc.png?alt=media&token=db6aedac-2016-4717-ba26-e157db0d0015",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Ft7uRtRNRQOhKJHWnWIDY%2F_images%2FaXfgPNdVfDBZsAL6AeOW-stylish-woman-model-in-studio-in-coat-autumn-fash-2023-11-27-05-18-04-utc.png?alt=media&token=c2a0579e-6f0a-46ec-9dfa-d8471f0574c5",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Ft7uRtRNRQOhKJHWnWIDY%2F_images%2FQspmDfWFjlLz1o50Zxgg-stylish-woman-model-in-studio-in-coat-autumn-fash-2023-11-27-05-09-23-utc%20(1).png?alt=media&token=86f53e55-8a91-43f7-9205-dc164d29c354",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Ft7uRtRNRQOhKJHWnWIDY%2F_images%2FeovITyMmjEk2Bp7Endwc-stylish-woman-model-in-studio-in-coat-autumn-fash-2023-11-27-05-34-49-utc.png?alt=media&token=27cc230c-ca71-47de-81c5-af7c1611914b"
+            ]
+        },
+        {
+            "id": "J8RzGJAfAF9ZyckeTCqr",
+            "name": "Casual Sandals",
+            "skuCode": "S09003",
+            "permalink": "shoes-casual-sandals",
+            "description": "Sleek design, single strap, effortlessly stylish.",
+            "price": 590,
+            "promotionalPrice": 590,
+            "categories": [
+                "all-ladies",
+                "ladies-shoes"
+            ],
+            "collection": "",
+            "ratings": 3.2,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FJ8RzGJAfAF9ZyckeTCqr%2F_images%2Fb3XFpkKnjxykomovzaID-Gemini_Generated_Image%20(3).jpeg?alt=media&token=d3076cf4-5f6a-46ec-8d1b-0aedc85853cc",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FJ8RzGJAfAF9ZyckeTCqr%2F_images%2F9kDk0XqcAtwBTgTQzGxx-Gemini_Generated_Image%20(1).jpeg?alt=media&token=f3d3af59-689f-49a0-884c-a215973bdc6b",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FJ8RzGJAfAF9ZyckeTCqr%2F_images%2Ft5bK5wpC5nHugIJGGhup-Gemini_Generated_Image%20(4).jpeg?alt=media&token=8280df06-c8f6-4c4b-a7e9-cc885ef112be",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FJ8RzGJAfAF9ZyckeTCqr%2F_images%2FQJPFefXZWRPyw7xrcO1o-Gemini_Generated_Image%20(2).jpeg?alt=media&token=da79e22f-c057-4b39-81e4-5fa1d20c05ec",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FJ8RzGJAfAF9ZyckeTCqr%2F_images%2FgF1SHaUQoFSB6HNiiZxB-Gemini_Generated_Image%20(5).jpeg?alt=media&token=3630fe7a-45e2-451b-aac5-bca545ed388d"
+            ]
+        },
+        {
+            "id": "UMcp5TasyJzU5XuQCNbv",
+            "name": "Casual Strappy Flat Sandals",
+            "skuCode": "S09004",
+            "permalink": "shoes-casual-strappy-flat-sandals",
+            "description": "Faux leather, metallic accents, customizable comfort for summer chic.",
+            "price": 590,
+            "promotionalPrice": 590,
+            "categories": [
+                "all-ladies",
+                "ladies-shoes"
+            ],
+            "collection": "",
+            "ratings": 4.2,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FUMcp5TasyJzU5XuQCNbv%2F_images%2FCvZfNSBjdFa7J4PY8561-Gemini%20(5).jpeg?alt=media&token=e1093b4c-4b09-4d5c-85cd-8b7520167b88",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FUMcp5TasyJzU5XuQCNbv%2F_images%2FTQfr0WOIjdvFbFjzDBQm-Gemini%20Generated%20(22).jpeg?alt=media&token=275a6713-dc00-4676-bfc1-e1812da4b4f5",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FUMcp5TasyJzU5XuQCNbv%2F_images%2F82QNgwMEZe7YQHPdjWLh-Gemini%20Generated%20Image%20(16).jpeg?alt=media&token=1c52a67b-d720-4ce8-b9d8-89b36ebf37ed",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FUMcp5TasyJzU5XuQCNbv%2F_images%2FlUL758sBAtTLzOocjkuu-Gemini%20Generated%20Image%20(17).jpeg?alt=media&token=7bafe8ff-915a-425c-8859-69bc9578e60f",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FUMcp5TasyJzU5XuQCNbv%2F_images%2FNZbSAinbTnggTK4WQx6Y-Gemini_Generated_Image%20(1).jpeg?alt=media&token=930f5589-9941-4e37-82cc-b53bcabaab40"
+            ]
+        },
+        {
+            "id": "qK3cDSs3ndfVfqfnflOO",
+            "name": "Chelsea Boots",
+            "skuCode": "C02005",
+            "permalink": "shoes-chelsea-boots",
+            "description": "An elegant and practical boot style with elasticated side panels for easy on and off.  Suitable for colder weather and can be dressed up or down. ",
+            "price": 6900,
+            "promotionalPrice": 3450,
+            "categories": [
+                "all-men",
+                "men-shoes"
+            ],
+            "collection": "price-down",
+            "ratings": 3.8,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FqK3cDSs3ndfVfqfnflOO%2F_images%2FpbSN3PWcvDqDx8yTyWzu-Gemini_Generated_Image%20(3).jpeg?alt=media&token=a71aa635-e846-4432-bbcd-a429ad23d2dd",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FqK3cDSs3ndfVfqfnflOO%2F_images%2FLXd765wQxUzNoPN7aVOU-Gemini_Generated_Image%20(20).jpeg?alt=media&token=0d16dd67-a407-463c-acec-e6ea691f1980",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FqK3cDSs3ndfVfqfnflOO%2F_images%2FVmISVmwYX35Iti6oFTyc-Gemini_Generated_Image%20(18).jpeg?alt=media&token=9e5ed0d6-8ed4-4742-8d9d-606809c0a09d",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FqK3cDSs3ndfVfqfnflOO%2F_images%2FrjxafTdCJpPXTC98cotD-Gemini_Generated_Image%20(19).jpeg?alt=media&token=d7a7fd15-6dc3-4b5d-a85f-0f9d9398a3f8",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FqK3cDSs3ndfVfqfnflOO%2F_images%2F9ZpycISHflUpXtotm6wr-Gemini_Generated_Image%20(21).jpeg?alt=media&token=41ab6149-45d7-409d-af3c-3d9a3b60682e"
+            ]
+        },
+        {
+            "id": "tu3orKLE5ylbmiNBQS4o",
+            "name": "Chic Suede Ankle Boots",
+            "skuCode": "S09005",
+            "permalink": "shoes-chic-suede-ankle-boots",
+            "description": "Premium suede, sleek design, versatile elegance for any occasion.",
+            "price": 1490,
+            "promotionalPrice": 1490,
+            "categories": [
+                "all-ladies",
+                "ladies-shoes"
+            ],
+            "collection": "new-arrivals",
+            "ratings": 2.1,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Ftu3orKLE5ylbmiNBQS4o%2F_images%2FWzS0W6j6he95XXg2S8sg-Gemini%20Generated%20Image%20(14).jpeg?alt=media&token=012d8619-1be7-4329-bf78-32799f550bc2",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Ftu3orKLE5ylbmiNBQS4o%2F_images%2F6juPryj8JgnT5yMJsXtE-Gemini%20Generated%20(2).jpeg?alt=media&token=8c15ae17-b64d-4eb7-a4b9-5710061cde48",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Ftu3orKLE5ylbmiNBQS4o%2F_images%2F0NpYvNpvdPpGnrtuvk72-Gemini%20Generated%20Image%20(1).jpeg?alt=media&token=29a6e43a-7db4-465e-8c34-52891bcd083b",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Ftu3orKLE5ylbmiNBQS4o%2F_images%2FwwgEkmy1Mammi2677AJ6-Gemini%20Generated%20(3).jpeg?alt=media&token=02854074-6ac4-4901-ac9b-4976b4e4a593",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Ftu3orKLE5ylbmiNBQS4o%2F_images%2FBXLq2Kvb95ACz0dgrbsJ-Gem.jpeg?alt=media&token=7c28d786-224c-4330-b4eb-c0d2249b653c"
+            ]
+        },
+        {
+            "id": "6jqhbn0A4mtg1o6bRLVO",
+            "name": "City Commuter Coat",
+            "skuCode": "C01002",
+            "permalink": "shirts-city-commuter-coat",
+            "description": "Embrace timeless style with our cotton-blend trench coat. This lightweight yet durable outer layer offers classic sophistication with modern comfort. ",
+            "price": 1990,
+            "promotionalPrice": 995,
+            "categories": [
+                "all-men",
+                "men-shirts"
+            ],
+            "collection": "price-down",
+            "ratings": 1.6,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6jqhbn0A4mtg1o6bRLVO%2F_images%2FfpH5fRXnDaZqFdiwGhx1-full-length-of-bearded-man-in-stylish-outfit-and-s-2023-11-27-04-57-52-utc.png?alt=media&token=a25c1a35-67ad-4a17-8522-f6e1299addb3",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6jqhbn0A4mtg1o6bRLVO%2F_images%2FY2VdyI8mrs1ontvVG23d-full-length-of-bearded-man-in-stylish-outfit-and-s-2023-11-27-05-21-05-utc.png?alt=media&token=9f50a6ef-00c2-40af-8368-aed806c3c049",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6jqhbn0A4mtg1o6bRLVO%2F_images%2FtPooVdE7cawjunHYc5nE-full-length-of-bearded-man-in-stylish-outfit-stand-2023-11-27-04-58-03-utc.png?alt=media&token=f52287a2-9fc5-4303-8e05-6f84a8a642e7",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6jqhbn0A4mtg1o6bRLVO%2F_images%2F3L9T6cG0tLy4bJZ5QLPG-full-length-of-bearded-man-in-stylish-outfit-looki-2023-11-27-05-26-02-utc.png?alt=media&token=836b5cca-500f-4cbf-88fc-77432c0faaab",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6jqhbn0A4mtg1o6bRLVO%2F_images%2F6pWxw7t4fLbysTmWM6Sc-full-length-of-bearded-man-in-trendy-outfit-posing-2023-11-27-04-53-21-utc%201.png?alt=media&token=2573e346-9b77-4cfe-9d6d-550e8122130f"
+            ]
+        },
+        {
+            "id": "kb1yxnG2jd3pAEy225M5",
+            "name": "City Essentials Blazer",
+            "skuCode": "C01004",
+            "permalink": "shirts-city-essentials-blazer",
+            "description": "Elevate your style with our refined yet casual corduroy blazer. Crafted from premium cotton with a touch of stretch, this garment offers lasting comfort and shape retention. ",
+            "price": 1990,
+            "promotionalPrice": 1990,
+            "categories": [
+                "all-men",
+                "men-shirts"
+            ],
+            "collection": "new-arrivals",
+            "ratings": 3.9,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fkb1yxnG2jd3pAEy225M5%2F_images%2FleqIHZHqkP2HwWyAOA6B-full-length-of-stylish-young-man-in-jacket-looking-2023-11-27-04-50-28-utc.png?alt=media&token=4d0251a9-c7c3-4fbf-b70f-342629e80274",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fkb1yxnG2jd3pAEy225M5%2F_images%2FF3alR048c95gAUFAcQy9-full-length-of-stylish-man-in-autumn-outfit-touchi-2023-11-27-05-00-25-utc.png?alt=media&token=e32b2efa-e592-4b30-b7f7-5a697928599b",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fkb1yxnG2jd3pAEy225M5%2F_images%2FUFrtHPkICdjWRBx2p6yb-full-length-of-man-in-autumn-outfit-holding-paper-2023-11-27-05-23-41-utc.png?alt=media&token=4fcd5ec8-a9d5-4ca5-9cd5-55ff784f3948",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fkb1yxnG2jd3pAEy225M5%2F_images%2Flu3wCjHLhEAsFo1Icyvh-full-length-of-smiling-man-in-autumn-outfit-sittin-2023-11-27-05-12-06-utc.png?alt=media&token=c5c277d7-de48-4680-8e03-812d99cb6a0b",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fkb1yxnG2jd3pAEy225M5%2F_images%2FBqfHyqnV26GqYMnSBbbH-trendy-man-in-autumn-jacket-holding-backpack-and-c-2023-11-27-05-00-33-utc.png?alt=media&token=10e098e7-4fb5-461c-b89a-e8b6e457f64f"
+            ]
+        },
+        {
+            "id": "6wSgoNAwkxlbEBvCjwEf",
+            "name": "Classic Leather Crossbody Bag",
+            "skuCode": "A09002",
+            "permalink": "accessories-classic-leather-crossbody-bag",
+            "description": "High-quality leather, multiple compartments, versatile style.",
+            "price": 2490,
+            "promotionalPrice": 1990,
+            "categories": [
+                "all-ladies",
+                "ladies-accessories"
+            ],
+            "collection": "price-down",
+            "ratings": 2.5,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6wSgoNAwkxlbEBvCjwEf%2F_images%2FRAAaDHbm4GKnpwaLJkHX-Gemini%20Generated%20(10).jpeg?alt=media&token=d18fcc79-884d-46ab-bd5f-ba966043757b",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6wSgoNAwkxlbEBvCjwEf%2F_images%2FqRANOEwtPYWvEVbOixN9-Gemini%20Generated%20(9).jpeg?alt=media&token=f608921d-f4f6-45f8-b2e8-8dde37fd62ea",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6wSgoNAwkxlbEBvCjwEf%2F_images%2Fw6Fkkp60WzYSdCPB80o2-Gemini%20Generated%20Image%20(9).jpeg?alt=media&token=d4ddae8d-3ebd-49cb-bc0c-2d92c864f29e",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6wSgoNAwkxlbEBvCjwEf%2F_images%2FW45ER73KXUMfTwz9KEL6-Gemini%20Generated%20Image%20(10).jpeg?alt=media&token=9dfb0749-2dcc-401d-a899-42c32585907e",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6wSgoNAwkxlbEBvCjwEf%2F_images%2Fh0V12j4nQJBXNspo4lSE-Gemini%20Generated%20Image%20(7).jpeg?alt=media&token=09757a63-6cc9-4baa-b694-972cbe9b0b86"
+            ]
+        },
+        {
+            "id": "3L0UBclFSYQuuPFxZaXB",
+            "name": "Cotton Short Sleeve Dress",
+            "skuCode": "C09010",
+            "permalink": "shirts-cotton-short-sleeve-dress",
+            "description": "Exude timeless elegance in our classic little rose dress, featuring a tasteful knee-length hem and a tailored silhouette.",
+            "price": 2990,
+            "promotionalPrice": 2190,
+            "categories": [
+                "all-ladies",
+                "ladies-shirts"
+            ],
+            "collection": "price-down",
+            "ratings": 1.9,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F3L0UBclFSYQuuPFxZaXB%2F_images%2FjfABJzilH3zBNDrr2BYw-elegant-pretty-slim-woman-in-trendy-summer-outfit-2023-11-27-05-14-48-utc.png?alt=media&token=b4d9852d-05d9-40e9-920d-e6f526f868f7",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F3L0UBclFSYQuuPFxZaXB%2F_images%2F8bN6ojltuLATfmGYonKW-elegant-pretty-slim-woman-in-trendy-summer-outfit-2023-11-27-05-09-50-utc.png?alt=media&token=0b8dfda7-47dd-499f-8f23-36ad7202ed8f",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F3L0UBclFSYQuuPFxZaXB%2F_images%2FUWlBWYd2vCtafLTHZY05-elegant-pretty-slim-woman-in-trendy-summer-outfit-2023-11-27-05-04-54-utc.png?alt=media&token=d9981601-1c55-4e13-a9cd-64c3f2f9b4e0",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F3L0UBclFSYQuuPFxZaXB%2F_images%2FPZx7oCfm4T3KKdnMCd74-elegant-pretty-slim-woman-in-trendy-summer-outfit-2023-11-27-04-56-34-utc.png?alt=media&token=e1bb4041-9d7e-4d5d-979b-175e910bf2bf",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F3L0UBclFSYQuuPFxZaXB%2F_images%2FpZxxzD1NARjdmAWj6B0C-elegant-pretty-slim-woman-in-trendy-summer-outfit-2023-11-27-05-35-23-utc.png?alt=media&token=06896258-131b-45d2-a904-1d7955f50689"
+            ]
+        },
+        {
+            "id": "tA5dh5EIpcVaiUgcKbxP",
+            "name": "Derby Shoes",
+            "skuCode": "C02003",
+            "permalink": "shoes-derby-shoes",
+            "description": "Similar to Oxfords but with open lacing, offering more flexibility and a slightly less formal look. Great for work or dressed-up casual wear. ",
+            "price": 5900,
+            "promotionalPrice": 2950,
+            "categories": [
+                "all-men",
+                "men-shoes"
+            ],
+            "collection": "price-down",
+            "ratings": 4.7,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FtA5dh5EIpcVaiUgcKbxP%2F_images%2FMbaZqpVkpUSizGwnMPbx-Gemini_Generated_Image%20(1).jpeg?alt=media&token=d6826a36-da93-4fa0-8796-99899e49e3cb",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FtA5dh5EIpcVaiUgcKbxP%2F_images%2F9Z5oxqCh28EvWcCpe3k5-Gemini_Generated_Image%20(8).jpeg?alt=media&token=c3bf747b-c7de-4084-9097-a1a68b5cbc22",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FtA5dh5EIpcVaiUgcKbxP%2F_images%2FsEvspfDD6OD6egcf8EM4-Gemini_Generated_Image%20(9).jpeg?alt=media&token=68214d06-4ca8-4a57-a899-74618a9f607f",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FtA5dh5EIpcVaiUgcKbxP%2F_images%2FRckmD7nrQWJX1R81yruL-Gemini_Generated_Image%20(10).jpeg?alt=media&token=9fe4088c-ff1b-4123-bb1d-eb67f2ff7e27",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FtA5dh5EIpcVaiUgcKbxP%2F_images%2F2N50ABTuZwuIjuWoLxPu-Gemini_Generated_Image%20(12).jpeg?alt=media&token=7fe3b03f-d661-4822-a743-0c2465cfce2b"
+            ]
+        },
+        {
+            "id": "ILcPNHt5pe1jBT5aRoyp",
+            "name": "Duke Overcoat",
+            "skuCode": "C01005",
+            "permalink": "shirts-duke-overcoat",
+            "description": "Embrace sophisticated style with our timeless wool overcoat. This premium garment exudes luxury with its rich fabric and impeccable tailoring.",
+            "price": 1990,
+            "promotionalPrice": 995,
+            "categories": [
+                "all-men",
+                "men-shirts"
+            ],
+            "collection": "price-down",
+            "ratings": 2.4,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FILcPNHt5pe1jBT5aRoyp%2F_images%2FHzSQUGzukLSTNjirvEO2-full-length-of-young-african-american-man-in-autum-2023-11-27-04-58-55-utc.png?alt=media&token=1cda2142-55da-4800-9166-3908f2fecf33",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FILcPNHt5pe1jBT5aRoyp%2F_images%2FQ1Md9jcaQtSlRuzK7GNU-full-length-of-young-african-american-man-in-autum-2023-11-27-05-35-48-utc.png?alt=media&token=dd8ea71e-0a74-496e-9901-5d17abd32e6f",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FILcPNHt5pe1jBT5aRoyp%2F_images%2Fc8DrQWY2tTrkF6zWuJbj-full-length-of-young-african-american-man-in-autum-2023-11-27-05-32-44-utc.png?alt=media&token=602690e7-e07a-4fd2-906d-2d01801497c4",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FILcPNHt5pe1jBT5aRoyp%2F_images%2FA8bzsYHFe0k0eeYEa6NV-full-length-of-young-african-american-man-in-autum-2023-11-27-05-31-43-utc.png?alt=media&token=9225730a-2055-49ad-930e-760a09df981b",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FILcPNHt5pe1jBT5aRoyp%2F_images%2FWSx2pfxeW5YYG0e64sUj-full-length-of-young-african-american-man-in-autum-2023-11-27-05-36-10-utc.png?alt=media&token=d841af8b-91b1-462b-8e80-31d1c1fe525a"
+            ]
+        },
+        {
+            "id": "RbBa0gYBeWelfxxg0rcK",
+            "name": "Fashionable High-Top Canvas Sneakers",
+            "skuCode": "S09002",
+            "permalink": "shoes-fashionable-high-top-canvas-sneakers",
+            "description": "Durable canvas, trendy high-top style, urban flair for any outfit.",
+            "price": 990,
+            "promotionalPrice": 790,
+            "categories": [
+                "all-ladies",
+                "ladies-shoes"
+            ],
+            "collection": "price-down",
+            "ratings": 4.4,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FRbBa0gYBeWelfxxg0rcK%2F_images%2FXI9yzAfRIRl7QsyzTS6z-Gemini%20Generated%20Image%20(12).jpeg?alt=media&token=6e3c62dd-380c-47f9-94ce-c03b6750f922",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FRbBa0gYBeWelfxxg0rcK%2F_images%2F5XsbFT1xw0KF1kj01an8-Gemini%20Generated%20(16).jpeg?alt=media&token=1f278b9e-b3c5-45aa-b49e-0fdd1fdecbe5",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FRbBa0gYBeWelfxxg0rcK%2F_images%2F8n8GoOnbRURdIBJCPlv8-Gemini%20Generated%20Image%20(13).jpeg?alt=media&token=78ec29af-57e6-4dbb-bbf5-b3ec19fbf5b8",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FRbBa0gYBeWelfxxg0rcK%2F_images%2FJyjv1yAT6LNXStoKhIjd-Gemini%20Generated%20(17).jpeg?alt=media&token=cd6182fa-1259-4978-86e4-f0c4cbb430df",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FRbBa0gYBeWelfxxg0rcK%2F_images%2FLGnPxwvZR3HMSHU8I7ox-Gemini_Generated_Image.jpeg?alt=media&token=fb6c9ff0-5b5d-4dbc-9951-10a388d28c57"
+            ]
+        },
+        {
+            "id": "qkgJhtwob70HoMELcHn0",
+            "name": "Fleece Turtleneck Long Sleeve Dress",
+            "skuCode": "C09004",
+            "permalink": "shirts-fleece-turtleneck-long-sleeve-dress",
+            "description": "Elevate your winter style with our cozy flannel shirt, perfect for casual outings or fireside gatherings.",
+            "price": 1990,
+            "promotionalPrice": 1490,
+            "categories": [
+                "all-ladies",
+                "ladies-shirts"
+            ],
+            "collection": "",
+            "ratings": 4,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FqkgJhtwob70HoMELcHn0%2F_images%2Fvsu9ed3piwtSyie8mHCm-studio-portrait-of-young-woman-in-fancy-clothes-on-2023-11-27-04-52-53-utc.png?alt=media&token=6fba8cef-7f1b-4905-9dba-69904459f85c",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FqkgJhtwob70HoMELcHn0%2F_images%2FZ2Nw8TsHy9V03mITtnlp-studio-portrait-of-young-woman-in-fancy-clothes-on-2023-11-27-05-01-18-utc.png?alt=media&token=bd089ad8-b1e0-4167-9aaf-4080e8b99244",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FqkgJhtwob70HoMELcHn0%2F_images%2Fk5IqOBci0YS5LgmdVSPf-studio-portrait-of-young-woman-in-fancy-clothes-on-2023-11-27-04-56-20-utc%201.png?alt=media&token=568ec95e-0328-4128-b904-39db5e883d8c",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FqkgJhtwob70HoMELcHn0%2F_images%2Fo0hqULfKl6ozyu7u5eqY-studio-portrait-of-young-woman-in-fancy-clothes-on-2023-11-27-05-15-05-utc.png?alt=media&token=8bc9f0df-4f21-4236-8056-95267245c622",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FqkgJhtwob70HoMELcHn0%2F_images%2F9LM6ByCr4mZHdxEartnk-studio-portrait-of-young-woman-in-fancy-clothes-on-2023-11-27-05-24-48-utc.png?alt=media&token=d7c20c63-12a2-43af-95d5-c47ba1cca291"
+            ]
+        },
+        {
+            "id": "3QRh8qt3IoOMxgl7jg7U",
+            "name": "Heritage Duffle",
+            "skuCode": "C01007",
+            "permalink": "shirts-heritage-duffle",
+            "description": "Experience classic style with this traditional duffle coat, perfect for braving cooler weather.",
+            "price": 2990,
+            "promotionalPrice": 2990,
+            "categories": [
+                "all-men",
+                "men-shirts"
+            ],
+            "collection": "",
+            "ratings": 1.9,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F3QRh8qt3IoOMxgl7jg7U%2F_images%2F7ZWgnBfJQix3YsLytXcU-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-04-50-16-utc.png?alt=media&token=64a2716f-9d6b-4f8f-bba9-bfc5f79db033",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F3QRh8qt3IoOMxgl7jg7U%2F_images%2FZP9t39nzXIiyhkIuYzNV-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-10-42-utc.png?alt=media&token=ae3f0736-f055-41da-90f5-a65a29b99333",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F3QRh8qt3IoOMxgl7jg7U%2F_images%2FYqQtkJjRioBinh4Au9gY-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-22-39-utc.png?alt=media&token=adb2d51a-58c4-4266-9b7d-f07fb735cdd0",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F3QRh8qt3IoOMxgl7jg7U%2F_images%2Fb6fBoSj8A8YSSCuG4y5U-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-34-10-utc.png?alt=media&token=7f2644ac-a113-42a1-9412-01b728780333",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F3QRh8qt3IoOMxgl7jg7U%2F_images%2FQE9booB5IwC6k9hXJrSg-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-00-27-utc.png?alt=media&token=645d34d9-50cd-4cba-b726-ade33146ccd0"
+            ]
+        },
+        {
+            "id": "mLTFNsHxm2WRj9lFVVI6",
+            "name": "Hoop Earrings",
+            "skuCode": "A09001",
+            "permalink": "accessories-hoop-earrings",
+            "description": "Classic hoops, timeless elegance, versatile style.",
+            "price": 390,
+            "promotionalPrice": 290,
+            "categories": [
+                "all-ladies",
+                "ladies-accessories"
+            ],
+            "collection": "price-down",
+            "ratings": 4.7,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FmLTFNsHxm2WRj9lFVVI6%2F_images%2FHoPOP0tPb3ez1EzSiOJB-Gemini%20Generated%20(11).jpeg?alt=media&token=743f9b98-ae59-424c-88e9-8bb8b539b730",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FmLTFNsHxm2WRj9lFVVI6%2F_images%2FHyixKj9Xzi3Ok9aVTAUX-Gemini%20(2).jpeg?alt=media&token=db515a55-c812-44bb-a91a-e0bba880eeed",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FmLTFNsHxm2WRj9lFVVI6%2F_images%2FtDNGg59emYPsa2OVkTd1-Gemini%20(3).jpeg?alt=media&token=c6ce69e7-969f-4611-99d2-4e4f2223facf",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FmLTFNsHxm2WRj9lFVVI6%2F_images%2Fnpoej58q8JRLzz9lhYeg-Gemini%20Generated%20Image%20(8).jpeg?alt=media&token=ef3bfb81-2e62-468c-9d8d-0018559f241b",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FmLTFNsHxm2WRj9lFVVI6%2F_images%2FxgzSxGzr94xhq58pfnuj-Gemini%20Generated%20(12).jpeg?alt=media&token=d3b92934-7492-4cc5-99c4-61adbc3f027d"
+            ]
+        },
+        {
+            "id": "QeO3UviceqzMgguVZ9E6",
+            "name": "Icon Denim Trucker",
+            "skuCode": "C01008",
+            "permalink": "shirts-icon-denim-trucker",
+            "description": "Channel effortless cool with our versatile denim jacket. This timeless piece adds a touch of edge to any outfit, making it a wardrobe staple for all seasons.",
+            "price": 2990,
+            "promotionalPrice": 1495,
+            "categories": [
+                "all-men",
+                "men-shirts"
+            ],
+            "collection": "price-down",
+            "ratings": 1.2,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FQeO3UviceqzMgguVZ9E6%2F_images%2Fc25zinf7eHH3zrsZt93Z-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-01-35-utc.png?alt=media&token=e3c15e57-bd6a-49e8-83d9-ab6a2f85f548",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FQeO3UviceqzMgguVZ9E6%2F_images%2FUYzbpHUrMICY9VUqj1IT-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-03-24-utc.png?alt=media&token=9749b5cc-1f9f-4991-a4b8-e690561138db",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FQeO3UviceqzMgguVZ9E6%2F_images%2FeSOw3KTmyeNYZ9wNwdzt-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-15-04-utc%201.png?alt=media&token=e1989aa8-1955-458d-93a4-ccd1a224bbfb",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FQeO3UviceqzMgguVZ9E6%2F_images%2FmU8x4u9cf6j0ceeGRiKz-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-10-10-utc%201.png?alt=media&token=f87b4b9b-aace-45dc-a292-da67dde2772f",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FQeO3UviceqzMgguVZ9E6%2F_images%2FxIWZ5ZqixchvKOsaPdDA-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-17-22-utc.png?alt=media&token=82b16911-07cd-411c-b6b5-17623c02300e"
+            ]
+        },
+        {
+            "id": "ji5cJ2bYGtT2ulAdazaD",
+            "name": "Iconic Tee",
+            "skuCode": "C01006",
+            "permalink": "shirts-iconic-tee",
+            "description": "Embrace casual sophistication with our premium cotton crewneck tee. Tailored for a modern, streamlined fit, this wardrobe staple pairs perfectly with your favorite denim or chinos.",
+            "price": 2990,
+            "promotionalPrice": 2990,
+            "categories": [
+                "all-men",
+                "men-shirts"
+            ],
+            "collection": "new-arrivals",
+            "ratings": 1.2,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fji5cJ2bYGtT2ulAdazaD%2F_images%2F4siYtnwQDrxiYISxXvjs-full-length-of-young-man-using-cellphone-while-lea-2023-11-27-05-28-51-utc.png?alt=media&token=188127ee-c3a6-48d0-ae55-e11cd64baada",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fji5cJ2bYGtT2ulAdazaD%2F_images%2F3pZmvc2gjS3Q2h9Ze2of-full-length-of-young-man-holding-blazer-while-sitt-2023-11-27-05-20-24-utc.png?alt=media&token=0d9b28c8-8868-4609-98fd-cf0faf787db5",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fji5cJ2bYGtT2ulAdazaD%2F_images%2Fm2mmsKwhQv5EsJR2o6lO-full-length-of-young-man-sitting-on-chair-on-grey-2023-11-27-05-35-09-utc.png?alt=media&token=83b69185-ef72-412e-afd5-1372531c2b8c",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fji5cJ2bYGtT2ulAdazaD%2F_images%2F8pXPdiWr6ncQ4PVfSjlL-full-length-of-young-man-in-black-t-shirt-sitting-2023-11-27-05-32-08-utc.png?alt=media&token=5948c9ce-0a75-4e8b-abbd-fadfdd9775a0",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fji5cJ2bYGtT2ulAdazaD%2F_images%2FrAMS7Il2Sk064BvWEW9r-pensive-young-man-in-black-t-shirt-sitting-on-chai-2023-11-27-04-58-29-utc.png?alt=media&token=3e3c450a-9561-4895-87c7-5c8b670325ba"
+            ]
+        },
+        {
+            "id": "QZLd7uh5m20GlAnY4yON",
+            "name": "Linen Blend Shirt",
+            "skuCode": "C09009",
+            "permalink": "shirts-linen-blend-shirt",
+            "description": "floral-print midi dress effortlessly combines style and comfort, making it a versatile choice for any occasion.",
+            "price": 2990,
+            "promotionalPrice": 2190,
+            "categories": [
+                "all-ladies",
+                "ladies-shirts"
+            ],
+            "collection": "price-down",
+            "ratings": 3.7,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FQZLd7uh5m20GlAnY4yON%2F_images%2Fn6695WW8EkXd3o59gV55-Student%20reading%20book.png?alt=media&token=3e5c96d5-dfe2-423b-90db-ac3285ca843e",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FQZLd7uh5m20GlAnY4yON%2F_images%2Fbw5ZA0JcVCARfd3bjIUI-Student%20reading.png?alt=media&token=e1f4dc0e-2254-4ab2-a195-5ae17ea85e9b",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FQZLd7uh5m20GlAnY4yON%2F_images%2FcYe1hDBxEFpiTgcoUKH3-Student%20reading%20book%20(1).png?alt=media&token=575370be-475f-4a5d-9321-fdfb5b8f133e",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FQZLd7uh5m20GlAnY4yON%2F_images%2FgCSY91ENcxGNozHCqVI3-Student%20reading%20book%20(2).png?alt=media&token=e6d43490-7038-4fed-87d0-970394f51ba8",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FQZLd7uh5m20GlAnY4yON%2F_images%2Fo7V7MrttuM96wfMBQ2kX-Student%20reading%20(1).png?alt=media&token=23dd4705-1bf7-439a-aef5-48b5c494e375"
+            ]
+        },
+        {
+            "id": "bgpG49blFztUlbzFErai",
+            "name": "Loafers",
+            "skuCode": "C02004",
+            "permalink": "shoes-loafers",
+            "description": "Versatile slip-on shoes with a moccasin construction. Available in various materials like leather and suede, ideal for smart casual settings. ",
+            "price": 6900,
+            "promotionalPrice": 6900,
+            "categories": [
+                "all-men",
+                "men-shoes"
+            ],
+            "collection": "",
+            "ratings": 4,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FbgpG49blFztUlbzFErai%2F_images%2FUDhSLb6ToUTclBDdOVgK-Gemini_Generated_Image%20(2).jpeg?alt=media&token=aaa8c9be-713a-4588-b051-eaacd81199e4",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FbgpG49blFztUlbzFErai%2F_images%2FhtnekwbSZoIjYn5j0kPu-Gemini_Generated_Image%20(15).jpeg?alt=media&token=297f471a-b148-4ec9-a0b3-46c3814de99b",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FbgpG49blFztUlbzFErai%2F_images%2F6XE8OVFmxrhPfFvgs7hn-Gemini_Generated_Image%20(17).jpeg?alt=media&token=18637858-a066-4229-bfee-16d31dedb84c",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FbgpG49blFztUlbzFErai%2F_images%2FzpJCFPxi2UmEA3BNfCz5-Gemini_Generated_Image%20(16).jpeg?alt=media&token=236897e3-596b-43e4-bd36-67c73d961053",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FbgpG49blFztUlbzFErai%2F_images%2F93qv2O8vn97cy9rVSGYV-Gemini_Generated_Image%20(14).jpeg?alt=media&token=731030f5-7f7b-4e77-b6ed-9bce529f49b8"
+            ]
+        },
+        {
+            "id": "XAz85aYa1UvboM88q7DL",
+            "name": "Maverick Bomber",
+            "skuCode": "C01009",
+            "permalink": "shirts-maverick-bomber",
+            "description": "Make a statement with our edgy bomber jacket.  This iconic design features ribbed cuffs and hem, offering a timeless and effortlessly cool look.",
+            "price": 2990,
+            "promotionalPrice": 1495,
+            "categories": [
+                "all-men",
+                "men-shirts"
+            ],
+            "collection": "price-down",
+            "ratings": 4.9,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FXAz85aYa1UvboM88q7DL%2F_images%2FvZUIaqfeHqTDh5W9vl2X-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-14-26-utc.png?alt=media&token=6db5d46a-9ad4-493a-8659-ebe10732c31f",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FXAz85aYa1UvboM88q7DL%2F_images%2FPMZ6xGxoht0MQIaljhoo-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-13-41-utc%201.png?alt=media&token=b977ff2d-fc1a-40a3-b084-10be47982ddc",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FXAz85aYa1UvboM88q7DL%2F_images%2F8aFU75KTe3Kpi731lO62-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-32-16-utc.png?alt=media&token=2fdd15b4-76a0-4050-ac1a-e77dadbe20ba",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FXAz85aYa1UvboM88q7DL%2F_images%2F4HxjMMl5pBtdekwvFbT4-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-11-17-utc.png?alt=media&token=4a80202a-541f-48f1-9fd7-2af81169e2ea",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FXAz85aYa1UvboM88q7DL%2F_images%2FGvofvljZjkhmChMTMckG-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-10-42-utc.png?alt=media&token=2402f82b-4f13-4d2a-8f2b-531df4be47c1"
+            ]
+        },
+        {
+            "id": "jPrhNxGoxg46JRMxgcgX",
+            "name": "Minimalist Layered Necklace",
+            "skuCode": "A09005",
+            "permalink": "accessories-minimalist-layered-necklace",
+            "description": "Delicate chains, dainty pendants, effortlessly chic.",
+            "price": 990,
+            "promotionalPrice": 990,
+            "categories": [
+                "all-ladies",
+                "ladies-accessories"
+            ],
+            "collection": "",
+            "ratings": 3.3,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FjPrhNxGoxg46JRMxgcgX%2F_images%2FVcFB7FcUNSrPIrf8xSTC-Gemini%20Generated%20(15).jpeg?alt=media&token=fe8eedd4-35eb-4c53-b1af-4a3b25399c61",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FjPrhNxGoxg46JRMxgcgX%2F_images%2FXPJPAVwzcm07Ztz5vGSs-Gemini%20Generated%20(14).jpeg?alt=media&token=d1f74de0-d4c4-4d02-9fcb-15d473139ad6",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FjPrhNxGoxg46JRMxgcgX%2F_images%2Fen1WOJVB7puwD7DVO1Kf-Gemini%20Generated%20(13).jpeg?alt=media&token=a48c11bd-f9c1-4af2-bc04-69e8aeb2d899",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FjPrhNxGoxg46JRMxgcgX%2F_images%2FhuJGatygGKIJkyTCo3ve-Gemini%20Generated%20Image%20(11).jpeg?alt=media&token=f640bfec-e526-4dc6-9189-f7c3710cd577",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FjPrhNxGoxg46JRMxgcgX%2F_images%2FF1Y2VAZwhzIPp5ECdQVq-Gemini%20(4).jpeg?alt=media&token=a26222de-6a3e-4558-b8bd-4474b9d9ae97"
+            ]
+        },
+        {
+            "id": "vzUkdPBwtV7FfQrFkaXl",
+            "name": "Oxford Shoes",
+            "skuCode": "C02002",
+            "permalink": "shoes-oxford-shoes",
+            "description": "A timeless dress shoe characterized by closed lacing and a low heel. Perfect for formal occasions and work environments. ",
+            "price": 5900,
+            "promotionalPrice": 5900,
+            "categories": [
+                "all-men",
+                "men-shoes"
+            ],
+            "collection": "new-arrivals",
+            "ratings": 3.1,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FvzUkdPBwtV7FfQrFkaXl%2F_images%2FBnwDLu7LdGCOOEo6T2ZA-Gemini_Generated_Image.jpeg?alt=media&token=dfda2f38-31b8-4bc4-bc92-2b7a29ecd912",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FvzUkdPBwtV7FfQrFkaXl%2F_images%2FH4gVmei90apuN7QetDOz-Gemini_Generated_Image%20(6).jpeg?alt=media&token=7a8be893-eeb9-4b89-818b-8a748f37fab5",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FvzUkdPBwtV7FfQrFkaXl%2F_images%2F3k21Sag0URSq4BWqVEve-Gemini_Generated_Image%20(5).jpeg?alt=media&token=e0751ef7-3738-4e9b-a17c-812c227258f4",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FvzUkdPBwtV7FfQrFkaXl%2F_images%2FwMyQIMWXvEYBKu90TJWT-Gemini_Generated_Image%20(7).jpeg?alt=media&token=df669f81-45d5-45a9-8e34-2937780d1fec",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FvzUkdPBwtV7FfQrFkaXl%2F_images%2FtYeihqlvPLSG2p26wjWY-Gemini_Generated_Image%20(13).jpeg?alt=media&token=b5d3764f-9d35-426e-90d9-3665613bd03d"
+            ]
+        },
+        {
+            "id": "Q3aAxCG0alrPsJ2NOumR",
+            "name": "Pleated Camisole Dress (Floral)",
+            "skuCode": "C09008",
+            "permalink": "shirts-pleated-camisole-dress",
+            "description": "Slim-fit denim shirt features a stylish button-down collar and versatile dark wash.",
+            "price": 2990,
+            "promotionalPrice": 2990,
+            "categories": [
+                "all-ladies",
+                "ladies-shirts"
+            ],
+            "collection": "new-arrivals",
+            "ratings": 1.3,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FQ3aAxCG0alrPsJ2NOumR%2F_images%2Fa2k4rZ0ahl0iSw25bJzX-Young%20woman%20fancy%20(2).png?alt=media&token=7d1a4f3c-d664-42e4-a042-a6c87ba6dad3",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FQ3aAxCG0alrPsJ2NOumR%2F_images%2FumUMtGfCqKDy1Lj8jxfG-Young%20woman%20fancy%20(3).png?alt=media&token=dea2c6d1-0a79-4d9d-9ec3-296856abf32a",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FQ3aAxCG0alrPsJ2NOumR%2F_images%2F63yUNce4folINF5PJSuI-Young%20woman.png?alt=media&token=e2a27f47-5fa9-4678-9547-cf3635c046e6",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FQ3aAxCG0alrPsJ2NOumR%2F_images%2F07BhU7bLQSTCqjApC0zY-Young%20Woman%20Fancy.png?alt=media&token=30aab0c8-03e9-4d33-92e4-408929f8657a",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FQ3aAxCG0alrPsJ2NOumR%2F_images%2Fqd4u223kqYLzzFXHiG9r-Young%20woman%20fancy%20(1).png?alt=media&token=e1cec1b7-794d-4c3c-9e74-abdbb1c8e072"
+            ]
+        },
+        {
+            "id": "gt0dLmVel9CC6MJbDnkP",
+            "name": "Premium Linen Long Sleeve Shirt (Striped)",
+            "skuCode": "C09007",
+            "permalink": "shirts-premium-linen-long-sleeve-shirt",
+            "description": "Step into summer with our lightweight linen shirt, offering a breezy and relaxed fit for warm-weather occasions.",
+            "price": 2990,
+            "promotionalPrice": 2990,
+            "categories": [
+                "all-ladies",
+                "ladies-shirts"
+            ],
+            "collection": "",
+            "ratings": 4.9,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fgt0dLmVel9CC6MJbDnkP%2F_images%2FmaHdCyMYro92inXxt473-fashion-photo-of-a-stylish-female-model-in-a-fancy-2023-11-27-05-19-48-utc.png?alt=media&token=7c2025e3-d678-4338-ab34-934948887145",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fgt0dLmVel9CC6MJbDnkP%2F_images%2FQ0VI0XM7uy7DfjFbeIZw-fashion-photo-of-a-stylish-female-model-in-a-fancy-2023-11-27-05-12-23-utc.png?alt=media&token=372ea3b0-8c3b-4d74-bc87-fba4799d2d39",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fgt0dLmVel9CC6MJbDnkP%2F_images%2FFk8EPSW6i4uWLGs3xm05-fashion-photo-of-a-stylish-female-model-in-a-fancy-2023-11-27-05-22-10-utc.png?alt=media&token=46bf18e6-d3f8-45db-90a3-0dddd81b4f98",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fgt0dLmVel9CC6MJbDnkP%2F_images%2FzJxbIJmay8JJYjrom04O-beautiful-girl-in-trandy-fashion-clothes-enjoying-2023-11-27-05-35-01-utc%201.png?alt=media&token=0d6c3f16-d503-4ff3-8f5c-c818b43a7edc",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fgt0dLmVel9CC6MJbDnkP%2F_images%2FoJyiwtDI45Ccr0R2NQlU-fashion-photo-of-a-stylish-female-model-in-a-fancy-2023-11-27-05-29-38-utc.png?alt=media&token=a52b0aec-c830-4246-bd3d-5e5169cd240a"
+            ]
+        },
+        {
+            "id": "cY3r7b1XkUfi9sq4GeTz",
+            "name": "Rayon Long Sleeve Blouse",
+            "skuCode": "C09003",
+            "permalink": "shirts-rayon-long-sleeve-blouse",
+            "description": "Stay on-trend with our polka dots-printed shirt, adding a pop of color and personality to your ensemble.",
+            "price": 1990,
+            "promotionalPrice": 1490,
+            "categories": [
+                "all-ladies",
+                "ladies-shirts"
+            ],
+            "collection": "",
+            "ratings": 1.1,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FcY3r7b1XkUfi9sq4GeTz%2F_images%2FpYweIQd8iuLa9p9ED0nM-girl-student-in-casual-outfit-reading-book-studyi-2023-11-27-05-26-30-utc.png?alt=media&token=e22e0a35-20b1-4998-932a-c7fe2d7d2f24",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FcY3r7b1XkUfi9sq4GeTz%2F_images%2FmQh85zr5QIpXbGJsurdY-girl-student-in-casual-outfit-reading-book-studyi-2023-11-27-05-37-18-utc.png?alt=media&token=2887008e-62e0-4885-8582-638b33ea136c",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FcY3r7b1XkUfi9sq4GeTz%2F_images%2FRJ8gx2jV78NQkSuplgQO-girl-student-in-casual-outfit-reading-book-studyi-2023-11-27-04-51-36-utc.png?alt=media&token=ba14bbb8-ebb4-48a0-ad92-f0c493d20b88",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FcY3r7b1XkUfi9sq4GeTz%2F_images%2FyaxR1OvSg3yM93Jl66T7-girl-student-in-casual-outfit-reading-book-studyi-2023-11-27-05-31-37-utc.png?alt=media&token=88ca4665-d90b-40a5-ac08-99cdeb43249e",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FcY3r7b1XkUfi9sq4GeTz%2F_images%2FbCodUI4eLxzeR2IJZxBb-girl-student-in-casual-outfit-reading-book-studyi-2023-11-27-05-30-09-utc.png?alt=media&token=05b97fbb-e311-4df5-b7d1-a7ed9dd5a407"
+            ]
+        },
+        {
+            "id": "yQc6uM7CQhmeJpErjlNY",
+            "name": "Relaxed Tailored Jacket",
+            "skuCode": "C09002",
+            "permalink": "shirts-relaxed-tailored-jacket",
+            "description": "Transition seamlessly between seasons with our lightweight, water-resistant raincoat, featuring a packable design for on-the-go convenience.",
+            "price": 1990,
+            "promotionalPrice": 1990,
+            "categories": [
+                "all-ladies",
+                "ladies-shirts"
+            ],
+            "collection": "",
+            "ratings": 1.6,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FyQc6uM7CQhmeJpErjlNY%2F_images%2FwZkT3urIRzY3OKoJaFAu-beautiful-young-elegant-woman-brunette-in-long-dre-2023-11-27-05-12-13-utc.png?alt=media&token=180d9141-7160-4b05-9095-41f066e4513e",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FyQc6uM7CQhmeJpErjlNY%2F_images%2FlN7VW18t3zbPPvaAl4b8-beautiful-young-elegant-woman-brunette-in-long-dre-2023-11-27-04-53-01-utc.png?alt=media&token=49422e2d-f74a-45bf-8ae6-a571dcae60d7",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FyQc6uM7CQhmeJpErjlNY%2F_images%2FgL5HWfaKp9ahqnBYBz2z-beautiful-young-elegant-woman-brunette-in-long-dre-2023-11-27-05-10-41-utc.png?alt=media&token=c7fab29b-05ea-4e96-86c8-13ac191aca24",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FyQc6uM7CQhmeJpErjlNY%2F_images%2F7C5Nsq1roMBeMkb2OYs5-beautiful-young-elegant-woman-brunette-in-long-dre-2023-11-27-04-49-41-utc.png?alt=media&token=d3e90d80-5a11-461a-a94d-6355404fdb74",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FyQc6uM7CQhmeJpErjlNY%2F_images%2FfnJ8HMphd2PqONbekHw4-beautiful-young-elegant-woman-brunette-in-long-dre-2023-11-27-04-59-28-utc.png?alt=media&token=6e4c46f0-b551-444e-b150-d8983a62ac82"
+            ]
+        },
+        {
+            "id": "Dpw9ckFPjpPJ8omkhrOV",
+            "name": "Smooth Stretch Cotton Crew Neck Long Sleeve T-Shirt",
+            "skuCode": "C09001",
+            "permalink": "shirts-smooth-stretch-cotton-crew-neck-long-sleeve-t-shirt",
+            "description": "Experience ultimate comfort with our wrinkle-resistant, moisture-wicking shirt, ideal for long days at the office.",
+            "price": 1990,
+            "promotionalPrice": 1990,
+            "categories": [
+                "all-ladies",
+                "ladies-shirts"
+            ],
+            "collection": "new-arrivals",
+            "ratings": 1.5,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FDpw9ckFPjpPJ8omkhrOV%2F_images%2FRSdqtz1WIWSPojq81dHR-studio-portrait-of-young-woman-in-fancy-clothes-on-2023-11-27-05-11-48-utc.png?alt=media&token=6eed5cbd-307b-4c51-84a1-78412fccdc02",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FDpw9ckFPjpPJ8omkhrOV%2F_images%2FQQmALUMR2hPUAsmIG0Ao-studio-portrait-of-young-woman-in-fancy-clothes-on-2023-11-27-05-05-51-utc.png?alt=media&token=8f0ed3af-89ec-4a24-a7e0-e0bfd36f85ed",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FDpw9ckFPjpPJ8omkhrOV%2F_images%2Fji57ZjVcCN5ZEvcENmog-studio-portrait-of-young-woman-in-fancy-clothes-on-2023-11-27-05-07-29-utc.png?alt=media&token=b5988b2c-7a62-4fb2-a8ad-c2cf42dd1530",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FDpw9ckFPjpPJ8omkhrOV%2F_images%2FE6u0ElzTu7Vuqm0uhWHk-studio-portrait-of-young-woman-in-fancy-clothes-on-2023-11-27-05-28-50-utc.png?alt=media&token=95c61512-e198-4e19-b637-7494ede6f7fa",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FDpw9ckFPjpPJ8omkhrOV%2F_images%2F0SxyWwfU4YnXEiYS8tJT-studio-portrait-of-young-woman-in-fancy-clothes-on-2023-11-27-05-02-12-utc.png?alt=media&token=915fe860-0b53-4533-ad10-3a6d3b0f6db0"
+            ]
+        },
+        {
+            "id": "Sah5RT4fD9y1ak1hZkef",
+            "name": "Smooth Stretch Cotton Crew Neck Long Sleeve T-Shirt",
+            "skuCode": "C09005",
+            "permalink": "shirts-smooth-stretch-cotton-crew-neck-long-sleeve-t-shirt",
+            "description": "Elevate your winter style with our cozy flannel shirt, perfect for casual outings or fireside gatherings.",
+            "price": 2990,
+            "promotionalPrice": 2990,
+            "categories": [
+                "all-ladies",
+                "ladies-shirts"
+            ],
+            "collection": "",
+            "ratings": 3,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FSah5RT4fD9y1ak1hZkef%2F_images%2FtumBlFT9BGZwJFqpsNkU-fashion-photo-of-a-stylish-female-model-in-a-fancy-2023-11-27-05-21-42-utc.png?alt=media&token=3ecab5c5-096e-4931-889f-32a03ac101cf",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FSah5RT4fD9y1ak1hZkef%2F_images%2FfAzXmIGhtEqvekkevxzj-fashion-photo-of-a-stylish-female-model-in-a-fancy-2023-11-27-05-28-28-utc.png?alt=media&token=fd00ee88-aeb8-45b9-87c6-7e73beb0630a",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FSah5RT4fD9y1ak1hZkef%2F_images%2Fp9alpsylRkbR6oXpHG0U-fashion-photo-of-a-stylish-female-model-in-a-fancy-2023-11-27-05-05-56-utc.png?alt=media&token=ea617f4b-806c-4cf7-b369-5bdf857e83ca",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FSah5RT4fD9y1ak1hZkef%2F_images%2FankgXeD4xaVAP86gXgS2-fashion-photo-of-a-stylish-female-model-in-a-fancy-2023-11-27-05-05-28-utc.png?alt=media&token=ac2125aa-fc80-4a3a-88cd-e79e7bd07541",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FSah5RT4fD9y1ak1hZkef%2F_images%2FGaeKUDGbtweHPVS6gL6L-fashion-photo-of-a-stylish-female-model-in-a-fancy-2023-11-27-04-56-20-utc.png?alt=media&token=6d92e0e2-e04b-426d-a8f0-1668c7e55f11"
+            ]
+        },
+        {
+            "id": "c508YWEJgeRcATOqmyOb",
+            "name": "Sneakers",
+            "skuCode": "C02006",
+            "permalink": "shoes-sneakers",
+            "description": "A footwear staple offering comfort and style.  From classic low-top styles to trendy high-tops, there's a sneaker for every occasion.",
+            "price": 6900,
+            "promotionalPrice": 6900,
+            "categories": [
+                "all-men",
+                "men-shoes"
+            ],
+            "collection": "",
+            "ratings": 2.9,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fc508YWEJgeRcATOqmyOb%2F_images%2F6k0uitjRMTS4QQBNK95j-Gemini_Generated_Image%20(27).jpeg?alt=media&token=cecd50ea-610c-48dc-882d-21e870d4d6bb",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fc508YWEJgeRcATOqmyOb%2F_images%2FezMBL7TgtCvP7F31x8JW-Gemini_Generated_Image%20(24).jpeg?alt=media&token=58697f3b-b4c6-4405-a792-cdead1436329",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fc508YWEJgeRcATOqmyOb%2F_images%2FFDjEPVFqqZ7xPsh67EtW-Gemini_Generated_Image%20(26).jpeg?alt=media&token=2ac19fa5-e944-461a-92bf-5d600f783e58",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fc508YWEJgeRcATOqmyOb%2F_images%2FKAk8Gg70T8vZARYbuo0C-Gemini_Generated_Image%20(25).jpeg?alt=media&token=174de69e-2e60-4681-b35a-c99b41014544",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Fc508YWEJgeRcATOqmyOb%2F_images%2FxuNtvvCiAUrGRDkAw5IV-Gemini_Generated_Image%20(28).jpeg?alt=media&token=091e4fd4-90c3-4f35-8c9b-0e7d46a9fff8"
+            ]
+        },
+        {
+            "id": "BtCq2ZmNjRe2F1iyI5if",
+            "name": "Sunglasses",
+            "skuCode": "A04004",
+            "permalink": "men-accessories-sunglasses",
+            "description": "Originally designed for pilots, they became popularized by celebrities and have remained a fashion staple ever since. ",
+            "price": 590,
+            "promotionalPrice": 590,
+            "categories": [
+                "men-accessories",
+                "all-men"
+            ],
+            "collection": "",
+            "ratings": 4.4,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FBtCq2ZmNjRe2F1iyI5if%2F_images%2Fh4Zft35qlKa6q8kBOoOj-Gemini_Generated_Image%20(47).jpeg?alt=media&token=612c074e-636d-4be3-a1d3-fb5d3052e519",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FBtCq2ZmNjRe2F1iyI5if%2F_images%2FEoIWRtS91nhzbdw8WaEz-Gemini_Generated_Image%20(48).jpeg?alt=media&token=62c30913-de2b-4639-ab4f-2da744a0fa24",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FBtCq2ZmNjRe2F1iyI5if%2F_images%2F9H0bwl598ebcipjFNw3F-Gemini_Generated_Image%20(50).jpeg?alt=media&token=dc7af3ac-72e4-4b53-a0db-2c0eb90624f3",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FBtCq2ZmNjRe2F1iyI5if%2F_images%2F3FiVJww3tOPGzJ8qlNzZ-Gemini_Generated_Image%20(49).jpeg?alt=media&token=1229893b-7bb2-4228-99a4-0070813a1ccb",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FBtCq2ZmNjRe2F1iyI5if%2F_images%2FSVR3P7kvcY1FAfGQn9gS-Gemini_Generated_Image%20(51).jpeg?alt=media&token=33ef4b59-e4ca-4575-8b2c-4e8d727ea2ed"
+            ]
+        },
+        {
+            "id": "W4AK7SbW4N10sk1BYqME",
+            "name": "The Rebel Rider",
+            "skuCode": "C01003",
+            "permalink": "shirts-the-rebel-rider",
+            "description": "Exude edgy confidence with our classic leather biker jacket. Crafted from premium cowhide, this jacket combines rebellious attitude with timeless style.",
+            "price": 1990,
+            "promotionalPrice": 1990,
+            "categories": [
+                "all-men",
+                "men-shirts"
+            ],
+            "collection": "",
+            "ratings": 2.5,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FW4AK7SbW4N10sk1BYqME%2F_images%2FvSsopuJksP6D7jll8Cg7-african-american-man-with-trendy-hairstyle-in-lea-2023-11-27-05-06-15-utc%201.png?alt=media&token=fbdd3e31-423d-443e-89f1-d503134ee9a5",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FW4AK7SbW4N10sk1BYqME%2F_images%2Ft3oxLY3pinJZOYg9gRl4-african-american-man-with-trendy-hairstyle-and-bla-2023-11-27-05-21-06-utc%201.png?alt=media&token=aa399dcd-64f9-4f93-acf6-32c7adf0af8a",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FW4AK7SbW4N10sk1BYqME%2F_images%2FexsJ9XyTlrYprIc5A1vk-african-american-man-in-jeans-black-leather-jacke-2023-11-27-05-20-46-utc%201.png?alt=media&token=efe095f8-b17f-443c-b59f-655b4cc0932e",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FW4AK7SbW4N10sk1BYqME%2F_images%2FSXEluJqZZV0oBky7HA2z-curly-african-american-man-in-black-leather-jacket-2023-11-27-05-10-45-utc%201.png?alt=media&token=bdfbc164-118a-42c1-a48f-44ae2bacfc38",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FW4AK7SbW4N10sk1BYqME%2F_images%2FITEidTk9GOew6lBn59r6-trendy-african-american-man-in-jeans-and-black-lea-2023-11-27-05-07-39-utc%201.png?alt=media&token=d32cb260-e58d-43da-a67b-d42dbfade1c6"
+            ]
+        },
+        {
+            "id": "8PJ9TJIF8oOpf7TwRb1h",
+            "name": "The Winter Rebel Parka",
+            "skuCode": "C01011",
+            "permalink": "shirts-the-winter-rebel-parka",
+            "description": "Crafted from a warm yet lightweight wool-blend fabric, this versatile coat features a high collar to block chilly winds and a full-length zipper for easy layering.",
+            "price": 2990,
+            "promotionalPrice": 1495,
+            "categories": [
+                "all-men",
+                "men-shirts"
+            ],
+            "collection": "price-down",
+            "ratings": 2.1,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F8PJ9TJIF8oOpf7TwRb1h%2F_images%2FcnxI2n5v2UodHcGslzq2-young-african-american-man-in-jeans-and-leather-ja-2023-11-27-05-05-59-utc%201.png?alt=media&token=728a63fc-f5fd-48d0-be78-202c3aedf85e",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F8PJ9TJIF8oOpf7TwRb1h%2F_images%2FHj5IybEjt9rm6Ht1c1yy-young-african-american-man-in-jeans-and-black-leat-2023-11-27-05-22-20-utc%201.png?alt=media&token=ac1612ec-a306-40af-94fb-bbad12105e1c",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F8PJ9TJIF8oOpf7TwRb1h%2F_images%2FgIE0xMeD9hnJaB7gPB2S-full-length-of-young-african-american-man-in-jeans-2023-11-27-05-18-20-utc%201.png?alt=media&token=c2241205-d854-4f55-83db-0a4cda537496",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F8PJ9TJIF8oOpf7TwRb1h%2F_images%2FAZK54Dwoy510visA4UDJ-full-length-of-young-african-american-man-in-jeans-2023-11-27-05-12-15-utc%201.png?alt=media&token=32979900-ed27-4b49-b179-1362e6d4ccf9",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F8PJ9TJIF8oOpf7TwRb1h%2F_images%2FWJEWHCKCh2b5EtA0LmqJ-muscular-young-african-american-man-in-tank-top-ho-2023-11-27-04-57-27-utc%201.png?alt=media&token=6b113baf-eb8a-4b10-9dec-b2ce35cd9ce2"
+            ]
+        },
+        {
+            "id": "yANd3zBIESETaqwoMACr",
+            "name": "Urban Utility Jacket",
+            "skuCode": "C01010",
+            "permalink": "shirts-urban-utility-jacket",
+            "description": "This versatile jacket boasts multiple pockets for functionality and a timeless design that transitions seamlessly from work to weekend wear.",
+            "price": 2990,
+            "promotionalPrice": 2990,
+            "categories": [
+                "all-men",
+                "men-shirts"
+            ],
+            "collection": "new-arrivals",
+            "ratings": 4.4,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FyANd3zBIESETaqwoMACr%2F_images%2FCcc7pWisHzpkwTurKbWZ-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-23-30-utc.png?alt=media&token=bcc891a6-e97f-42d3-a7a1-94f33409d257",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FyANd3zBIESETaqwoMACr%2F_images%2FCOSYOsBCJMBbhudbfNMM-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-07-55-utc.png?alt=media&token=14a96a92-f2e2-43da-a53d-94ea93f6183a",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FyANd3zBIESETaqwoMACr%2F_images%2FJbcVwcLlGZ6vDnaPy4qa-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-21-47-utc%201.png?alt=media&token=6b338f2f-5386-4f2d-b4f6-0cdd1ca1d32d",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FyANd3zBIESETaqwoMACr%2F_images%2FaY6ULR2UwgNned6UbOH8-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-21-28-utc%201.png?alt=media&token=28a7ea86-a349-4316-ae6e-cafb903114ba",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FyANd3zBIESETaqwoMACr%2F_images%2FN3JD8aBcrFat2HaiMFry-full-length-portrait-of-handsome-man-in-warm-coat-2023-11-27-05-30-26-utc%201.png?alt=media&token=81e57bf1-fd50-4959-b46b-4e694b366275"
+            ]
+        },
+        {
+            "id": "OMTTvQ43MqMAAD4GNqLh",
+            "name": "Vintage Round Sunglasses",
+            "skuCode": "A09003",
+            "permalink": "accessories-vintage-round-sunglasses",
+            "description": "Retro round frame, tinted lenses, UV protection.",
+            "price": 2490,
+            "promotionalPrice": 2490,
+            "categories": [
+                "all-ladies",
+                "ladies-accessories"
+            ],
+            "collection": "new-arrivals",
+            "ratings": 2.8,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FOMTTvQ43MqMAAD4GNqLh%2F_images%2F7FW83e2Icd2I5CQQ5i9P-Gemini%20Generated%20Image%20(2).jpeg?alt=media&token=1f14722a-06fe-438a-8415-db887c0e71a3",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FOMTTvQ43MqMAAD4GNqLh%2F_images%2F3S3hbnt48s1nym3x7H68-Gemini%20Generated%20(4).jpeg?alt=media&token=dda70060-8459-4458-a17f-9ac43d1c4a3b",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FOMTTvQ43MqMAAD4GNqLh%2F_images%2FCX4FcmsHrivPzTIrmqmV-Gemini%20Generated%20(6).jpeg?alt=media&token=cf59a00b-cac5-4277-afe9-a6064a53b8d9",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FOMTTvQ43MqMAAD4GNqLh%2F_images%2FKe855MpeNf2WfIruWioj-Gemini%20Generated%20(5).jpeg?alt=media&token=8506d398-203e-4be2-96fb-465b829f330d",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FOMTTvQ43MqMAAD4GNqLh%2F_images%2FMTS01P7Mr1bg2EyVqE0E-Gemini%20Generated%20(7).jpeg?alt=media&token=948a3c1c-874c-47a8-87d2-66705cb9559d"
+            ]
+        },
+        {
+            "id": "YQ6cGEAKw8CsAv0ex47p",
+            "name": "Watches",
+            "skuCode": "A04001",
+            "permalink": "men-accessories-watches",
+            "description": "A great choice for the active man.  Sport watches are typically made from durable materials, are water-resistant, and often have special features like timers, alarms, compasses, etc. ",
+            "price": 990,
+            "promotionalPrice": 990,
+            "categories": [
+                "all-men",
+                "men-accessories"
+            ],
+            "collection": "",
+            "ratings": 2.6,
+            "imageUrls": [
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FYQ6cGEAKw8CsAv0ex47p%2F_images%2FlIH3mcEktAcdeyO44L5H-Gemini_Generated_Image%20(30).jpeg?alt=media&token=9cffb57c-6766-4449-8f80-5fc586bfc715",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FYQ6cGEAKw8CsAv0ex47p%2F_images%2FwiUkfZRYrttiq23B2jHn-Gemini_Generated_Image%20(32).jpeg?alt=media&token=0d01e40d-7cf3-4d99-9cd8-0e66ea9ecabe",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FYQ6cGEAKw8CsAv0ex47p%2F_images%2FGHb0nzKJg13sFwvzUZZD-Gemini_Generated_Image%20(29).jpeg?alt=media&token=83250e28-02bf-4132-9bf8-c950a7424e40",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FYQ6cGEAKw8CsAv0ex47p%2F_images%2Fj7s3oRCoUCyJUHpgIWP1-Gemini_Generated_Image%20(31).jpeg?alt=media&token=f92bb374-8859-4148-92b2-f3ea86609bbe",
+                "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2FYQ6cGEAKw8CsAv0ex47p%2F_images%2F4Uil5R7MRYhMwefrtdMx-Gemini_Generated_Image%20(34).jpeg?alt=media&token=49f68e53-6126-480c-8124-5137b0960fbf"
+            ]
+        }
+    ],
+    "pagination": {
+        "total": 40,
+        "nextCursor": "YQ6cGEAKw8CsAv0ex47p"
+    }
+}

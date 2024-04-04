@@ -1,0 +1,56 @@
+[
+    {
+        "id": "COL0002",
+        "name": "Price Down",
+        "permalink": "price-down",
+        "description": "Prices are dropping faster than a hot potato! Don't miss these amazing deals on our hottest products. Major discounts for a limited time only.",
+        "items": [
+            {
+                "title": "Pleated Camisole Dress (Floral)",
+                "description": "Our versatile crossbody bag combines fashion and function, offering ample storage space with multiple compartments and a chic, adjustable strap.",
+                "imageUrl": "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/collections%2F4CjEGqDp3IGlnuRjRlOM%2Fitems%2F0%2F_images%2FWeswOkwknfjQ03d8dIaF-Frame%204189.png?alt=media&token=5a49e35e-81d7-4119-b225-eb3c9f812fbd"
+            },
+            {
+                "title": "Washable Milano Ribbed Crew Neck Long Sleeve Sweater",
+                "description": "Embrace coziness with our crafted from a soft blend of materials and designed with a relaxed fit for a perfect blend of warmth and style.",
+                "imageUrl": "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/collections%2F4CjEGqDp3IGlnuRjRlOM%2Fitems%2F1%2F_images%2FxsnodQLHoesPjQHMKge3-Frame%204189%20(1).png?alt=media&token=12ff9180-e454-464f-8eec-4467c0cc089d"
+            }
+        ]
+    },
+    {
+        "id": "COL0001",
+        "name": "New Arrivals",
+        "permalink": "new-arrivals",
+        "description": "Fresh out of the box and into our store! Experience the latest offerings that are trendy, stylish, and top-quality. We've got new products hitting the shelves every week to satisfy your cravings.",
+        "items": [
+            {
+                "title": "Flexi Move Sneaker",
+                "description": "Step into comfort and style with our lightweight, cushioned sneakers, featuring a breathable mesh upper and a durable rubber sole.",
+                "imageUrl": "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/collections%2FUnDdJrzuPcDCuLKRbfcD%2Fitems%2F0%2F_images%2FlgoHdaDtQciWWItYQ2iv-Frame%204189%20(2).png?alt=media&token=3a14f339-064c-40ca-bfc8-54170aec0ab1"
+            },
+            {
+                "title": "Cotton Belted Short Sleeve Dress",
+                "description": "Exude timeless elegance in our classic little rose dress, featuring a tasteful knee-length hem and a tailored silhouette.",
+                "imageUrl": "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/collections%2FUnDdJrzuPcDCuLKRbfcD%2Fitems%2F1%2F_images%2FfW6yFojcmQfmc184NmWL-Frame%204189%20(3).png?alt=media&token=0e93f62f-8ef0-4b2a-8032-6fa9450611f9"
+            }
+        ]
+    },
+    {
+        "id": "zzzzzzzzzzzzzzzzzzzy",
+        "name": "Spring 2024",
+        "permalink": "spring-2024",
+        "description": "Step into a world of winter elegance and style with our latest Winter Collection. As temperatures drop, our curated selection of clothing is designed to keep you fashionably warm. From luxurious knitwear to trend-setting outerwear, each piece in our collection is a celebration of seasonal sophistication. Explore the blend of comfort and fashion, as we present you with the must-have ensembles to make a statement in the chilly months ahead. Welcome to a winter wardrobe that seamlessly combines coziness with chic aesthetics.",
+        "items": [
+            {
+                "title": "Flexi Move",
+                "description": "Step into a world where fashion meets functionality with our latest Sneaker Collection. Designed for those who appreciate the perfect fusion of style and comfort, our curated selection of sneakers is a celebration of urban chic.",
+                "imageUrl": "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/collections%2FktSwHuuSw5r8r1D6EsDH%2Fitems%2F0%2F_images%2FcdeFaXOlIOpC9E8OJarp-432892586_953186182498002_7100593146420319785_n.jpg?alt=media&token=f55ca524-f94f-4aaf-909e-16851856c5e7"
+            },
+            {
+                "title": "Cozy Breeze",
+                "description": " Embrace the season with our carefully curated selection of garments, each piece thoughtfully designed to blend fashion and functionality. From cozy knits to elegant outerwear, our collection invites you to indulge in the allure of winter fashion. ",
+                "imageUrl": "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/collections%2FktSwHuuSw5r8r1D6EsDH%2Fitems%2F1%2F_images%2FpHMhRGl7L2AYomr0amyB-432774374_784184376941038_7784216171184636910_n.jpg?alt=media&token=d795a1d4-0c34-4d3e-9961-cf87757eea61"
+            }
+        ]
+    }
+]
