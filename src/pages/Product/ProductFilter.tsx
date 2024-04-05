@@ -7,8 +7,6 @@ export default function ProductFilter(){
     const [page,setPage] = useState(1);
     const {name} = useParams();
     let dataDisplay = product.data.filter(x=>x.categories[1].includes(name))
-    console.log("product",JSON.stringify(product))
-
 
     return <>
         <div className='flex justify-between'>
@@ -21,8 +19,8 @@ export default function ProductFilter(){
                 <option value="">Sort</option>
             </select>
         </div>
-
-        <div className='flex justify-center'>{[...Array(Math.ceil(dataDisplay.length/6))].map((index)=> 
+        {Math.ceil(dataDisplay.length/6)}
+        <div className='flex justify-center'>{[...Array(Math.ceil(dataDisplay.length/6))].map((x,index)=> 
         <div key={index}>
             <button onClick={()=>{setPage(index+1)}}> {index+1} </button> &nbsp; 
         </div>
