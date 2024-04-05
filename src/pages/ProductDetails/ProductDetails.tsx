@@ -22,9 +22,9 @@ export default function ProductDetails(){
         <div  className={ contentBodyStyle }>
 
         <div className="mx-[160px] mt-[110px] lg:flex justify-between">
-            <div className="w-full">
+            <div className="w-[780px]">
                 { dataDisplay.length > 0 ? <img src={dataDisplay[0].imageUrls[0]} alt="" className={mainImage} />: <></>}
-                <div className="flex justify-between">
+                <div className="flex justify-between w-[780px]">
                     { dataDisplay.length > 0 ? dataDisplay.map((x)=> x.imageUrls.map((y,index)=> 
                         {
                             if(index !== 0){

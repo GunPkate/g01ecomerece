@@ -26,9 +26,9 @@ export default function ProductFilter(){
         </div>
         )}
         </div>
-        <div className='w-full grid grid-cols-3 gap-x-0'>
+        <div className='grid grid-cols-3'>
             {dataDisplay.length>0? 
-                dataDisplay.map((x,id) => { if( id/6 >= page-1  && id/6 < page){ return <Link key={id + 1} to={"/productdetails/"+x.permalink}> <ProductCard product={x} />  </Link>} })
+                dataDisplay.map((x,id) => { if( id/6 >= page-1  && id/6 < page){ return <Link key={id + 1} to={"/productdetails/"+x.permalink}> <ProductCard product={x} width={"370px"} height={"370px"}/>  </Link>} })
                 :<></>
             }
         </div>
