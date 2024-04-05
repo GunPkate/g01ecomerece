@@ -7,9 +7,8 @@ import MyCart from './pages/MyCart/MyCart'
 import MyCartItemProvider from './components/context/MyCartItemContext'
 import Admin from './pagesAdmin/Admin'
 import Product from './pages/Product/Product'
-import ProductDetails from './pages/ProductDetails/ProductDetails'
 import ProductFilter from './pages/Product/ProductFilter'
-
+import ProductDescription from './pages/ProductDetails/ProductDescription'
 
 function AppContent() {
   const contentBodyStyle = 'min-h-[90vh]'
@@ -49,7 +48,8 @@ function AppContent() {
     <>
       <Navbar/>
         <div  className={ contentBodyStyle }>
-          <ProductDetails/>
+          {/* <ProductDetails/> */}
+          <ProductDescription/>
         </div>
       <Footer/>
     </>
