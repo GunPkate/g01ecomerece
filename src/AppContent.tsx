@@ -8,6 +8,8 @@ import MyCartItemProvider from './components/context/MyCartItemContext'
 import Admin from './pagesAdmin/Admin'
 import Product from './pages/Product/Product'
 import ProductDetails from './pages/ProductDetails/ProductDetails'
+import ProductFilter from './pages/Product/ProductFilter'
+
 
 function AppContent() {
   const contentBodyStyle = 'min-h-[90vh]'
@@ -24,15 +26,22 @@ function AppContent() {
     </> 
   },
   {
-    path: '/product',
+    path: '/product/',
     element: 
     <>
-      <Navbar/>
-        <div  className={ contentBodyStyle }>
+
           <Product/>
-        </div>
-      <Footer/>
-    </>
+
+    </>,
+    children: [
+      {
+        path: "/product/:name",
+        element:
+        <>
+            <ProductFilter/>
+        </>,
+      }
+    ]
   },
   {
     path: '/productdetails',
