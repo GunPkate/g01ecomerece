@@ -6,6 +6,8 @@ import UserTokenProvider from './components/context/UserTokenContext'
 import MyCart from './pages/MyCart/MyCart'
 import MyCartItemProvider from './components/context/MyCartItemContext'
 import Admin from './pagesAdmin/Admin'
+import Product from './pages/Product/Product'
+import ProductDetails from './pages/ProductDetails/ProductDetails'
 
 function AppContent() {
   const contentBodyStyle = 'min-h-[90vh]'
@@ -27,18 +29,18 @@ function AppContent() {
     <>
       <Navbar/>
         <div  className={ contentBodyStyle }>
-          <h1 className='text-blue-500 font-bold'>new Product</h1>
+          <Product/>
         </div>
       <Footer/>
     </>
   },
   {
-    path: '/product2',
+    path: '/productdetails',
     element: 
     <>
       <Navbar/>
         <div  className={ contentBodyStyle }>
-          <h1 className='text-blue-500 font-bold'>new Product</h1>
+          <ProductDetails/>
         </div>
       <Footer/>
     </>

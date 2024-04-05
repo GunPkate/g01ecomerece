@@ -1,4 +1,4 @@
-export default function ProductDetails(){
+export default function Home(){
     return 
     <>
         Home
