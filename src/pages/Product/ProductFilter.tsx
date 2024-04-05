@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ProductCard from '../../components/ProductCard';
 import  product from '../../skuData/product.json';
 
@@ -30,7 +30,7 @@ export default function ProductFilter(){
         </div>
         <div className='w-full grid grid-cols-3 gap-x-0'>
             {dataDisplay.length>0? 
-                dataDisplay.map((x,id) => { if( id/6 >= page-1  && id/6 < page){ return <div key={id+1}> <ProductCard product={x} />  </div>} })
+                dataDisplay.map((x,id) => { if( id/6 >= page-1  && id/6 < page){ return <Link key={id + 1} to={"/productdetails/"+x.permalink}> <ProductCard product={x} />  </Link>} })
                 :<></>
             }
         </div>

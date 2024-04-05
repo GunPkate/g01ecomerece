@@ -43,15 +43,17 @@ function AppContent() {
     ]
   },
   {
-    path: '/productdetails',
+    path: '/productdetails/',
     element: 
     <>
-      <Navbar/>
-        <div  className={ contentBodyStyle }>
-          <ProductDetails/>
-        </div>
-      <Footer/>
-    </>
+      <ProductDetails/>
+    </>,
+    children:[{
+      path: "/productdetails/:permalink",
+      element: <>
+
+      </>
+    }]
   },
   {
     path: '/mycart',
