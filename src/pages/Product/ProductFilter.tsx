@@ -22,9 +22,9 @@ export default function ProductFilter(){
             </select>
         </div>
 
-        <div className='flex justify-center'>{[...Array(Math.ceil(dataDisplay.length/6))].map((x,index)=> 
+        <div className='flex justify-center'>{[...Array(Math.ceil(dataDisplay.length/6))].map((index)=> 
         <div key={index}>
-            <button onClick={(e)=>{setPage(index+1)}}> {index+1} </button> &nbsp; 
+            <button onClick={()=>{setPage(index+1)}}> {index+1} </button> &nbsp; 
         </div>
         )}
         </div>

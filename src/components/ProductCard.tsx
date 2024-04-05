@@ -7,7 +7,7 @@ export default function ProductCard({product}: {product: any}){
             <div>{product.description}</div>
 
             <div className="inline-flex">
-            {[...Array(Math.ceil(product.ratings))].map((x,index)=> 
+            {[...Array(Math.ceil(product.ratings))].map((index)=> 
                 [...Array(Math.round(product.ratings))].length === index ?
                 <span key={index}> { Math.round( (product.ratings.toFixed(3)- index )*100)/100 }
                 &nbsp; </span> 
