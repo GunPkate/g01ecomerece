@@ -25,7 +25,10 @@ export default function ProductDetails(){
 
     function handleVariant(e: MouseEvent<HTMLButtonElement, MouseEvent>, data:any,type: string) {
         e.preventDefault()
-        
+        if(varaint.length === 1 && color.length > 0 && size.length > 0){
+            resetSelect()
+        }
+
         let resetFilter = dataDisplay[0].variants 
         let firstFilter = []
         filterItem.length > 0 ? firstFilter = filterItem  : firstFilter = resetFilter
@@ -35,12 +38,12 @@ export default function ProductDetails(){
         if(type==='size'){
             setSize(data)
             firstFilter = firstFilter.filter(x=>x.size === data)
-            setValidate(firstFilter.map(x=>x.size).join())
+            // setValidate(firstFilter.map(x=>x.size).join())
         }
         else if(type==='color'){
             setColor(data)
             firstFilter = firstFilter.filter(x=>x.colorCode === data)
-            setValidate(firstFilter.map(x=>x.color).join())
+            // setValidate(firstFilter.map(x=>x.color).join())
         }
         
 
@@ -49,12 +52,15 @@ export default function ProductDetails(){
             console.log("First")
             console.log(firstFilter)
             setFilterItem([])
+            setValidate( " Color: "+ firstFilter[0].color + " Size: " + firstFilter[0].size + " In Stock: " + firstFilter[0].remains)
         }
 
         else{
             console.log("second")
+            console.log(filterItem)
+            console.log(firstFilter)
                 setFilterItem(firstFilter)
-                
+                setValidate('')
                 let secondFilter = []
                 if(type==='size' && color.length > 0 && filterItem.length > 0){
                     secondFilter = firstFilter.filter(x=>x.colorCode)
@@ -67,8 +73,23 @@ export default function ProductDetails(){
             }
         }
 
+        function resetSelect(){
+            setFilterItem([])
+            setColor('')
+            setSize('')
+        }
 
-        // console.log(varaint)
+
+        console.log(varaint)
+    }
+
+    function handleQty(e: MouseEvent<HTMLButtonElement, MouseEvent>){
+        e.preventDefault()
+        console.log(varaint)
+        let tempData = varaint
+        tempData[0].remains = e.target.value;
+        console.log(tempData)
+        setVariant(tempData)
     }
     
     function getColor(data: any){
@@ -86,8 +107,11 @@ export default function ProductDetails(){
 
         let resultSize: unknown[] = []
         const tempDataSize = [...new Set(data.map((x: { size: any })=> x.size )) ]
-        tempDataSize.forEach(x=>
-            resultSize.push( { "size": x } )
+        tempDataSize.forEach(x=>{
+            if(x.length >0){
+                resultSize.push( { "size": x } )
+            }
+        }
         )
 
         const btnSize = "w-[100px] h-[82px] "
@@ -99,7 +123,7 @@ export default function ProductDetails(){
                 {/* {resultColorCode.map(x=><button style={{background: `${x.colorCode}`}}>1</button>)} */}
                 {resultColorCode.map(x=>
                     <div className="">
-                        <button className= {btnSize} onClick={(e)=>{handleVariant(e,x.colorCode,'color')}}>
+                        <button className= {x.colorCode === color ? btnSize + "border-2 border-rose-400": btnSize } onClick={(e)=>{handleVariant(e,x.colorCode,'color')}}>
                             <div className={bgColor} style={{background: `${x.colorCode}`}} ></div>
                         </button>
                     </div>
@@ -114,7 +138,7 @@ export default function ProductDetails(){
                 {/* {resultColorCode.map(x=><button style={{background: `${x.colorCode}`}}>1</button>)} */}
                 {resultSize.map(x=>
                     <div className="">
-                        <button className= {btnSize} onClick={(e)=>{handleVariant(e,x.size,'size')}}>
+                        <button className= {x.size === size ? btnSize + "border-2 border-rose-400" : btnSize + "border-2 border-[#eeeeee]"} onClick={(e)=>{handleVariant(e,x.size,'size')}}>
                             {x.size}
                         </button>
                     </div>
@@ -151,7 +175,7 @@ export default function ProductDetails(){
             <div className="w-full pl-5">
                 {dataDisplay.length > 0 ? dataDisplay.map((x,index)=> 
                     <div key={index}>
-                        <div>{x.name} {color} {size} </div>  
+                        <div className="text-2xl">{x.name} {color} {size} </div>  
                         <div>{x.description}</div> 
                         <div className={ x.price > x.promotionalPrice ? discountStyle + "w-[277px] ":""}>THB: {x.promotionalPrice}</div> 
                         <div className={ x.price > x.promotionalPrice ? "opacity-1 line-through":"opacity-0"}>From THB: {x.price}</div> 
@@ -171,10 +195,29 @@ export default function ProductDetails(){
                     
                     : <></>
                 }
+
+                <div>
+                    <div>
+                        Qty
+                    </div>
+                    <select name="qty" className="w-[158px] w-[82px]" onChange={(e)=>{handleQty(e)}} id="">
+                        {   
+                            [...Array(10)].map((x,index) => <option>{index+1}</option>)
+                        }
+                    </select>
+                </div>
+
+                {/* Add Section */}
+                <div className="text-red-600"> {validate} </div>
+                <button className="bg-black w-full text-white">
+                    <div>
+                        Add to Cart
+                    </div>
+                </button>
             </div>
 
-            {/* Add Section */}
-            <div>Validate {validate}</div>
+
+
         </div>
         {/* <Outlet/> */}
     </div>
