@@ -29,8 +29,8 @@ export default function Navbar(){
     return (
     <>
         <div className="bg-black h-[56px] lg:h-[60px] text-white ">
-            <div className="flex flex-inline justify-between ">
-                <div>
+            <div className="flex flex-inline justify-between mx-[160px]  ">
+                <div className="my-auto">
                     <span className="flex inline-flex ml-2">
                         <Link to={`/`} >
                             Home
@@ -46,7 +46,7 @@ export default function Navbar(){
 
                 </div>
 
-                <div className="flex">
+                <div className="flex mt-3 relative">
                     {/* {userTokens[0].email.length } */}
                     {userTokens[0].email.length  === 0  ?
                         <><Link to={"/login"}>
@@ -65,9 +65,9 @@ export default function Navbar(){
                     <span>
                         <Link to={"/mycart"}>
                             <div dangerouslySetInnerHTML={{__html: cart}}></div>
-                            <span>{myCartItems.length}</span>
                         </Link>
                     </span>
+                    <span className="absolute right-3 text-red-500">{myCartItems.length}</span>
                 </div>
             </div>
         </div>
