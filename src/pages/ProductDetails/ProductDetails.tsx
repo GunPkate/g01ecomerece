@@ -4,6 +4,7 @@ import Footer from "../../components/Footer"
 import Navbar from "../../components/Navbar"
 import productByPermarlink from '../../skuData/productByPermarlink.json'
 import GenStar from "../../components/GenStar"
+import { MouseEvent, useState } from "react"
 
 export default function ProductDetails(){
     
@@ -11,13 +12,63 @@ export default function ProductDetails(){
 
     const mainImage = 'w-[780px] h-[780px] '
     const sideImage = 'w-[172.21px] h-[172.21px] '
-    const discountStyle = "bg-red-500 text-white text-2xl "
-    
+    const discountStyle = "bg-red-500 text-white text-2xl p-2 "
+    const [varaint,setVariant] = useState([])
+    const [filterItem,setFilterItem] = useState([])
+    const [color,setColor] = useState('')
+    const [size,setSize] = useState('')
+    const [validate,setValidate] = useState('')
     const {permalink} = useParams();
     // console.log(permalink)
     let dataDisplay = productByPermarlink.filter(x=>x.permalink==permalink)
     // console.log(JSON.stringify(dataDisplay) )
 
+    function handleVariant(e: MouseEvent<HTMLButtonElement, MouseEvent>, data:any,type: string) {
+        e.preventDefault()
+        
+        let resetFilter = dataDisplay[0].variants 
+        let firstFilter = resetFilter
+
+        console.log(type,data,)
+
+        if(type==='size'){
+            setSize(data)
+            firstFilter = firstFilter.filter(x=>x.size === data)
+            setValidate(firstFilter.map(x=>x.size).join())
+        }
+        else if(type==='color'){
+            setColor(data)
+            firstFilter = firstFilter.filter(x=>x.colorCode === data)
+            setValidate(firstFilter.map(x=>x.color).join())
+        }
+        
+
+        if(firstFilter.length === 1){
+            setVariant(firstFilter)
+            console.log("First")
+            console.log(firstFilter)
+        }
+
+        else{
+            console.log("second")
+                setFilterItem(firstFilter)
+                
+                let secondFilter = []
+                if(type==='size' && color.length > 0 && filterItem.length > 0){
+                    secondFilter = firstFilter.filter(x=>x.colorCode)
+                }else  if(type==='color' && size.length > 0 && filterItem.length > 0){
+                    secondFilter = firstFilter.filter(x=>x.colorCode)
+                }
+            console.log(secondFilter)
+            if(secondFilter.length === 1 ){
+                setVariant(secondFilter)
+            }
+        }
+
+
+        // console.log(varaint)
+    }
+    
     function getColor(data: any){
         let resultColor: unknown[] = []
         const tempDataColor = [...new Set(data.map((x: { color: any })=> x.color )) ]
@@ -31,6 +82,12 @@ export default function ProductDetails(){
             resultColorCode.push( { "colorCode": x } )
         )
 
+        let resultSize: unknown[] = []
+        const tempDataSize = [...new Set(data.map((x: { size: any })=> x.size )) ]
+        tempDataSize.forEach(x=>
+            resultSize.push( { "size": x } )
+        )
+
         const btnSize = "w-[100px] h-[82px] "
         const bgColor = "w-[54px] h-[54px] ml-auto mr-auto "
 
@@ -40,7 +97,7 @@ export default function ProductDetails(){
                 {/* {resultColorCode.map(x=><button style={{background: `${x.colorCode}`}}>1</button>)} */}
                 {resultColorCode.map(x=>
                     <div className="">
-                        <button className= {btnSize}>
+                        <button className= {btnSize} onClick={(e)=>{handleVariant(e,x.colorCode,'color')}}>
                             <div className={bgColor} style={{background: `${x.colorCode}`}} ></div>
                         </button>
                     </div>
@@ -49,6 +106,17 @@ export default function ProductDetails(){
 
             <div className="flex text-center">
                 {resultColor.map(x=><div className= {btnSize}>{x.color}</div>)}
+            </div>
+
+            <div className="flex ">
+                {/* {resultColorCode.map(x=><button style={{background: `${x.colorCode}`}}>1</button>)} */}
+                {resultSize.map(x=>
+                    <div className="">
+                        <button className= {btnSize} onClick={(e)=>{handleVariant(e,x.size,'size')}}>
+                            {x.size}
+                        </button>
+                    </div>
+                )}
             </div>
         </div>
     }
@@ -59,6 +127,7 @@ export default function ProductDetails(){
         <div  className={ contentBodyStyle }>
 
         <div className="mx-[160px] mt-[110px] lg:flex justify-between">
+            {/* Image Section */}
             <div className="relative w-[780px]">
                 <div>
                     <div className={"absolute right-10 top-10 " + discountStyle}>Sale</div>
@@ -76,10 +145,11 @@ export default function ProductDetails(){
                 </div>
             </div>
 
+            {/* Item Section */}
             <div className="w-full pl-5">
                 {dataDisplay.length > 0 ? dataDisplay.map((x,index)=> 
                     <div key={index}>
-                        <div>{x.name}</div> 
+                        <div>{x.name} {color} {size} </div>  
                         <div>{x.description}</div> 
                         <div className={ x.price > x.promotionalPrice ? discountStyle + "w-[277px] ":""}>THB: {x.promotionalPrice}</div> 
                         <div className={ x.price > x.promotionalPrice ? "opacity-1 line-through":"opacity-0"}>From THB: {x.price}</div> 
@@ -100,6 +170,9 @@ export default function ProductDetails(){
                     : <></>
                 }
             </div>
+
+            {/* Add Section */}
+            <div>Validate {validate}</div>
         </div>
         {/* <Outlet/> */}
     </div>

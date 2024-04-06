@@ -4,7 +4,7 @@ export default function ProductCard({product,width,height}: {product: any, width
 
 
     return <>
-        <div className={`max-w-[${width}] max-h-[${height}]`}>
+        <div className={`w-[${width}] h-[${height}]`}>
             <img src={product.imageUrls[0]} className={`object-fit w-[${width}] max-h-[$${height}]`} alt="" />
             <div>{product.name}</div>
             <div>{product.description}</div>
