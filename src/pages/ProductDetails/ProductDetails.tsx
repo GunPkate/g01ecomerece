@@ -27,7 +27,8 @@ export default function ProductDetails(){
         e.preventDefault()
         
         let resetFilter = dataDisplay[0].variants 
-        let firstFilter = resetFilter
+        let firstFilter = []
+        filterItem.length > 0 ? firstFilter = filterItem  : firstFilter = resetFilter
 
         console.log(type,data,)
 
@@ -47,6 +48,7 @@ export default function ProductDetails(){
             setVariant(firstFilter)
             console.log("First")
             console.log(firstFilter)
+            setFilterItem([])
         }
 
         else{
