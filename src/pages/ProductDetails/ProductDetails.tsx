@@ -13,11 +13,18 @@ export default function ProductDetails(){
     const mainImage = 'w-[780px] h-[780px] '
     const sideImage = 'w-[172.21px] h-[172.21px] '
     const discountStyle = "bg-red-500 text-white text-2xl p-2 "
+    //Filter only
     const [varaint,setVariant] = useState([])
     const [filterItem,setFilterItem] = useState([])
+    
     const [color,setColor] = useState('')
     const [size,setSize] = useState('')
+    const [qty,setQty] = useState(0)
     const [validate,setValidate] = useState('')
+    //Filter only
+
+    const [uniqueItem,setUniqueItem] = useState([])
+    
     const {permalink} = useParams();
     // console.log(permalink)
     let dataDisplay = productByPermarlink.filter(x=>x.permalink==permalink)
@@ -77,6 +84,7 @@ export default function ProductDetails(){
             setFilterItem([])
             setColor('')
             setSize('')
+            setUniqueItem([])
         }
 
 
@@ -89,7 +97,8 @@ export default function ProductDetails(){
         let tempData = varaint
         tempData[0].remains = e.target.value;
         console.log(tempData)
-        setVariant(tempData)
+        setQty(e.target.value)
+        setUniqueItem(tempData)
     }
     
     function getColor(data: any){
@@ -147,6 +156,13 @@ export default function ProductDetails(){
         </div>
     }
 
+    
+    function showModal(){
+        console.log(uniqueItem)
+        return <div className="w-screen h-screen">
+            123
+        </div>
+    }
 
     return (<>
     <Navbar/>
@@ -209,11 +225,18 @@ export default function ProductDetails(){
 
                 {/* Add Section */}
                 <div className="text-red-600"> {validate} </div>
-                <button className="bg-black w-full text-white">
-                    <div>
-                        Add to Cart
-                    </div>
-                </button>
+                {qty !==0 && color.length >0 && size.length >0 ?
+                    <button className="bg-black w-full text-white">
+                        <div onClick={(e)=>{showModal(e)}}>
+                            Add to Cart
+                        </div>
+                    </button>
+                    :<button className="bg-[#E1E1E1] w-full text-white" disabled>
+                        <div>
+                            Add to Cart
+                        </div>
+                    </button>
+                }
             </div>
 
 
