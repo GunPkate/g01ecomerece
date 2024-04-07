@@ -225,7 +225,7 @@ export default function ProductDetails(){
 
                 {/* Add Section */}
                 <div className="text-red-600"> {validate} </div>
-                {qty !==0 && color.length >0 && size.length >0 ?
+                {qty !==0 && color.length >0 && size.length >0 && uniqueItem.length > 0?
                     <button className="bg-black w-full text-white">
                         <div onClick={(e)=>{showModal(e)}}>
                             Add to Cart
