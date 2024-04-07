@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar"
 import productByPermarlink from '../../skuData/productByPermarlink.json'
 import GenStar from "../../components/GenStar"
 import { MouseEvent, useState } from "react"
+import Modal from "../../components/Modal"
 
 export default function ProductDetails(){
     
@@ -24,7 +25,8 @@ export default function ProductDetails(){
     //Filter only
 
     const [uniqueItem,setUniqueItem] = useState([])
-    
+    const [displayModal,setDisplayModal] = useState(false)
+
     const {permalink} = useParams();
     // console.log(permalink)
     let dataDisplay = productByPermarlink.filter(x=>x.permalink==permalink)
@@ -157,17 +159,15 @@ export default function ProductDetails(){
     }
 
     
-    function showModal(){
+    const handleModal = () => {
+        setDisplayModal(!displayModal)
         console.log(uniqueItem)
-        return <div className="w-screen h-screen">
-            123
-        </div>
     }
+    
 
     return (<>
     <Navbar/>
         <div  className={ contentBodyStyle }>
-
         <div className="mx-[160px] mt-[110px] lg:flex justify-between">
             {/* Image Section */}
             <div className="relative w-[780px]">
@@ -227,7 +227,7 @@ export default function ProductDetails(){
                 <div className="text-red-600"> {validate} </div>
                 {qty !==0 && color.length >0 && size.length >0 && uniqueItem.length > 0?
                     <button className="bg-black w-full text-white">
-                        <div onClick={(e)=>{showModal(e)}}>
+                        <div onClick={(e)=>{handleModal(e)}}>
                             Add to Cart
                         </div>
                     </button>
@@ -245,5 +245,7 @@ export default function ProductDetails(){
         {/* <Outlet/> */}
     </div>
     <Footer/>
+
+    <Modal display={displayModal} onClose={()=>{setDisplayModal(false)}}/>
     </>)
 }
