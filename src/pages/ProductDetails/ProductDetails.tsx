@@ -24,7 +24,17 @@ export default function ProductDetails(){
     const [validate,setValidate] = useState('')
     //Filter only
 
-    const [uniqueItem,setUniqueItem] = useState([])
+    interface UniqueData {
+        skuCode: string,
+        color: string,
+        size: string,
+        remains: number,
+        colorCode: string 
+    } 
+    const uniqueData: UniqueData[] = [{"skuCode":"","color":"","size":"","remains":0,"colorCode":""}]
+
+    const [uniqueItem,setUniqueItem] = useState(uniqueData)
+
     const [displayModal,setDisplayModal] = useState(false)
 
     const {permalink} = useParams();
@@ -39,7 +49,7 @@ export default function ProductDetails(){
         }
 
         let resetFilter = dataDisplay[0].variants 
-        let firstFilter = []
+        let firstFilter: UniqueData[] = []
         filterItem.length > 0 ? firstFilter = filterItem  : firstFilter = resetFilter
 
         console.log(type,data,)
@@ -70,7 +80,7 @@ export default function ProductDetails(){
             console.log(firstFilter)
                 setFilterItem(firstFilter)
                 setValidate('')
-                let secondFilter = []
+                let secondFilter: UniqueData[] = []
                 if(type==='size' && color.length > 0 && filterItem.length > 0){
                     secondFilter = firstFilter.filter(x=>x.colorCode)
                 }else  if(type==='color' && size.length > 0 && filterItem.length > 0){
@@ -225,7 +235,7 @@ export default function ProductDetails(){
 
                 {/* Add Section */}
                 <div className="text-red-600"> {validate} </div>
-                {qty !==0 && color.length >0 && size.length >0 && uniqueItem.length > 0?
+                {qty !==0 && color.length >0 && uniqueItem.length > 0?
                     <button className="bg-black w-full text-white">
                         <div onClick={(e)=>{handleModal(e)}}>
                             Add to Cart
@@ -246,6 +256,6 @@ export default function ProductDetails(){
     </div>
     <Footer/>
 
-    <Modal display={displayModal} onClose={()=>{setDisplayModal(false)}}/>
+    <Modal display={displayModal} onClose={()=>{setDisplayModal(false)}} uniqueItem={uniqueItem} dataDisplay={dataDisplay}/>
     </>)
 }

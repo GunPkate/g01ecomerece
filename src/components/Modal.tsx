@@ -1,44 +1,50 @@
 import { useState } from "react"
 
+export default function Modal ({display = false ,onClose, dataDisplay, uniqueItem }: {display: boolean, onClose: any, dataDisplay:any, uniqueItem:any}){
 
-export default function Modal ({display = false ,onClose}: {display: boolean, onClose: any}){
 
+    console.log(JSON.stringify(uniqueItem))
+    const buttonStyle = "w-[49%] border-2 border-[#eeeeee] "
 
     return <div className={display === true ? "visible" : "invisible"}>
         <div className="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
-        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+            <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+                <div className="bg-white rounded-xl w-[46.9%]  mx-auto mt-60">
+                    <div>
 
-        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-            <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                        <div className="p-6 pb-0 flex justify-between">
+                            <div>
+                                Item added to your cart
+                            </div>
+                            <div>
+                                <button onClick={()=>{onClose(false)}}>
+                                X
+                                </button>
+                            </div>
+                        </div>
 
-            <div className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                <div className="sm:flex sm:items-start">
+                        <div className="flex m-6">
+                            <img src={dataDisplay[0].imageUrls[0]} className="object-fit w-[160px] h-[160px]" alt="" />
 
-                    <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                    <h3 className="text-base font-semibold leading-6 text-gray-900" id="modal-title">Deactivate account</h3>
-                    <div className="mt-2">
-                        <p className="text-sm text-gray-500">Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.</p>
+                            <div className="flex justify-between w-full my-auto ml-[40px]">
+                                <div> {dataDisplay[0].name} 
+                                    <div> QTY: {uniqueItem[0].remains}  </div>
+                                </div>
+                                <div> {dataDisplay[0].price * uniqueItem[0].remains} THB </div>
+                            </div>
+                        </div>
+
+                        <div className="flex justify-between w-full p-6 pt-0">
+                            <button className={buttonStyle + "bg-black text-white "}>View Cart</button>
+                            <button className={buttonStyle }>Continue Shopping</button>
+                        </div>
                     </div>
-                    </div>
-                    <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-                    
-                    <button onClick={()=>{onClose(false)}}>
-                    <svg className="h-6 w-6 text-red-600" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-                    </svg>
-                    </button>
-                    </div>
-                </div>
-                </div>
-                <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                <button type="button" className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto">Deactivate</button>
-                <button type="button" className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto">Cancel</button>
+
                 </div>
             </div>
-            </div>
-        </div>
+
         </div>
 
     </div>
