@@ -1,5 +1,3 @@
-import { useState } from "react"
-
 export default function Modal ({display = false ,onClose, dataDisplay, uniqueItem }: {display: boolean, onClose: any, dataDisplay:any, uniqueItem:any}){
 
 

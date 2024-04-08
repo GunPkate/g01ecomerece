@@ -15,8 +15,8 @@ export default function ProductDetails(){
     const sideImage = 'w-[172.21px] h-[172.21px] '
     const discountStyle = "bg-red-500 text-white text-2xl p-2 "
     //Filter only
-    const [varaint,setVariant] = useState([])
-    const [filterItem,setFilterItem] = useState([])
+    const [varaint,setVariant] = useState<Array<UniqueData>>([])
+    const [filterItem,setFilterItem] = useState<Array<UniqueData>>([])
     
     const [color,setColor] = useState('')
     const [size,setSize] = useState('')
@@ -48,7 +48,7 @@ export default function ProductDetails(){
             resetSelect()
         }
 
-        let resetFilter = dataDisplay[0].variants 
+        let resetFilter: UniqueData[] = dataDisplay[0].variants 
         let firstFilter: UniqueData[] = []
         filterItem.length > 0 ? firstFilter = filterItem  : firstFilter = resetFilter
 
@@ -113,7 +113,7 @@ export default function ProductDetails(){
         setUniqueItem(tempData)
     }
     
-    function getColor(data: any){
+    function getColor(data: UniqueData[]){
         let resultColor: unknown[] = []
         const tempDataColor = [...new Set(data.map((x: { color: any })=> x.color )) ]
         tempDataColor.forEach(x=>
@@ -169,7 +169,8 @@ export default function ProductDetails(){
     }
 
     
-    const handleModal = () => {
+    const handleModal = (e) => {
+        e.preventDefault()
         setDisplayModal(!displayModal)
         console.log(uniqueItem)
     }
