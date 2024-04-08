@@ -1,7 +1,5 @@
 export default function Modal ({display = false ,onClose, dataDisplay, uniqueItem }: {display: boolean, onClose: any, dataDisplay:any, uniqueItem:any}){
 
-
-    console.log(JSON.stringify(uniqueItem))
     const buttonStyle = "w-[49%] border-2 border-[#eeeeee] "
 
     return <div className={display === true ? "visible" : "invisible"}>

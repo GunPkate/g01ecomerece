@@ -39,10 +39,12 @@ export default function ProductDetails(){
 
     const {permalink} = useParams();
     // console.log(permalink)
+    type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
+    
     let dataDisplay = productByPermarlink.filter(x=>x.permalink==permalink)
     // console.log(JSON.stringify(dataDisplay) )
 
-    function handleVariant(e: MouseEvent<HTMLButtonElement, MouseEvent>, data:any,type: string) {
+    function handleVariant(e: ButtonEvent, data:any,type: string) {
         e.preventDefault()
         if(varaint.length === 1 && color.length > 0 && size.length > 0){
             resetSelect()
@@ -52,7 +54,6 @@ export default function ProductDetails(){
         let firstFilter: UniqueData[] = []
         filterItem.length > 0 ? firstFilter = filterItem  : firstFilter = resetFilter
 
-        console.log(type,data,)
 
         if(type==='size'){
             setSize(data)
@@ -68,16 +69,13 @@ export default function ProductDetails(){
 
         if(firstFilter.length === 1){
             setVariant(firstFilter)
-            console.log("First")
-            console.log(firstFilter)
+
             setFilterItem([])
             setValidate( " Color: "+ firstFilter[0].color + " Size: " + firstFilter[0].size + " In Stock: " + firstFilter[0].remains)
         }
 
         else{
-            console.log("second")
-            console.log(filterItem)
-            console.log(firstFilter)
+
                 setFilterItem(firstFilter)
                 setValidate('')
                 let secondFilter: UniqueData[] = []
@@ -86,7 +84,7 @@ export default function ProductDetails(){
                 }else  if(type==='color' && size.length > 0 && filterItem.length > 0){
                     secondFilter = firstFilter.filter(x=>x.colorCode)
                 }
-            console.log(secondFilter)
+
             if(secondFilter.length === 1 ){
                 setVariant(secondFilter)
             }
@@ -100,12 +98,10 @@ export default function ProductDetails(){
         }
 
 
-        console.log(varaint)
     }
 
-    function handleQty(e: MouseEvent<HTMLButtonElement, MouseEvent>){
+    function handleQty(e: ButtonEvent ){
         e.preventDefault()
-        console.log(varaint)
         let tempData = varaint
         tempData[0].remains = e.target.value;
         console.log(tempData)
@@ -114,19 +110,32 @@ export default function ProductDetails(){
     }
     
     function getColor(data: UniqueData[]){
-        let resultColor: unknown[] = []
+        interface colorSet {
+            color: string
+        }
+
+        let resultColor: colorSet[] = []
         const tempDataColor = [...new Set(data.map((x: { color: any })=> x.color )) ]
         tempDataColor.forEach(x=>
             resultColor.push( { "color": x } )
         )
+
+        interface colorCodeSet {
+            colorCode: string
+        }
         
-        let resultColorCode: unknown[] = []
+        let resultColorCode: colorCodeSet[] = []
         const tempDataColorCode = [...new Set(data.map((x: { colorCode: any })=> x.colorCode )) ]
         tempDataColorCode.forEach(x=>
             resultColorCode.push( { "colorCode": x } )
         )
 
-        let resultSize: unknown[] = []
+        interface sizeSet {
+            size: string
+        }
+        
+
+        let resultSize: sizeSet[] = []
         const tempDataSize = [...new Set(data.map((x: { size: any })=> x.size )) ]
         tempDataSize.forEach(x=>{
             if(x.length >0){
@@ -169,7 +178,7 @@ export default function ProductDetails(){
     }
 
     
-    const handleModal = (e) => {
+    const handleModal = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
         e.preventDefault()
         setDisplayModal(!displayModal)
         console.log(uniqueItem)
