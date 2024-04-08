@@ -6,6 +6,7 @@ import productByPermarlink from '../../skuData/productByPermarlink.json'
 import GenStar from "../../components/GenStar"
 import { ChangeEvent, MouseEvent, useState } from "react"
 import Modal from "../../components/Modal"
+import { ProductByPermarlink, VariantType, colorCodeSet, colorSet, sizeSet } from "../../types/ProductDetails"
 
 export default function ProductDetails(){
     
@@ -15,8 +16,8 @@ export default function ProductDetails(){
     const sideImage = 'w-[172.21px] h-[172.21px] '
     const discountStyle = "bg-red-500 text-white text-2xl p-2 "
     //Filter only
-    const [varaint,setVariant] = useState<Array<UniqueData>>([])
-    const [filterItem,setFilterItem] = useState<Array<UniqueData>>([])
+    const [varaint,setVariant] = useState<Array<VariantType>>([])
+    const [filterItem,setFilterItem] = useState<Array<VariantType>>([])
     
     const [color,setColor] = useState('')
     const [size,setSize] = useState('')
@@ -24,14 +25,8 @@ export default function ProductDetails(){
     const [validate,setValidate] = useState('')
     //Filter only
 
-    interface UniqueData {
-        skuCode: string,
-        color: string,
-        size: string,
-        remains: number,
-        colorCode: string 
-    } 
-    const uniqueData: UniqueData[] = [{"skuCode":"","color":"","size":"","remains":0,"colorCode":""}]
+ 
+    const uniqueData: VariantType[] = [{"skuCode":"","color":"","size":"","remains":0,"colorCode":""}]
 
     const [uniqueItem,setUniqueItem] = useState(uniqueData)
 
@@ -41,7 +36,7 @@ export default function ProductDetails(){
     // console.log(permalink)
     type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
     
-    let dataDisplay = productByPermarlink.filter(x=>x.permalink==permalink)
+    let dataDisplay: ProductByPermarlink[] = productByPermarlink.filter(x=>x.permalink==permalink)
     // console.log(JSON.stringify(dataDisplay) )
 
     function handleVariant(e: ButtonEvent, data:any,type: string) {
@@ -50,8 +45,8 @@ export default function ProductDetails(){
             resetSelect()
         }
 
-        let resetFilter: UniqueData[] = dataDisplay[0].variants 
-        let firstFilter: UniqueData[] = []
+        let resetFilter: VariantType[] = dataDisplay[0].variants 
+        let firstFilter: VariantType[] = []
         filterItem.length > 0 ? firstFilter = filterItem  : firstFilter = resetFilter
 
 
@@ -78,7 +73,7 @@ export default function ProductDetails(){
 
                 setFilterItem(firstFilter)
                 setValidate('')
-                let secondFilter: UniqueData[] = []
+                let secondFilter: VariantType[] = []
                 if(type==='size' && color.length > 0 && filterItem.length > 0){
                     secondFilter = firstFilter.filter(x=>x.colorCode)
                 }else  if(type==='color' && size.length > 0 && filterItem.length > 0){
@@ -110,31 +105,19 @@ export default function ProductDetails(){
         setUniqueItem(tempData)
     }
     
-    function getColor(data: UniqueData[]){
-        interface colorSet {
-            color: string
-        }
+    function getColor(data: VariantType[]){
 
         let resultColor: colorSet[] = []
         const tempDataColor = [...new Set(data.map((x: { color: any })=> x.color )) ]
         tempDataColor.forEach(x=>
             resultColor.push( { "color": x } )
         )
-
-        interface colorCodeSet {
-            colorCode: string
-        }
-        
+      
         let resultColorCode: colorCodeSet[] = []
         const tempDataColorCode = [...new Set(data.map((x: { colorCode: any })=> x.colorCode )) ]
         tempDataColorCode.forEach(x=>
             resultColorCode.push( { "colorCode": x } )
-        )
-
-        interface sizeSet {
-            size: string
-        }
-        
+        )     
 
         let resultSize: sizeSet[] = []
         const tempDataSize = [...new Set(data.map((x: { size: any })=> x.size )) ]
