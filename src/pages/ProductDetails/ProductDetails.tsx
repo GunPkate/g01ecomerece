@@ -12,8 +12,10 @@ export default function ProductDetails(){
     
     const contentBodyStyle = 'min-h-[90vh]'
 
-    const mainImage = 'w-[780px] h-[780px] '
-    const sideImage = 'w-[172.21px] h-[172.21px] '
+    const mainImageSize = '40.6vw'
+    const sideImageSize = '172.21px'
+    const mainImage = `w-[${mainImageSize}] h-[${mainImageSize}] `
+    const sideImage = `w-[${sideImageSize}] h-[${sideImageSize}] `
     const discountStyle = "bg-red-500 text-white text-2xl p-2 "
     //Filter only
     const [varaint,setVariant] = useState<Array<VariantType>>([])
@@ -174,12 +176,12 @@ export default function ProductDetails(){
         <div  className={ contentBodyStyle }>
         <div className="mx-[160px] mt-[110px] lg:flex justify-between">
             {/* Image Section */}
-            <div className="relative w-[780px]">
+            <div className="relative w-full">
                 <div>
                     <div className={"absolute right-10 top-10 " + discountStyle}>Sale</div>
                     { dataDisplay.length > 0 ? <img src={dataDisplay[0].imageUrls[0]} alt="" className={mainImage} />: <></>}
                 </div>
-                <div className="flex justify-between w-[780px]">
+                <div className={`flex justify-between w-[${mainImageSize}]`}>
                     { dataDisplay.length > 0 ? dataDisplay.map((x)=> x.imageUrls.map((y,index)=> 
                         {
                             if(index !== 0){
