@@ -4,7 +4,7 @@ import Footer from "../../components/Footer"
 import Navbar from "../../components/Navbar"
 import productByPermarlink from '../../skuData/productByPermarlink.json'
 import GenStar from "../../components/GenStar"
-import { MouseEvent, useState } from "react"
+import { ChangeEvent, MouseEvent, useState } from "react"
 import Modal from "../../components/Modal"
 
 export default function ProductDetails(){
@@ -100,12 +100,13 @@ export default function ProductDetails(){
 
     }
 
-    function handleQty(e: ButtonEvent ){
+    function handleQty(e: ChangeEvent ){
         e.preventDefault()
         let tempData = varaint
-        tempData[0].remains = e.target.value;
+        const getValue = (e.target as HTMLInputElement).value;
+        tempData[0].remains = parseInt(getValue);
         console.log(tempData)
-        setQty(e.target.value)
+        setQty(parseInt(getValue))
         setUniqueItem(tempData)
     }
     
