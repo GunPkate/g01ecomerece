@@ -1,4 +1,4 @@
-export default function Modal ({display = false ,onClose, dataDisplay, uniqueItem }: {display: boolean, onClose: any, dataDisplay:any, uniqueItem:any}){
+export default function Modal ({display = false ,onClose, dataDisplay, qty }: {display: boolean, onClose: any, dataDisplay:any,  qty: number}){
 
     const buttonStyle = "w-[49%] border-2 border-[#eeeeee] "
 
@@ -26,9 +26,9 @@ export default function Modal ({display = false ,onClose, dataDisplay, uniqueIte
 
                             <div className="flex justify-between w-full my-auto ml-[40px]">
                                 <div> {dataDisplay[0].name} 
-                                    <div> QTY: {uniqueItem[0].remains}  </div>
+                                    <div> QTY: {qty}  </div>
                                 </div>
-                                <div> {dataDisplay[0].price * uniqueItem[0].remains} THB </div>
+                                <div> {dataDisplay[0].price * qty} THB </div>
                             </div>
                         </div>
 

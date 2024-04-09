@@ -18,11 +18,12 @@ export default function MyCart(){
     }
 
     function ItemCard ( { item}:{  item: MyCartItem} ){
+        console.log("item x",item)
         return <>
             <div className="mt-[24px] mb-[24px] max-h-[209px] max-w-[896px]">
                 <div className=" lg:flex block">
 
-                    <img src="https://picsum.photos/300/300.webp" className="w-[209px] h-[209px] object-cover" alt="" />
+                    <img src={item.img} className="w-[209px] h-[209px] object-cover" alt="" />
 
                     <div className="lg:ml-[40px] w-full ">
                         <div className="w-full h-[40px] flex justify-between">

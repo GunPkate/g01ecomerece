@@ -30,9 +30,6 @@ export default function ProductDetails(){
     //Filter only
 
     const { myCartItems } = useContext(MyCartItemContext) as MyCartItemContextType;
-    const uniqueData: VariantType[] = [{"skuCode":"","color":"","size":"","remains":0,"colorCode":""}]
-
-    const [uniqueItem,setUniqueItem] = useState(uniqueData)
 
     const [displayModal,setDisplayModal] = useState(false)
 
@@ -93,7 +90,7 @@ export default function ProductDetails(){
             setFilterItem([])
             setColor('')
             setSize('')
-            setUniqueItem([])
+            setVariant([])
         }
 
 
@@ -101,12 +98,11 @@ export default function ProductDetails(){
 
     function handleQty(e: ChangeEvent ){
         e.preventDefault()
-        let tempData = varaint
+        // let tempData = varaint
         const getValue = (e.target as HTMLInputElement).value;
-        tempData[0].remains = parseInt(getValue);
-        console.log(tempData)
+
+        // console.log(tempData)
         setQty(parseInt(getValue))
-        setUniqueItem(tempData)
     }
     
     function getColor(data: VariantType[]){
@@ -172,14 +168,15 @@ export default function ProductDetails(){
         
         let contextBody = InitailObjMycart
         contextBody.name = dataDisplay[0].name
-        contextBody.color = uniqueData[0].color
-        contextBody.size = uniqueData[0].size
-        contextBody.quantity = uniqueData[0].remains
-        contextBody.skuCode = uniqueData[0].skuCode
+        contextBody.color = varaint[0].color
+        contextBody.size = varaint[0].size
+        contextBody.quantity = qty
+        contextBody.skuCode = varaint[0].skuCode
         contextBody.price = dataDisplay[0].price 
         contextBody.img = dataDisplay[0].imageUrls[0]
         contextBody.variants = dataDisplay[0].variants
 
+        console.log("uniqueData",varaint)
         console.log("Body",contextBody)
         let newContext = myCartItems;
         newContext.push(contextBody)
@@ -247,7 +244,7 @@ export default function ProductDetails(){
 
                 {/* Add Section */}
                 <div className="text-red-600"> {validate} </div>
-                {qty !==0 && color.length >0 && uniqueItem.length > 0?
+                {qty !==0 && color.length >0 && varaint.length > 0?
                     <button className="bg-black w-full text-white">
                         <div onClick={(e)=>{addITemsCart(e)}}>
                             Add to Cart
@@ -268,6 +265,6 @@ export default function ProductDetails(){
     </div>
     <Footer/>
 
-    <Modal display={displayModal} onClose={()=>{setDisplayModal(false)}} uniqueItem={uniqueItem} dataDisplay={dataDisplay}/>
+    <Modal display={displayModal} onClose={()=>{setDisplayModal(false)}} qty={qty} dataDisplay={dataDisplay}/>
     </>)
 }
