@@ -4,7 +4,7 @@ import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem";
 import { MyCartItemContext } from "../../components/context/MyCartItemContext";
 
 export default function MyCart(){
-    const { myCartItems  } = useContext(MyCartItemContext) as MyCartItemContextType;
+    const { myCartItems, updateMyCartItem } = useContext(MyCartItemContext) as MyCartItemContextType;
 
     function MainCard ( { children, cardStyle, width, title }:{ children: any , cardStyle: string, width: string, title: string}){
         return <>
@@ -30,7 +30,7 @@ export default function MyCart(){
                             <div>
                                 {item.name}
                             </div>
-                            <button>
+                            <button onClick={(e)=>{handleDelete(e, item)}}>
                                 Delete
                             </button>
                         </div>
@@ -59,7 +59,7 @@ export default function MyCart(){
                             </div>
       
                             <div className="absolute bottom-0 right-0">
-                                <h1 className="">THB {item.price}</h1>
+                                <h1 className="">THB {item.price * item.quantity}</h1>
                             </div>
                         </div>
                     </div>
@@ -71,6 +71,13 @@ export default function MyCart(){
             
             <hr className="mb-[24px]"/>
         </>
+    }
+    type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
+
+    function handleDelete( e: ButtonEvent, item: MyCartItem) {
+        let filterItem = myCartItems.filter(x=>x.skuCode !== item.skuCode)
+        console.log(filterItem)
+        updateMyCartItem(filterItem)
     }
 
     const cardStyleInput = "bg-red-300 w-full min-h-[800px] "

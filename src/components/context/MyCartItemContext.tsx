@@ -33,28 +33,9 @@ const MyCartItemProvider: FC<{children: React.ReactNode}> = ({ children }) => {
   );
 
   const updateMyCartItem = (
-    id: string,
-    name: string,
-    color: string,
-    size: string,
-    skuCode: string,
-    price: number,
-    quantity: number,
-    variants: VariantType[],
-    img: string
+    myCartItem: MyCartItem[]
   ) => {
-    myCartItems.filter((myCartItem: MyCartItem) => {
-        myCartItem.id = id;
-        myCartItem.name = name;
-        myCartItem.color = color;
-        myCartItem.size = size;
-        myCartItem.price = price;
-        myCartItem.quantity = quantity;
-        myCartItem.skuCode = skuCode;
-        myCartItem.img = img;
-        myCartItem.variants = variants;
-        setMyCartItems([...myCartItems]);
-    });
+      setMyCartItems(myCartItem);
   };
   return <MyCartItemContext.Provider value={{ myCartItems, updateMyCartItem: updateMyCartItem }}>{children}</MyCartItemContext.Provider>;
 };

@@ -15,14 +15,7 @@ export interface MyCartItem {
   export type MyCartItemContextType = {
     myCartItems: MyCartItem[];
     updateMyCartItem: (
-        id: string,
-        name: string,
-        color: string,
-        size: string,
-        skuCode: string,
-        quantity: number,
-        img: string,
-        variants: VariantType[]
+      myCartItems: MyCartItem[]
     ) => void;
   };
 
