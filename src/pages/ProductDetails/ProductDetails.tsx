@@ -7,6 +7,7 @@ import GenStar from "../../components/GenStar"
 import { ChangeEvent, MouseEvent, useState } from "react"
 import Modal from "../../components/Modal"
 import { ProductByPermarlink, VariantType, colorCodeSet, colorSet, sizeSet } from "../../types/ProductDetails"
+import { InitailObjMycart } from "../../types/MyCartItem"
 
 export default function ProductDetails(){
     
@@ -164,9 +165,20 @@ export default function ProductDetails(){
     }
 
     
-    const handleModal = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
+    const addITemsCart = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
         e.preventDefault()
         setDisplayModal(!displayModal)
+        
+        let contextBody = InitailObjMycart
+        contextBody.name = dataDisplay[0].name
+        contextBody.color = uniqueData[0].color
+        contextBody.size = uniqueData[0].size
+        contextBody.quantity = uniqueData[0].remains
+        contextBody.skuCode = uniqueData[0].skuCode
+        contextBody.price = dataDisplay[0].price 
+        contextBody.img = dataDisplay[0].imageUrls[0]
+        contextBody.variants = dataDisplay[0].variants
+
         console.log(uniqueItem)
     }
     
@@ -233,7 +245,7 @@ export default function ProductDetails(){
                 <div className="text-red-600"> {validate} </div>
                 {qty !==0 && color.length >0 && uniqueItem.length > 0?
                     <button className="bg-black w-full text-white">
-                        <div onClick={(e)=>{handleModal(e)}}>
+                        <div onClick={(e)=>{addITemsCart(e)}}>
                             Add to Cart
                         </div>
                     </button>

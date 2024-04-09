@@ -1,5 +1,6 @@
 import { FC, createContext, useState } from "react";
 import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem";
+import { VariantType } from "../../types/ProductDetails";
 
 
 
@@ -20,6 +21,7 @@ const defaultMyCartItem = [
         name: "xxx22",
         color: "Blue",
         size: "XL",
+        skuCode: "",
         quantity: 20,
         price: 3000
       },
@@ -35,14 +37,22 @@ const MyCartItemProvider: FC<{children: React.ReactNode}> = ({ children }) => {
     name: string,
     color: string,
     size: string,
-    quantity: number
+    skuCode: string,
+    price: number,
+    quantity: number,
+    variants: VariantType[],
+    img: string
   ) => {
     myCartItems.filter((myCartItem: MyCartItem) => {
         myCartItem.id = id;
         myCartItem.name = name;
         myCartItem.color = color;
         myCartItem.size = size;
+        myCartItem.price = price;
         myCartItem.quantity = quantity;
+        myCartItem.skuCode = skuCode;
+        myCartItem.img = img;
+        myCartItem.variants = variants;
         setMyCartItems([...myCartItems]);
     });
   };

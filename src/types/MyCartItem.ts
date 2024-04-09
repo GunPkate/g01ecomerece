@@ -1,11 +1,15 @@
+import { VariantType } from './ProductDetails';
 export interface MyCartItem {
+  
     id: string;
     name: string
     color: string;
     size: string;
+    skuCode: string;
     quantity: number;
     price: number;
     img: string
+    variants: VariantType[]
   }
 
   export type MyCartItemContextType = {
@@ -15,7 +19,21 @@ export interface MyCartItem {
         name: string,
         color: string,
         size: string,
+        skuCode: string,
         quantity: number,
-        img: string
+        img: string,
+        variants: VariantType[]
     ) => void;
   };
+
+  export const InitailObjMycart: MyCartItem = {
+    id: '',
+    name: '',
+    color: '',
+    size: '',
+    skuCode: '',
+    quantity: 0,
+    price: 0,
+    img: '',
+    variants: []
+  }
