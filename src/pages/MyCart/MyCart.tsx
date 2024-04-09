@@ -2,6 +2,7 @@ import { useContext } from "react";
 
 import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem";
 import { MyCartItemContext } from "../../components/context/MyCartItemContext";
+import { VariantType, colorSet, colorCodeSet, sizeSet } from "../../types/ProductDetails";
 
 export default function MyCart(){
     const { myCartItems, updateMyCartItem } = useContext(MyCartItemContext) as MyCartItemContextType;
@@ -18,7 +19,7 @@ export default function MyCart(){
     }
 
     function ItemCard ( { item}:{  item: MyCartItem} ){
-        console.log("item x",item)
+        console.log("item x",JSON.stringify(item))
         return <>
             <div className="mt-[24px] mb-[24px] max-h-[209px] max-w-[896px]">
                 <div className=" lg:flex block">
@@ -36,28 +37,7 @@ export default function MyCart(){
                         </div>
 
                         <div className="relative flex w-full mt-[87px]">
-                            <div className="block lg:w-[139px] h-[82px] mr-[16px]">
-                                <label className="w-full h-[85px]">Color</label>
-                                <select className=" w-full h-[54px]">
-                                    <option>{item.color}</option>
-                                    {/* <option>2</option> */}
-                                </select>
-                            </div>
-                            <div className="block lg:w-[139px] h-[82px] mr-[16px]">
-                                <label className="w-full h-[85px]">Size</label>
-                                <select className=" w-full h-[54px]">
-                                    <option>{item.size}</option>
-                                    {/* <option>2</option> */}
-                                </select>
-                            </div>
-                            <div className="block lg:w-[139px] h-[82px] mr-[16px]">
-                                <label className="w-full h-[85px]">Qty</label>
-                                <select className=" w-full h-[54px]">
-                                    <option>{item.quantity}</option>
-                                    {/* <option>2</option> */}
-                                </select>
-                            </div>
-      
+                            {getColor(item.variants, item.quantity)}
                             <div className="absolute bottom-0 right-0">
                                 <h1 className="">THB {item.price * item.quantity}</h1>
                             </div>
@@ -71,6 +51,66 @@ export default function MyCart(){
             
             <hr className="mb-[24px]"/>
         </>
+    }
+
+    function getColor(data: VariantType[], qty: number){
+
+        let resultColor: colorSet[] = []
+        const tempDataColor = [...new Set(data.map((x: { color: any })=> x.color )) ]
+        tempDataColor.forEach(x=>
+            resultColor.push( { "color": x } )
+        )
+      
+        let resultColorCode: colorCodeSet[] = []
+        const tempDataColorCode = [...new Set(data.map((x: { colorCode: any })=> x.colorCode )) ]
+        tempDataColorCode.forEach(x=>
+            resultColorCode.push( { "colorCode": x } )
+        )     
+
+        let resultSize: sizeSet[] = []
+        const tempDataSize = [...new Set(data.map((x: { size: any })=> x.size )) ]
+        tempDataSize.forEach(x=>{
+            if(x.length >0){
+                resultSize.push( { "size": x } )
+            }
+        }
+        )
+
+        const btnSize = "w-[100px] h-[82px] "
+        const bgColor = "w-[54px] h-[54px] ml-auto mr-auto "
+
+        return (
+        <div className="flex w-full mx-auto"> 
+            <div className="block lg:w-[139px] h-[82px] mr-[16px]">
+                <label className="w-full h-[85px]">Color</label>
+                <select className=" w-full h-[54px]">
+                    {resultColor.length > 0 ? resultColor.map((x,index)=>{
+                        // if(index === 0 && x){
+                            return <option value={x.color}>{x.color}</option>
+                        // }else {
+                            // return <option value={x.color}>{x.color}</option>
+                        // }
+                    }) : <></>
+                    } 
+                </select>
+            </div>
+
+            <div className="block lg:w-[139px] h-[82px] mr-[16px]">
+                <label className="w-full h-[85px]">Size</label>
+                <select className=" w-full h-[54px]">
+                    {resultSize.map((x,index)=> <option value={x.size}>{x.size}</option>)}
+                </select>
+            </div>
+
+            <div className="block lg:w-[139px] h-[82px] mr-[16px]">
+                                <label className="w-full h-[85px]">Qty</label>
+                                <select className=" w-full h-[54px]">
+                                    <option>{qty}</option>
+                                    {/* <option>2</option> */}
+                                </select>
+                            </div>
+        </div>
+        )
     }
     type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
 

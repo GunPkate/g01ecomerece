@@ -62,8 +62,8 @@ export default function Navbar(){
                         </button>
 
                     }
-                    <Link to={"/mycart"}>
-                    <div className="flex my-auto ml-2">
+                    <Link className=" my-auto" to={"/mycart"}>
+                    <div className="flex ml-2">
                         <span>
                                 <div dangerouslySetInnerHTML={{__html: cart}}></div>
                         </span>
