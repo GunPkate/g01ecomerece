@@ -4,10 +4,11 @@ import Footer from "../../components/Footer"
 import Navbar from "../../components/Navbar"
 import productByPermarlink from '../../skuData/productByPermarlink.json'
 import GenStar from "../../components/GenStar"
-import { ChangeEvent, MouseEvent, useState } from "react"
+import { ChangeEvent, MouseEvent, useContext, useState } from "react"
 import Modal from "../../components/Modal"
 import { ProductByPermarlink, VariantType, colorCodeSet, colorSet, sizeSet } from "../../types/ProductDetails"
-import { InitailObjMycart } from "../../types/MyCartItem"
+import { InitailObjMycart, MyCartItemContextType } from "../../types/MyCartItem"
+import { MyCartItemContext } from "../../components/context/MyCartItemContext"
 
 export default function ProductDetails(){
     
@@ -28,7 +29,7 @@ export default function ProductDetails(){
     const [validate,setValidate] = useState('')
     //Filter only
 
- 
+    const { myCartItems } = useContext(MyCartItemContext) as MyCartItemContextType;
     const uniqueData: VariantType[] = [{"skuCode":"","color":"","size":"","remains":0,"colorCode":""}]
 
     const [uniqueItem,setUniqueItem] = useState(uniqueData)
@@ -179,7 +180,10 @@ export default function ProductDetails(){
         contextBody.img = dataDisplay[0].imageUrls[0]
         contextBody.variants = dataDisplay[0].variants
 
-        console.log(uniqueItem)
+        console.log("Body",contextBody)
+        let newContext = myCartItems;
+        newContext.push(contextBody)
+        console.log("Context",myCartItems)
     }
     
 
