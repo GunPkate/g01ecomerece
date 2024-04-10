@@ -61,7 +61,7 @@ export default function MyCart(){
         </>
     }
 
-    function getColor(data: VariantType[], color: string, size: string, quantity: number){
+    function getColor(data: VariantType[], colorTemp: string, sizeTemp: string, quantity: number){
 
         let resultColor: colorSet[] = []
         const tempDataColor = [...new Set(data.map((x: { color: any })=> x.color )) ]
@@ -91,27 +91,22 @@ export default function MyCart(){
         <div className="flex w-full mx-auto"> 
             <div className="block lg:w-[139px] h-[82px] mr-[16px]">
                 <label className="w-full h-[85px]">Color</label>
-                <select onChange={(e)=>{handleVariant(e,color,'color')}} className=" w-full h-[54px]">
-                    {/* { resultColor.map((x)=>{ if(x.color === color) return <option  value={x.color}>{x.color}</option> }) } 
-                    { resultColor.map((x)=>{ if(x.color !== color) return <option  value={x.color}>{x.color}</option> }) }  */}
+                <select onChange={(e)=>{handleVariant(e,colorTemp,'color')}} className=" w-full h-[54px]" value={color}>
                     { resultColor.map((x)=>{  return <option  value={x.color}>{x.color}</option> }) }  
                 </select>
             </div>
 
             <div className="block lg:w-[139px] h-[82px] mr-[16px]">
                 <label className="w-full h-[85px]">Size</label>
-                <select onChange={(e)=>{handleVariant(e,size,'size')}} className=" w-full h-[54px]">
-                    {/* {resultSize.map((x)=>{ if(x.size === size) return <option  value={x.size}>{x.size}</option> } )}
-                    {resultSize.map((x)=>{ if(x.size !== size ) return <option  value={x.size}>{x.size}</option> } )} */}
+                <select onChange={(e)=>{handleVariant(e,sizeTemp,'size')}} className=" w-full h-[54px]" value={size}>
                     {resultSize.map((x)=>{  return <option  value={x.size}>{x.size}</option> } )} 
                 </select>
             </div>
 
             <div className="block lg:w-[139px] h-[82px] mr-[16px]">
                                 <label className="w-full h-[85px]">Qty</label>
-                                <select className=" w-full h-[54px]">
-                                    {qty===0 ? <option onChange={(e)=>{handleQty(e,'qty')}}>{quantity}</option> : <></>}
-                                    { [...Array(10)].map((x,index )=> { if(index+1 !== quantity) return <option value={index}>{index+1}</option>} )}
+                                <select className=" w-full h-[54px]" onChange={(e)=>{handleQty(e, qty)}} value={qty}>
+                                    { [...Array(10)].map((x,index )=> { return <option value={index}>{index+1}</option>} )}
                                 </select>
                             </div>
         </div>
