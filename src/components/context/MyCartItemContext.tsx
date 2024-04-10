@@ -31,16 +31,104 @@ const defaultMyCartItem = [
       { skuCode : "C0100202", color: "Blue", size: "S", remains: 100, colorCode: "#0c5eeacb" }, 
       { skuCode : "C0100210", color: "Black", size: "S", remains: 77, colorCode: "#0b0b0b" }
     ] 
+  } ,
+  {
+    id: "",
+    name: "Boxy Tailored Jacket",
+    color: "Navy",
+    size: "XL",
+    skuCode: "C0900604",
+    quantity: 4,
+    price: 2990,
+    img: "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Ft7uRtRNRQOhKJHWnWIDY%2F_images%2FSknj6SRVaDh94bLTLIS3-stylish-woman-model-in-studio-in-coat-autumn-fash-2023-11-27-04-59-28-utc.png?alt=media&token=961d6211-c471-4ab9-9e6d-6678962648ad",
+    variants: [
+      {
+        skuCode: "C0900611",
+        color: "Black",
+        size: "L",
+        remains: 0,
+        colorCode: "#030303"
+      },
+      {
+        skuCode: "C0900610",
+        color: "Black",
+        size: "M",
+        remains: 39,
+        colorCode: "#030303"
+      },
+      {
+        skuCode: "C0900609",
+        color: "Black",
+        size: "S",
+        remains: 30,
+        colorCode: "#030303"
+      },
+      {
+        skuCode: "C0900604",
+        color: "Navy",
+        size: "XL",
+        remains: 1,
+        colorCode: "#000080"
+      },
+      {
+        skuCode: "C0900608",
+        color: "Dark Grey",
+        size: "XL",
+        remains: 19,
+        colorCode: "#A9A9A9"
+      },
+      {
+        skuCode: "C0900605",
+        color: "Dark Grey",
+        size: "S",
+        remains: 27,
+        colorCode: "#A9A9A9"
+      },
+      {
+        skuCode: "C0900603",
+        color: "Navy",
+        size: "L",
+        remains: 26,
+        colorCode: "#000080"
+      },
+      {
+        skuCode: "C0900602",
+        color: "Navy",
+        size: "M",
+        remains: 27,
+        colorCode: "#000080"
+      },
+      {
+        skuCode: "C0900607",
+        color: "Dark Grey",
+        size: "L",
+        remains: 21,
+        colorCode: "#A9A9A9"
+      },
+      {
+        skuCode: "C0900606",
+        color: "Dark Grey",
+        size: "M",
+        remains: 8,
+        colorCode: "#A9A9A9"
+      },
+      {
+        skuCode: "C0900612",
+        color: "Black",
+        size: "XL",
+        remains: 9,
+        colorCode: "#030303"
+      },
+      {
+        skuCode: "C0900601",
+        color: "Navy",
+        size: "S",
+        remains: 13,
+        colorCode: "#000080"
+      }
+    ]
   }
-  // {
-  //     id: "asd2",
-  //     name: "xxx22",
-  //     color: "Blue",
-  //     size: "XL",
-  //     skuCode: "",
-  //     quantity: 20,
-  //     price: 3000
-  //   },
+
 ] as MyCartItem[]
 
 const MyCartItemProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -53,7 +141,23 @@ const MyCartItemProvider: FC<{ children: React.ReactNode }> = ({ children }) => 
   ) => {
     setMyCartItems(myCartItem);
   };
-  return <MyCartItemContext.Provider value={{ myCartItems, updateMyCartItem: updateMyCartItem }}>{children}</MyCartItemContext.Provider>;
+
+  const updateSelectedCartItem =(skuCode:string, value: string, name: string) => {
+    let tempData = myCartItems;
+    tempData.forEach( x => 
+      {
+        if( x.skuCode === skuCode ) {
+          if(name === 'color')  x.color = value
+          if(name === 'size')  x.size = value
+          if(name === 'qty')  x.quantity = parseInt(value)
+        }
+      }
+    )
+    console.log("context X",tempData)
+    setMyCartItems(myCartItems);
+  };
+  return <MyCartItemContext.Provider value={{ myCartItems, updateMyCartItem: updateMyCartItem, updateSelectedCartItem: updateSelectedCartItem }}>{children}</MyCartItemContext.Provider>;
+
 };
 
 export default MyCartItemProvider;

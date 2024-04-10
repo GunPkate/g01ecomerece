@@ -5,7 +5,7 @@ import { MyCartItemContext } from "../../components/context/MyCartItemContext";
 import { VariantType, colorSet, colorCodeSet, sizeSet } from "../../types/ProductDetails";
 
 export default function MyCart(){
-    const { myCartItems, updateMyCartItem } = useContext(MyCartItemContext) as MyCartItemContextType;
+    const { myCartItems, updateMyCartItem, updateSelectedCartItem } = useContext(MyCartItemContext) as MyCartItemContextType;
 
     const [varaint,setVariant] = useState<Array<VariantType>>([])
     const [filterItem,setFilterItem] = useState<Array<VariantType>>([])
@@ -28,7 +28,7 @@ export default function MyCart(){
 
     function ItemCard ( { item}:{  item: MyCartItem} ){
         // console.log("item x",JSON.stringify(item))
-        return <>
+        return <div key={item.skuCode}>
             <div className="mt-[24px] mb-[24px] max-h-[209px] max-w-[896px]">
                 <div className=" lg:flex block">
 
@@ -45,9 +45,9 @@ export default function MyCart(){
                         </div>
 
                         <div className="relative flex w-full mt-[87px]">
-                            {getColor(item.variants, item.color, item.size, item.quantity)}
+                            {getColor(item.variants, item.skuCode, item.color, item.size, item.quantity)}
                             <div className="absolute bottom-0 right-0">
-                                <h1 className="">THB {item.price * item.quantity}</h1>
+                                <h1 className="">THB { item.price * item.quantity}</h1>
                             </div>
                         </div>
                     </div>
@@ -58,25 +58,25 @@ export default function MyCart(){
             </div>
             
             <hr className="mb-[24px]"/>
-        </>
+        </div>
     }
 
-    function getColor(data: VariantType[], colorTemp: string, sizeTemp: string, quantity: number){
+    function getColor(itemList: VariantType[], skuCode:string, colorTemp: string, sizeTemp: string, quantityTemp: number){
 
         let resultColor: colorSet[] = []
-        const tempDataColor = [...new Set(data.map((x: { color: any })=> x.color )) ]
+        const tempDataColor = [...new Set(itemList.map((x: { color: any })=> x.color )) ]
         tempDataColor.forEach(x=>
             resultColor.push( { "color": x } )
         )
       
         let resultColorCode: colorCodeSet[] = []
-        const tempDataColorCode = [...new Set(data.map((x: { colorCode: any })=> x.colorCode )) ]
+        const tempDataColorCode = [...new Set(itemList.map((x: { colorCode: any })=> x.colorCode )) ]
         tempDataColorCode.forEach(x=>
             resultColorCode.push( { "colorCode": x } )
         )     
 
         let resultSize: sizeSet[] = []
-        const tempDataSize = [...new Set(data.map((x: { size: any })=> x.size )) ]
+        const tempDataSize = [...new Set(itemList.map((x: { size: any })=> x.size )) ]
         tempDataSize.forEach(x=>{
             if(x.length >0){
                 resultSize.push( { "size": x } )
@@ -91,21 +91,21 @@ export default function MyCart(){
         <div className="flex w-full mx-auto"> 
             <div className="block lg:w-[139px] h-[82px] mr-[16px]">
                 <label className="w-full h-[85px]">Color</label>
-                <select onChange={(e)=>{handleVariant(e,colorTemp,'color')}} className=" w-full h-[54px]" value={color}>
+                <select  onChange={(e)=>{handleVariant(e, skuCode, colorTemp,'color')}} className=" w-full h-[54px]" value={colorTemp}>
                     { resultColor.map((x)=>{  return <option  value={x.color}>{x.color}</option> }) }  
                 </select>
             </div>
 
             <div className="block lg:w-[139px] h-[82px] mr-[16px]">
                 <label className="w-full h-[85px]">Size</label>
-                <select onChange={(e)=>{handleVariant(e,sizeTemp,'size')}} className=" w-full h-[54px]" value={size}>
+                <select onChange={(e)=>{handleVariant(e, skuCode, sizeTemp,'size')}} className=" w-full h-[54px]" value={sizeTemp}>
                     {resultSize.map((x)=>{  return <option  value={x.size}>{x.size}</option> } )} 
                 </select>
             </div>
 
             <div className="block lg:w-[139px] h-[82px] mr-[16px]">
                                 <label className="w-full h-[85px]">Qty</label>
-                                <select className=" w-full h-[54px]" onChange={(e)=>{handleQty(e, qty)}} value={qty}>
+                                <select className=" w-full h-[54px]" onChange={(e)=>{handleQty(e, skuCode, qty, 'qty')}} value={quantityTemp}>
                                     { [...Array(10)].map((x,index )=> { return <option value={index}>{index+1}</option>} )}
                                 </select>
                             </div>
@@ -121,8 +121,11 @@ export default function MyCart(){
         updateMyCartItem(filterItem)
     }
 
-    function handleVariant(e: ChangeEvent, data:any,type: string) {
+    function handleVariant(e: ChangeEvent, skuCode: string, data:string ,type: string) {
         e.preventDefault()
+
+        updateSelectedCartItem(skuCode, e.target.value, type)
+
         if(varaint.length === 1 && color.length > 0 && size.length > 0){
             resetSelect()
         }
@@ -181,8 +184,10 @@ export default function MyCart(){
 
     }
 
-    function handleQty(e: ChangeEvent, name: string ){
+    function handleQty(e: ChangeEvent, skuCode: string, number: string, type: string ){
         e.preventDefault()
+        updateSelectedCartItem(skuCode, e.target.value, type)
+
         // let tempData = varaint
         const getValue = (e.target as HTMLInputElement).value;
 
@@ -209,8 +214,10 @@ export default function MyCart(){
             <MainCard cardStyle={cardStyleInput} width="lg:max-w-[944px] " title="Items">
                 <div className="m-[24px] min-h-[490px] bg-white">
                     { 
-                        myCartItems.length>0? myCartItems.map( item=>
+                        myCartItems.length>0? myCartItems.map( (item,index)=>
+                            <div key={index}>
                             <ItemCard item = {item} ></ItemCard>
+                            </div>
                         )
                         :<></>
                     }

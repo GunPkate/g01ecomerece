@@ -17,6 +17,10 @@ export interface MyCartItem {
     updateMyCartItem: (
       myCartItems: MyCartItem[]
     ) => void;
+
+    updateSelectedCartItem: (
+      skuCode: string, value: string, type: string
+    )=> void;
   };
 
   export const InitailObjMycart: MyCartItem = {
