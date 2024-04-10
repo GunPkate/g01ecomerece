@@ -40,7 +40,7 @@ export default function MyCart(){
                             <div>
                                 {item.name} {color} {size}
                             </div>
-                            <button onClick={(e)=>{handleDelete(e, item)}}>
+                            <button onClick={()=>{handleDelete( item)}}>
                                 Delete
                             </button>
                         </div>
@@ -116,7 +116,7 @@ export default function MyCart(){
             <div className="block lg:w-[139px] h-[82px] mr-[16px]">
                                 <label className="w-full h-[85px]">Qty</label>
                                 <select 
-                                    className={dropDownStyle} 
+                                    className={qty > 0 && skuCodeCheck === skuCode ? dropDownStyle + "border-2 border-rose-300": dropDownStyle} 
                                     onChange={(e)=>{handleQty(e, skuCode, 'qty')}} 
                                     value={quantityTemp}
                                 >
@@ -126,10 +126,10 @@ export default function MyCart(){
         </div>
         )
     }
-    type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
+    // type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
     type ChangeEvent = React.MouseEvent<HTMLOptionElement>;
 
-    function handleDelete( e: ButtonEvent, item: MyCartItem) {
+    function handleDelete( item: MyCartItem) {
         let filterItem = myCartItems.filter(x=>x.skuCode !== item.skuCode)
         console.log(filterItem)
         updateMyCartItem(filterItem)
@@ -137,8 +137,8 @@ export default function MyCart(){
 
     function handleVariant(e: ChangeEvent, skuCode: string, type: string) {
         e.preventDefault()
-
-        updateSelectedCartItem(skuCode, e.target.value, type)
+        const input = (e.target as HTMLInputElement).value
+        updateSelectedCartItem(skuCode, input, type)
         setSkuCodeCheck(skuCode)
         if(varaint.length === 1 && color.length > 0 && size.length > 0 || skuCodeCheck !== skuCode){
             resetSelect()
@@ -150,13 +150,13 @@ export default function MyCart(){
 
 
         if(type==='size'){
-            const sizeData = e.target.value;
+            const sizeData = input;
             setSize(sizeData)
             firstFilter = firstFilter.filter(x=>x.size === sizeData)
             // setValidate(firstFilter.map(x=>x.size).join())
         }
         else if(type==='color'){
-            const colorData = e.target.value;
+            const colorData = input;
             setColor(colorData)
             firstFilter = firstFilter.filter(x=>x.color === colorData)
             // setValidate(firstFilter.map(x=>x.color).join())
@@ -200,17 +200,13 @@ export default function MyCart(){
 
     function handleQty(e: ChangeEvent, skuCode: string, type: string ){
         e.preventDefault()
-        updateSelectedCartItem(skuCode, e.target.value, type)
 
         // let tempData = varaint
         const getValue = (e.target as HTMLInputElement).value;
+        updateSelectedCartItem(skuCode, getValue, type)
 
         // console.log(tempData)
         setQty(parseInt(getValue))
-    }
-
-    function resetUI (){
-        myCartItems
     }
 
     const cardStyleInput = "bg-red-300 w-full min-h-[800px] "
