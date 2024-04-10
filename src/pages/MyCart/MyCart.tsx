@@ -13,6 +13,7 @@ export default function MyCart(){
     const [color,setColor] = useState('')
     const [size,setSize] = useState('')
     const [qty,setQty] = useState(0)
+    const [skuCodeCheck,setSkuCodeCheck] = useState('')
     const [validate,setValidate] = useState('')
 
     function MainCard ( { children, cardStyle, width, title }:{ children: any , cardStyle: string, width: string, title: string}){
@@ -86,27 +87,40 @@ export default function MyCart(){
 
         const btnSize = "w-[100px] h-[82px] "
         const bgColor = "w-[54px] h-[54px] ml-auto mr-auto "
+        const dropDownStyle = "w-full h-[54px] "
 
         return (
         <div className="flex w-full mx-auto"> 
             <div className="block lg:w-[139px] h-[82px] mr-[16px]">
                 <label className="w-full h-[85px]">Color</label>
-                <select  onChange={(e)=>{handleVariant(e, skuCode, colorTemp,'color')}} className=" w-full h-[54px]" value={colorTemp}>
+                <select  
+                    onChange={(e)=>{handleVariant(e, skuCode, 'color')}} 
+                    className={color.length > 0 && skuCodeCheck === skuCode ? dropDownStyle + "border-2 border-rose-300": dropDownStyle} 
+                    value={colorTemp}
+                >
                     { resultColor.map((x)=>{  return <option  value={x.color}>{x.color}</option> }) }  
                 </select>
             </div>
 
             <div className="block lg:w-[139px] h-[82px] mr-[16px]">
                 <label className="w-full h-[85px]">Size</label>
-                <select onChange={(e)=>{handleVariant(e, skuCode, sizeTemp,'size')}} className=" w-full h-[54px]" value={sizeTemp}>
+                <select 
+                    onChange={(e)=>{handleVariant(e, skuCode, 'size')}} 
+                    className={size.length > 0 && skuCodeCheck === skuCode ? dropDownStyle + "border-2 border-rose-300": dropDownStyle} 
+                    value={sizeTemp}
+                >
                     {resultSize.map((x)=>{  return <option  value={x.size}>{x.size}</option> } )} 
                 </select>
             </div>
 
             <div className="block lg:w-[139px] h-[82px] mr-[16px]">
                                 <label className="w-full h-[85px]">Qty</label>
-                                <select className=" w-full h-[54px]" onChange={(e)=>{handleQty(e, skuCode, qty, 'qty')}} value={quantityTemp}>
-                                    { [...Array(10)].map((x,index )=> { return <option value={index}>{index+1}</option>} )}
+                                <select 
+                                    className={dropDownStyle} 
+                                    onChange={(e)=>{handleQty(e, skuCode, 'qty')}} 
+                                    value={quantityTemp}
+                                >
+                                    { [...Array(10)].map((x,index )=> { return <option value={index+1}>{index+1}</option>} )}
                                 </select>
                             </div>
         </div>
@@ -121,12 +135,12 @@ export default function MyCart(){
         updateMyCartItem(filterItem)
     }
 
-    function handleVariant(e: ChangeEvent, skuCode: string, data:string ,type: string) {
+    function handleVariant(e: ChangeEvent, skuCode: string, type: string) {
         e.preventDefault()
 
         updateSelectedCartItem(skuCode, e.target.value, type)
-
-        if(varaint.length === 1 && color.length > 0 && size.length > 0){
+        setSkuCodeCheck(skuCode)
+        if(varaint.length === 1 && color.length > 0 && size.length > 0 || skuCodeCheck !== skuCode){
             resetSelect()
         }
         console.log(myCartItems[0].variants )
@@ -184,7 +198,7 @@ export default function MyCart(){
 
     }
 
-    function handleQty(e: ChangeEvent, skuCode: string, number: string, type: string ){
+    function handleQty(e: ChangeEvent, skuCode: string, type: string ){
         e.preventDefault()
         updateSelectedCartItem(skuCode, e.target.value, type)
 
