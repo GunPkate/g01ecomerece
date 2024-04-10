@@ -19,10 +19,14 @@ export default function MyCart(){
     function MainCard ( { children, cardStyle, width, title }:{ children: any , cardStyle: string, width: string, title: string}){
         return <>
             <div className={cardStyle + width}>
-                <div className="m-[24px] h-[32px]">
-                    {title}
-                </div> 
-                {children}
+                <div className={title==="Summary" ? "fixed lg:w-[616px] ": ""}>
+
+                    <div className="m-[24px] h-[32px]">
+                        {title}
+                    </div> 
+                    {children}
+
+                </div>
             </div>
         </>
     }
@@ -211,6 +215,9 @@ export default function MyCart(){
     }
 
     const cardStyleInput = "bg-red-300 w-full min-h-[800px] "
+    const itemAlert = "fixed inset-0 bg-red-100 opacity-100 "
+    // const itemAlert = "fixed inset-0 bg-red-100 opacity-100 w-[900px] h-[200px] top-[60px] "
+
     return <>
         <div className={`lg:mx-[8.34%] mx-[0.834%]`}>
         
@@ -228,6 +235,11 @@ export default function MyCart(){
                         myCartItems.length>0? myCartItems.map( (item,index)=>
                             <div key={index}>
                             <ItemCard item = {item} ></ItemCard>
+{/* 
+                                <div>{filterItem.map(x=>
+                                    <div className={itemAlert}>{x.color}  {x.size}</div>
+                                )}</div> */}
+
                             </div>
                         )
                         :<></>
@@ -235,8 +247,8 @@ export default function MyCart(){
 
                 </div> 
             </MainCard>
-            <MainCard cardStyle={cardStyleInput} width="lg:ml-[40px] lg:max-w-[616px] " title="Summary">
-                <div className="m-[24px] min-h-[420px] bg-white">
+            <MainCard cardStyle={cardStyleInput } width="lg:ml-[40px] lg:max-w-[616px] " title="Summary">
+            <div className="m-[24px] mt-0 min-h-[420px] bg-white">
                     
                     {myCartItems.length > 0 ? myCartItems.map(x=>
                         <>
