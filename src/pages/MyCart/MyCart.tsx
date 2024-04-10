@@ -191,6 +191,7 @@ export default function MyCart(){
             setColor('')
             setSize('')
             setVariant([])
+            setQty(0)
         }
 
         console.log('firstFilter')
@@ -236,7 +237,56 @@ export default function MyCart(){
             </MainCard>
             <MainCard cardStyle={cardStyleInput} width="lg:ml-[40px] lg:max-w-[616px] " title="Summary">
                 <div className="m-[24px] min-h-[420px] bg-white">
-                    123
+                    
+                    {myCartItems.length > 0 ? myCartItems.map(x=>
+                        <>
+                            <div className="flex justify-between">
+                                <div>
+                                    {x.quantity> 1 ? x.name + " x " + x.quantity : x.name }
+                                </div>
+                                <div>
+                                    {x.price * x.quantity}
+                                </div>
+                            </div>
+  
+                        </>
+                    )
+                    :<></>}
+
+                    <div className="flex justify-between">
+                        <div>
+                            Subtotal 
+                        </div>
+                        <div>
+                            {
+                                myCartItems.length > 1 ? myCartItems.map(x=>x.price * x.quantity).reduce((a,c) => a + c,0) :
+                                myCartItems.length === 1 ? myCartItems[0].price * myCartItems[0].quantity :
+                                <></> 
+                            } 
+                        </div>
+                    </div>
+                    
+                    <div className="flex justify-between">
+                        <div>
+                            Shipping Fee
+                        </div>
+                        <div>
+                            Free
+                        </div>
+                    </div>
+
+                    <div className="flex justify-between">
+                        <div>
+                            Grand Total
+                        </div>
+                        <div>
+                        {
+                                myCartItems.length > 1 ? myCartItems.map(x=>x.price * x.quantity).reduce((a,c) => a + c,0) :
+                                myCartItems.length === 1 ? myCartItems[0].price * myCartItems[0].quantity :
+                                <></> 
+                            } 
+                        </div>
+                    </div>
                 </div> 
             </MainCard>
         </div>
