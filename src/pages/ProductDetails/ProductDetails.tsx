@@ -7,7 +7,7 @@ import GenStar from "../../components/GenStar"
 import { ChangeEvent, MouseEvent, useContext, useState } from "react"
 import Modal from "../../components/Modal"
 import { ProductByPermarlink, VariantType, colorCodeSet, colorSet, sizeSet } from "../../types/ProductDetails"
-import { InitailObjMycart, MyCartItem, MyCartItemContextType } from "../../types/MyCartItem"
+import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem"
 import { MyCartItemContext } from "../../components/context/MyCartItemContext"
 
 export default function ProductDetails(){

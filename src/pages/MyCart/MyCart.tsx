@@ -182,6 +182,7 @@ export default function MyCart(){
             item.skuCode = x.skuCode
             item.quantity = x.quantity
             item.productPermalink = x.productPermalink
+            item.price = x.price
             body.items.push(item)
         } )
 

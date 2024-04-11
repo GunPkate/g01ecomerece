@@ -7,14 +7,8 @@ export interface CartBodyItem {
     id: string,
     skuCode: string,
     quantity: number,
-    productPermalink: string
-}
-
-export const InitailObjCart = {
-    id: null,
-    skuCode: null,
-    quantity: null,
-    productPermalink: null,
+    productPermalink: string,
+    price: number
 }
 
 export class CartBody {
@@ -31,6 +25,7 @@ export class CartBody {
             skuCode: '',
             quantity: 0,
             productPermalink: '',
+            price: 0,
         }
     }
 }
