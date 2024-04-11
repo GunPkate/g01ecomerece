@@ -7,7 +7,7 @@ import GenStar from "../../components/GenStar"
 import { ChangeEvent, MouseEvent, useContext, useState } from "react"
 import Modal from "../../components/Modal"
 import { ProductByPermarlink, VariantType, colorCodeSet, colorSet, sizeSet } from "../../types/ProductDetails"
-import { InitailObjMycart, MyCartItemContextType } from "../../types/MyCartItem"
+import { InitailObjMycart, MyCartItem, MyCartItemContextType } from "../../types/MyCartItem"
 import { MyCartItemContext } from "../../components/context/MyCartItemContext"
 
 export default function ProductDetails(){
@@ -166,7 +166,7 @@ export default function ProductDetails(){
         e.preventDefault()
         setDisplayModal(!displayModal)
         
-        let contextBody = InitailObjMycart
+        let contextBody = MyCartItem.InitialObjMyCartItem()
         contextBody.name = dataDisplay[0].name
         contextBody.color = varaint[0].color
         contextBody.size = varaint[0].size
@@ -174,6 +174,7 @@ export default function ProductDetails(){
         contextBody.skuCode = varaint[0].skuCode
         contextBody.price = dataDisplay[0].price 
         contextBody.img = dataDisplay[0].imageUrls[0]
+        contextBody.permalink = dataDisplay[0].permalink
         contextBody.variants = dataDisplay[0].variants
 
         console.log("uniqueData",varaint)

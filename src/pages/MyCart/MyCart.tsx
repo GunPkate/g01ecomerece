@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem";
 import { MyCartItemContext } from "../../components/context/MyCartItemContext";
 import { VariantType, colorSet, colorCodeSet, sizeSet } from "../../types/ProductDetails";
+import { CartBody } from "../../types/CartBody";
 
 export default function MyCart(){
     const { myCartItems, updateMyCartItem, updateSelectedCartItem } = useContext(MyCartItemContext) as MyCartItemContextType;
@@ -171,6 +172,23 @@ export default function MyCart(){
         setQty(parseInt(getValue))
     }
 
+    function handleAddToCart(){
+        
+        let body = CartBody.initializeCartBody()
+        
+        myCartItems.forEach(x=> {
+            let item = CartBody.initializeCartItemBody()
+            item.id = x.id
+            item.skuCode = x.skuCode
+            item.quantity = x.quantity
+            item.productPermalink = x.productPermalink
+            body.items.push(item)
+        } )
+
+
+        console.log(body)
+    }
+
     const btnSize = "w-full  "
     const bgColor = "border-2 border-rose-500 "
     const cardStyleInput = "bg-red-300 w-full min-h-[800px] "
@@ -259,7 +277,7 @@ export default function MyCart(){
                         </div>
                     </div>
                     <div>
-                        <button className={btnSize + "bg-black text-white"}>Check Out</button>
+                        <button className={btnSize + "bg-black text-white"} onClick={()=>{handleAddToCart()}}>Check Out</button>
                     </div>
                     <div>
                         <button className={btnSize + bgColor}>Continue Shopping</button>

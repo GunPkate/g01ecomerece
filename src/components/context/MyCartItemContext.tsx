@@ -1,9 +1,5 @@
 import { FC, createContext, useState } from "react";
 import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem";
-import { VariantType } from "../../types/ProductDetails";
-
-
-
 
 export const MyCartItemContext = createContext<MyCartItemContextType | null>(null);
 
@@ -17,6 +13,7 @@ const defaultMyCartItem = [
     quantity: 5, 
     price: 1990, 
     img: "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2F6jqhbn0A4mtg1o6bRLVO%2F_images%2FfpH5fRXnDaZqFdiwGhx1-full-length-of-bearded-man-in-stylish-outfit-and-s-2023-11-27-04-57-52-utc.png?alt=media&token=a25c1a35-67ad-4a17-8522-f6e1299addb3", 
+    permalink: "shirts-city-commuter-coat",
     variants: [
       { skuCode : "C0100204", color: "Blue", size: "XL", remains: 100, colorCode: "#0c5eeacb" }, 
       { skuCode : "C0100205", color: "Khaki", size: "L", remains: 54, colorCode: "#F0E68C" }, 
@@ -41,6 +38,7 @@ const defaultMyCartItem = [
     quantity: 4,
     price: 2990,
     img: "https://firebasestorage.googleapis.com/v0/b/wdb-storefront-project-api.appspot.com/o/products%2Ft7uRtRNRQOhKJHWnWIDY%2F_images%2FSknj6SRVaDh94bLTLIS3-stylish-woman-model-in-studio-in-coat-autumn-fash-2023-11-27-04-59-28-utc.png?alt=media&token=961d6211-c471-4ab9-9e6d-6678962648ad",
+    permalink: "shirts-boxy-tailored-jacket",
     variants: [
       {
         skuCode: "C0900611",

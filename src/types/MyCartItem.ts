@@ -9,6 +9,7 @@ export interface MyCartItem {
     quantity: number;
     price: number;
     img: string
+    permalink: string
     variants: VariantType[]
   }
 
@@ -23,14 +24,19 @@ export interface MyCartItem {
     )=> void;
   };
 
-  export const InitailObjMycart: MyCartItem = {
-    id: '',
-    name: '',
-    color: '',
-    size: '',
-    skuCode: '',
-    quantity: 0,
-    price: 0,
-    img: '',
-    variants: []
+  export class MyCartItem  {
+    static InitialObjMyCartItem() {
+      return {     
+        id: '',
+        name: '',
+        color: '',
+        size: '',
+        skuCode: '',
+        quantity: 0,
+        price: 0,
+        img: '',
+        permalink: '',
+        variants: []
+      }
+    }
   }
