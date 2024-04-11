@@ -175,7 +175,7 @@ export default function MyCart(){
     }
 
     async function handleAddToCart(){
-        
+        console.log(myCartItems)
         let body = CartBody.initializeCartBody()
         body.id = 'user1'
         myCartItems.forEach(x=> {
@@ -183,7 +183,7 @@ export default function MyCart(){
             item.id = 'user1'
             item.skuCode = x.skuCode
             item.quantity = x.quantity
-            item.productPermalink = x.productPermalink
+            item.productPermalink = x.permalink
             item.price = x.price
             body.items.push(item)
         } )
