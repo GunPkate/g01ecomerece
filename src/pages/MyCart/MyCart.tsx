@@ -6,15 +6,12 @@ import { VariantType, colorSet, colorCodeSet, sizeSet } from "../../types/Produc
 
 export default function MyCart(){
     const { myCartItems, updateMyCartItem, updateSelectedCartItem } = useContext(MyCartItemContext) as MyCartItemContextType;
-
-    const [varaint,setVariant] = useState<Array<VariantType>>([])
-    const [filterItem,setFilterItem] = useState<Array<VariantType>>([])
     
     const [color,setColor] = useState('')
     const [size,setSize] = useState('')
     const [qty,setQty] = useState(0)
     const [skuCodeCheck,setSkuCodeCheck] = useState('')
-    const [validate,setValidate] = useState('')
+
 
     function MainCard ( { children, cardStyle, width, title }:{ children: any , cardStyle: string, width: string, title: string}){
         return <>
@@ -142,7 +139,7 @@ export default function MyCart(){
         const input = (e.target as HTMLInputElement).value
         updateSelectedCartItem(skuCode, input, type)
         // setSkuCodeCheck(skuCode)
-        if(varaint.length === 1 && color.length > 0 && size.length > 0 || skuCodeCheck !== skuCode){
+        if( color.length > 0 && size.length > 0 || skuCodeCheck !== skuCode){
             resetSelect()
         }
 
@@ -156,10 +153,8 @@ export default function MyCart(){
         }
         
         function resetSelect(){
-            setFilterItem([])
             setColor('')
             setSize('')
-            setVariant([])
             setQty(0)
         }
 
