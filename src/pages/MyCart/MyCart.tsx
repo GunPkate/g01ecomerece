@@ -4,6 +4,8 @@ import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem";
 import { MyCartItemContext } from "../../components/context/MyCartItemContext";
 import { VariantType, colorSet, colorCodeSet, sizeSet } from "../../types/ProductDetails";
 import { CartBody } from "../../types/CartBody";
+import { db } from "../../firebase";
+import { addDoc, collection, doc, setDoc } from "firebase/firestore";
 
 export default function MyCart(){
     const { myCartItems, updateMyCartItem, updateSelectedCartItem } = useContext(MyCartItemContext) as MyCartItemContextType;
@@ -172,13 +174,13 @@ export default function MyCart(){
         setQty(parseInt(getValue))
     }
 
-    function handleAddToCart(){
+    async function handleAddToCart(){
         
         let body = CartBody.initializeCartBody()
-        
+        body.id = 'user1'
         myCartItems.forEach(x=> {
             let item = CartBody.initializeCartItemBody()
-            item.id = x.id
+            item.id = 'user1'
             item.skuCode = x.skuCode
             item.quantity = x.quantity
             item.productPermalink = x.productPermalink
@@ -186,8 +188,16 @@ export default function MyCart(){
             body.items.push(item)
         } )
 
+        if(body.items.length > 0){
+            // for(let i = 0; i < body.items.length; i ++){
 
-        console.log(body)
+                
+            console.log(body)
+            const saveCart = await addDoc(collection(db,"/myCart"),body)
+            setDoc(saveCart, { capital: true }, { merge: true });
+            // console.log("Document written with ID: ", saveCart.id);
+            // }
+        }
     }
 
     const btnSize = "w-full  "
