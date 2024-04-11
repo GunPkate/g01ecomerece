@@ -89,8 +89,6 @@ export default function MyCart(){
         }
         )
 
-        const btnSize = "w-[100px] h-[82px] "
-        const bgColor = "w-[54px] h-[54px] ml-auto mr-auto "
         const dropDownStyle = "w-full h-[54px] "
 
         return (
@@ -143,53 +141,20 @@ export default function MyCart(){
         e.preventDefault()
         const input = (e.target as HTMLInputElement).value
         updateSelectedCartItem(skuCode, input, type)
-        setSkuCodeCheck(skuCode)
+        // setSkuCodeCheck(skuCode)
         if(varaint.length === 1 && color.length > 0 && size.length > 0 || skuCodeCheck !== skuCode){
             resetSelect()
         }
-        console.log(myCartItems[0].variants )
-        let resetFilter: VariantType[] = myCartItems[0].variants 
-        let firstFilter: VariantType[] = []
-        filterItem.length > 0 ? firstFilter = filterItem  : firstFilter = resetFilter
-
 
         if(type==='size'){
             const sizeData = input;
             setSize(sizeData)
-            firstFilter = firstFilter.filter(x=>x.size === sizeData)
-            // setValidate(firstFilter.map(x=>x.size).join())
         }
         else if(type==='color'){
             const colorData = input;
             setColor(colorData)
-            firstFilter = firstFilter.filter(x=>x.color === colorData)
-            // setValidate(firstFilter.map(x=>x.color).join())
         }
         
-
-        if(firstFilter.length === 1){
-            setVariant(firstFilter)
-            setFilterItem([])
-            setValidate( " Color: "+ firstFilter[0].color + " Size: " + firstFilter[0].size + " In Stock: " + firstFilter[0].remains)
-        }
-
-        else{
-
-                setFilterItem(firstFilter)
-                setValidate('')
-                let secondFilter: VariantType[] = []
-                if(type==='size' && color.length > 0 && filterItem.length > 0){
-                    secondFilter = firstFilter.filter(x=>x.colorCode)
-                }else  if(type==='color' && size.length > 0 && filterItem.length > 0){
-                    secondFilter = firstFilter.filter(x=>x.colorCode)
-                }
-                console.log('secondFilter')
-                console.log(secondFilter)
-            if(secondFilter.length === 1 ){
-                setVariant(secondFilter)
-            }
-        }
-
         function resetSelect(){
             setFilterItem([])
             setColor('')
@@ -197,9 +162,6 @@ export default function MyCart(){
             setVariant([])
             setQty(0)
         }
-
-        console.log('firstFilter')
-        console.log(firstFilter)
 
     }
 
@@ -214,6 +176,8 @@ export default function MyCart(){
         setQty(parseInt(getValue))
     }
 
+    const btnSize = "w-full  "
+    const bgColor = "border-2 border-rose-500 "
     const cardStyleInput = "bg-red-300 w-full min-h-[800px] "
     const itemAlert = "fixed inset-0 bg-red-100 opacity-100 "
     // const itemAlert = "fixed inset-0 bg-red-100 opacity-100 w-[900px] h-[200px] top-[60px] "
@@ -248,7 +212,7 @@ export default function MyCart(){
                 </div> 
             </MainCard>
             <MainCard cardStyle={cardStyleInput } width="lg:ml-[40px] lg:max-w-[616px] " title="Summary">
-            <div className="m-[24px] mt-0 min-h-[420px] bg-white">
+                <div className="m-[24px] mt-0 min-h-[420px] bg-white">
                     
                     {myCartItems.length > 0 ? myCartItems.map(x=>
                         <>
@@ -298,6 +262,12 @@ export default function MyCart(){
                                 <></> 
                             } 
                         </div>
+                    </div>
+                    <div>
+                        <button className={btnSize + "bg-black text-white"}>Check Out</button>
+                    </div>
+                    <div>
+                        <button className={btnSize + bgColor}>Continue Shopping</button>
                     </div>
                 </div> 
             </MainCard>

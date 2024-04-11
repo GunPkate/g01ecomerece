@@ -144,17 +144,40 @@ const MyCartItemProvider: FC<{ children: React.ReactNode }> = ({ children }) => 
 
   const updateSelectedCartItem =(skuCode:string, value: string, name: string) => {
     let tempData = myCartItems;
+    let checkFilter = 0;
     tempData.forEach( x => 
       {
         if( x.skuCode === skuCode ) {
-          if(name === 'color')  x.color = value
-          if(name === 'size')  x.size = value
+          if(name === 'color') {
+
+            let checkFilterTemp = x.variants.filter(y=>y.color === value && y.size === x.size)
+            checkFilter = checkFilterTemp.length
+            if(checkFilter === 1){
+              x.color = value
+              x.size = checkFilterTemp[0].size
+              x.skuCode = checkFilterTemp[0].skuCode
+              x.id = checkFilterTemp[0].skuCode
+            }
+            console.log("checkFilter",checkFilterTemp)
+          } 
+          if(name === 'size'){
+            x.size = value
+            let checkFilterTemp = x.variants.filter(y=>y.size === value && y.color === x.color)
+            checkFilter = checkFilterTemp.length
+            if(checkFilter === 1){
+              x.size = value
+              x.color = checkFilterTemp[0].color
+              x.skuCode = checkFilterTemp[0].skuCode
+              x.id = checkFilterTemp[0].skuCode
+            }
+            console.log("checkFilter",checkFilterTemp)
+          }  
           if(name === 'qty')  x.quantity = parseInt(value)
         }
       }
     )
     console.log("context X",tempData)
-    setMyCartItems(myCartItems);
+    setMyCartItems(tempData);
   };
   return <MyCartItemContext.Provider value={{ myCartItems, updateMyCartItem: updateMyCartItem, updateSelectedCartItem: updateSelectedCartItem }}>{children}</MyCartItemContext.Provider>;
 
