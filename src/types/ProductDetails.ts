@@ -1,3 +1,4 @@
+
 export interface VariantType {
     skuCode: string,
     color: string,
@@ -32,4 +33,16 @@ export interface colorCodeSet {
 
 export interface sizeSet {
     size: string
+}
+
+export class VariantType {
+    static InitialObjVariantType(): VariantType{
+        return {
+            skuCode: "",
+            color: "",
+            size: "",
+            remains: 0,
+            colorCode: "" 
+        }
+    }
 }

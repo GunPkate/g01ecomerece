@@ -19,7 +19,7 @@ export class CartBody {
         }
     }
 
-    static initializeCartItemBody() {
+    static initializeCartItemBody() :CartBodyItem {
         return {
             id: '',
             skuCode: '',

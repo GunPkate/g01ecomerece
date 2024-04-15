@@ -36,7 +36,7 @@ export interface MyCartItem {
         price: 0,
         img: '',
         permalink: '',
-        variants: []
+        variants: [] as VariantType[]
       }
     }
   }
