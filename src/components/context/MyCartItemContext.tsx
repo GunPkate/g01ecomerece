@@ -8,13 +8,16 @@ import { VariantType } from "../../types/ProductDetails";
 export const MyCartItemContext = createContext<MyCartItemContextType | null>(null);
 
 
-let defaultMyCartItem = mockMyCart as MyCartItem[]
-// let defaultMyCartItem = [] as MyCartItem[]
+// let defaultMyCartItem = mockMyCart as MyCartItem[]
+let defaultMyCartItem = [] as MyCartItem[]
 
-// getMycart()
+getMycart()
 
 async function getMycart(){
-  const mycartRef = doc(db,"myCart",'hM2yNqGFyIrPUDvUyqWm')
+
+  try {
+
+  const mycartRef = doc(db,"myCart",'euYT1yiV37sWqyUV4hJP')
   const docSnap = await getDoc(mycartRef);
   if (docSnap.exists()) {
     let tempData = docSnap.data();
@@ -29,13 +32,14 @@ async function getMycart(){
       newitem.skuCode = x.skuCode 
       newitem.quantity = x.quantity 
       newitem.price = x.price 
-      newitem.permalink = x.productPermalink
+      newitem.permalink = x.permalink
 
       // console.log(JSON.stringify(newitem))
-      // console.log(JSON.stringify(x.productPermalink))
+      // console.log((x))
+      // console.log(JSON.stringify(x.permalink))
 
       const permalinkRef = await collection(db,"productByPermarlink")
-      const permaQuery = await query(permalinkRef, where("permalink", "==",x.productPermalink))
+      const permaQuery = await query(permalinkRef, where("permalink", "==",newitem.permalink))
       // const permaQuery = query(permalinkRef, where("categories", "array-contains","shirts-city-commuter-coat"))
       // const permaQuery = query(permalinkRef, where("id", "==","cY3r7b1XkUfi9sq4GeTz"))
 
@@ -73,6 +77,11 @@ async function getMycart(){
   } else {
     console.log("No such document!"); // docSnap.data() will be undefined in this case
   }
+
+  } catch (error) {
+    console.log(error)
+  }
+
 }
 
 // console.log("1234",defaultMyCartItem)
