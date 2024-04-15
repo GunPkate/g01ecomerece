@@ -6,18 +6,37 @@ import mockMyCart from "../../skuData/mockMyCart.json"
 
 export const MyCartItemContext = createContext<MyCartItemContextType | null>(null);
 
-// const mycartRef = doc(db,"myCart",'e3H6i3pKOxhlKcEdDFTl')
-// const docSnap = await getDoc(mycartRef);
+const mycartRef = doc(db,"myCart",'e3H6i3pKOxhlKcEdDFTl')
+const docSnap = await getDoc(mycartRef);
 
+
+let defaultMyCartItem = mockMyCart as MyCartItem[]
+// let defaultMyCartItem = [] as MyCartItem[]
 // if (docSnap.exists()) {
-//   console.log("Document data:", docSnap.data());
+//   let tempData = docSnap.data();
+//   console.log("Document data:", tempData);
+//   tempData.items.forEach(async (x: any)=>{
+//     let newitem = MyCartItem.InitialObjMyCartItem();
+
+//     newitem.id = x.id 
+//     newitem.name = x.name 
+//     newitem.color = x.color 
+//     newitem.size = x.size 
+//     newitem.skuCode = x.skuCode 
+//     newitem.quantity = x.quantity 
+//     newitem.price = x.price 
+//     newitem.img = x.img 
+//     newitem.permalink = x.permalink
+//     newitem.variants = x.variants 
+
+//     await defaultMyCartItem.push(newitem)
+//   })
 // } else {
-//   // docSnap.data() will be undefined in this case
-//   console.log("No such document!");
+//   console.log("No such document!"); // docSnap.data() will be undefined in this case
 // }
 
-// const defaultMyCartItem = [] as MyCartItem[]
-const defaultMyCartItem = mockMyCart as MyCartItem[]
+// console.log("1234",defaultMyCartItem)
+
 
 const MyCartItemProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
   const [myCartItems, setMyCartItems] = useState<MyCartItem[]>(
