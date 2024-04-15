@@ -2,19 +2,19 @@ import { FC, createContext, useState } from "react";
 import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem";
 import { collection, doc, getDoc, getDocs, query, where} from "firebase/firestore"; 
 import { db } from "../../firebase";
-// import mockMyCart from "../../skuData/mockMyCart.json"
+import mockMyCart from "../../skuData/mockMyCart.json"
 import { VariantType } from "../../types/ProductDetails";
 
 export const MyCartItemContext = createContext<MyCartItemContextType | null>(null);
 
 
-// let defaultMyCartItem = mockMyCart as MyCartItem[]
-let defaultMyCartItem = [] as MyCartItem[]
+let defaultMyCartItem = mockMyCart as MyCartItem[]
+// let defaultMyCartItem = [] as MyCartItem[]
 
-getMycart()
+// getMycart()
 
 async function getMycart(){
-  const mycartRef = doc(db,"myCart",'e3H6i3pKOxhlKcEdDFTl')
+  const mycartRef = doc(db,"myCart",'hM2yNqGFyIrPUDvUyqWm')
   const docSnap = await getDoc(mycartRef);
   if (docSnap.exists()) {
     let tempData = docSnap.data();

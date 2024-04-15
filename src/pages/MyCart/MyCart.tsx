@@ -5,7 +5,7 @@ import { MyCartItemContext } from "../../components/context/MyCartItemContext";
 import { VariantType, colorSet, colorCodeSet, sizeSet } from "../../types/ProductDetails";
 import { CartBody } from "../../types/CartBody";
 import { db } from "../../firebase";
-import { addDoc, collection, doc, setDoc } from "firebase/firestore";
+import { addDoc, collection, deleteField, doc, setDoc, updateDoc } from "firebase/firestore";
 
 export default function MyCart(){
     const { myCartItems, updateMyCartItem, updateSelectedCartItem } = useContext(MyCartItemContext) as MyCartItemContextType;
@@ -131,8 +131,18 @@ export default function MyCart(){
     // type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
     type ChangeEvent = React.MouseEvent<HTMLOptionElement>;
 
-    function handleDelete( item: MyCartItem) {
+    async function handleDelete( item: MyCartItem) {
         let filterItem = myCartItems.filter(x=>x.skuCode !== item.skuCode)
+
+        const mycartRef = doc(db,"myCart",'hM2yNqGFyIrPUDvUyqWm')
+        await updateDoc(mycartRef, {
+            items: deleteField()
+        });
+
+        await setDoc(doc(db, "myCart", "hM2yNqGFyIrPUDvUyqWm"), {
+            id: "user1" ,
+            items: filterItem
+        });
         console.log(filterItem)
         updateMyCartItem(filterItem)
     }
