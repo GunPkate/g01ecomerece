@@ -9,6 +9,8 @@ import Modal from "../../components/Modal"
 import { ProductByPermarlink, VariantType, colorCodeSet, colorSet, sizeSet } from "../../types/ProductDetails"
 import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem"
 import { MyCartItemContext } from "../../components/context/MyCartItemContext"
+import saveMyCart from "../../apiService/saveMycart"
+import { CartBody } from "../../types/CartBody"
 
 export default function ProductDetails(){
     
@@ -166,6 +168,7 @@ export default function ProductDetails(){
         e.preventDefault()
         setDisplayModal(!displayModal)
         
+        //Update | Add UI
         let contextBody = MyCartItem.InitialObjMyCartItem()
         contextBody.name = dataDisplay[0].name
         contextBody.color = varaint[0].color
@@ -182,6 +185,24 @@ export default function ProductDetails(){
         let newContext = myCartItems;
         newContext.push(contextBody)
         console.log("Context",myCartItems)
+
+        //Update | Add UI
+        let body = CartBody.initializeCartBody()
+        body.id = 'user1'
+        newContext.forEach(x=> {
+            let item = CartBody.initializeCartItemBody()
+            item.id = newContext.length + ""
+            item.skuCode = x.skuCode
+            item.quantity = x.quantity
+            item.productPermalink = x.permalink
+            item.price = x.price
+            body.items.push(item)
+        } )
+
+        if(localStorage.getItem('Id') === undefined || localStorage.getItem('Id') === null){
+            saveMyCart(body)
+            console.log(body)
+        }
     }
     
 

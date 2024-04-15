@@ -11,13 +11,16 @@ export const MyCartItemContext = createContext<MyCartItemContextType | null>(nul
 // let defaultMyCartItem = mockMyCart as MyCartItem[]
 let defaultMyCartItem = [] as MyCartItem[]
 
-getMycart()
+let MyId: any = localStorage.getItem('Id')
+if(MyId !== null || MyId !== undefined){
+  if(MyId) getMycart()
+}
 
 async function getMycart(){
 
   try {
 
-  const mycartRef = doc(db,"myCart",'euYT1yiV37sWqyUV4hJP')
+  const mycartRef = doc(db,"myCart",MyId)
   const docSnap = await getDoc(mycartRef);
   if (docSnap.exists()) {
     let tempData = docSnap.data();
