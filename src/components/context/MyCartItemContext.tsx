@@ -14,7 +14,7 @@ const docSnap = await getDoc(mycartRef);
 let defaultMyCartItem = [] as MyCartItem[]
 if (docSnap.exists()) {
   let tempData = docSnap.data();
-  console.log("Document data:", tempData);
+  // console.log("Document data:", tempData);
   tempData.items.forEach(async (x: any)=>{
     let newitem = MyCartItem.InitialObjMyCartItem();
 
@@ -28,7 +28,7 @@ if (docSnap.exists()) {
     newitem.permalink = x.productPermalink
 
     // console.log(JSON.stringify(newitem))
-    console.log(JSON.stringify(x.productPermalink))
+    // console.log(JSON.stringify(x.productPermalink))
 
     const permalinkRef = await collection(db,"productByPermarlink")
     const permaQuery = await query(permalinkRef, where("permalink", "==",x.productPermalink))
@@ -50,9 +50,14 @@ if (docSnap.exists()) {
         itemTemp.size = z.size
         itemTemp.skuCode = z.skuCode
         tempVariant.push(itemTemp)
+        if(z.skuCode == x.skuCode){
+          newitem.color = z.color 
+          newitem.size = z.size
+        }
       })
 
       newitem.img = result.imageUrls[0]
+      newitem.name = result.name
       
     });
     newitem.variants = tempVariant
