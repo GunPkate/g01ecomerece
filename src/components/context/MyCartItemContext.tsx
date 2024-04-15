@@ -1,13 +1,23 @@
 import { FC, createContext, useState } from "react";
 import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem";
-import { collection, doc, getDoc, setDoc } from "firebase/firestore"; 
+import { collection, doc, getDoc, getDocs, query, where} from "firebase/firestore"; 
 import { db } from "../../firebase";
 import mockMyCart from "../../skuData/mockMyCart.json"
 
 export const MyCartItemContext = createContext<MyCartItemContextType | null>(null);
 
-const mycartRef = doc(db,"myCart",'e3H6i3pKOxhlKcEdDFTl')
-const docSnap = await getDoc(mycartRef);
+// const mycartRef = doc(db,"myCart",'e3H6i3pKOxhlKcEdDFTl')
+// const docSnap = await getDoc(mycartRef);
+
+const permalinkRef = collection(db,"productByPermarlink")
+// const permaQuery = query(permalinkRef, where("categories", "array-contains","shirts-city-commuter-coat"))
+const permaQuery = query(permalinkRef, where("id", "==","cY3r7b1XkUfi9sq4GeTz"))
+
+const querySnapshot = await getDocs(permaQuery);
+console.log("asd",querySnapshot)
+querySnapshot.forEach((doc) => {
+  console.log(doc.id, " => ", doc.data());   // doc.data() is never undefined for query doc snapshots
+});
 
 
 let defaultMyCartItem = mockMyCart as MyCartItem[]
