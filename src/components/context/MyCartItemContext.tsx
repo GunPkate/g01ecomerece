@@ -10,8 +10,9 @@ export const MyCartItemContext = createContext<MyCartItemContextType | null>(nul
 // const docSnap = await getDoc(mycartRef);
 
 const permalinkRef = collection(db,"productByPermarlink")
+const permaQuery = query(permalinkRef, where("permalink", "==","shirts-city-commuter-coat"))
 // const permaQuery = query(permalinkRef, where("categories", "array-contains","shirts-city-commuter-coat"))
-const permaQuery = query(permalinkRef, where("id", "==","cY3r7b1XkUfi9sq4GeTz"))
+// const permaQuery = query(permalinkRef, where("id", "==","cY3r7b1XkUfi9sq4GeTz"))
 
 const querySnapshot = await getDocs(permaQuery);
 console.log("asd",querySnapshot)
