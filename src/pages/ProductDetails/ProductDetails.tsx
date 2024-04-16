@@ -18,10 +18,8 @@ export default function ProductDetails(){
     
     const contentBodyStyle = 'min-h-[90vh]'
 
-    const mainImageSize = '40.6vw'
-    const sideImageSize = '172.21px'
-    const mainImage = `w-[${mainImageSize}] h-[${mainImageSize}] `
-    const sideImage = `w-[${sideImageSize}] h-[${sideImageSize}] `
+    const mainImage = 'w-[343px] h:[343px] object-fill md:w-[780px] md:h-[780px] '
+    const sideImage = 'w-[80px] h:[80px] md:w-[172.21px] md:h-[172.21px] md:object-fill lg:object-fill'
     const discountStyle = "bg-red-500 text-white text-2xl p-2 "
     //Filter only
     const [varaint,setVariant] = useState<Array<VariantType>>([])
@@ -224,14 +222,14 @@ export default function ProductDetails(){
     return (<>
     <Navbar/>
         <div  className={ contentBodyStyle }>
-        <div className="mx-[160px] mt-[110px] lg:flex justify-between">
+        <div className="mx-[16px] lg:mx-[160px] mt-[110px] lg:flex justify-between">
             {/* Image Section */}
             <div className="relative w-full">
                 <div>
                     <div className={"absolute right-10 top-10 " + discountStyle}>Sale</div>
                     { dataDisplay.length > 0 ? <img src={dataDisplay[0].imageUrls[0]} alt="" className={mainImage} />: <></>}
                 </div>
-                <div className={`flex justify-between w-[${mainImageSize}]`}>
+                <div className={`flex justify-between `}>
                     { dataDisplay.length > 0 ? dataDisplay.map((x)=> x.imageUrls.map((y,index)=> 
                         {
                             if(index !== 0){
@@ -244,7 +242,7 @@ export default function ProductDetails(){
             </div>
 
             {/* Item Section */}
-            <div className="w-full pl-5">
+            <div className="w-full pl-12">
                 {dataDisplay.length > 0 ? dataDisplay.map((x,index)=> 
                     <div key={index}>
                         <div className="text-2xl">{x.name} {color} {size} </div>  
