@@ -135,15 +135,16 @@ export default function MyCart(){
     async function handleDelete( item: MyCartItem) {
         let filterItem = myCartItems.filter(x=>x.skuCode !== item.skuCode)
         let filterPermalink = filterItem[0].permalink
-        // const mycartRef = doc(db,"myCart",' euYT1yiV37sWqyUV4hJP ')
+        let MyId  :any = localStorage.getItem("Id")
+        // const mycartRef = doc(db,"myCart",MyId)
         // await updateDoc(mycartRef, {
         //     items: deleteField()
         // });
 
-        await setDoc(doc(db, "myCart", "euYT1yiV37sWqyUV4hJP"), {
+        await setDoc(doc(db, "myCart", MyId), {
             id: "user1" ,
             items: filterItem,
-            productPermalink: filterPermalink
+            permalink: filterPermalink
         });
         console.log(filterItem)
         updateMyCartItem(filterItem)
@@ -190,12 +191,12 @@ export default function MyCart(){
         console.log(myCartItems)
         let body = CartBody.initializeCartBody()
         body.id = 'user1'
-        myCartItems.forEach(x=> {
+        myCartItems.forEach((x,index)=> {
             let item = CartBody.initializeCartItemBody()
-            item.id = 'xxx'
+            item.id = index+1
             item.skuCode = x.skuCode
             item.quantity = x.quantity
-            item.productPermalink = x.permalink
+            item.permalink = x.permalink
             item.price = x.price
             body.items.push(item)
         } )

@@ -13,18 +13,19 @@ let defaultMyCartItem = [] as MyCartItem[]
 
 let MyId: any = localStorage.getItem('Id')
 if(MyId !== null || MyId !== undefined){
-  if(MyId) getMycart()
+
+  if(MyId) getMycart(MyId)
 }
 
-async function getMycart(){
+async function getMycart(id: string){
 
   try {
 
-  const mycartRef = doc(db,"myCart",MyId)
+  const mycartRef = doc(db,"myCart",id)
   const docSnap = await getDoc(mycartRef);
   if (docSnap.exists()) {
     let tempData = docSnap.data();
-    // console.log("Document data:", tempData);
+    console.log("Document data:", tempData);
     tempData.items.forEach(async (x: any)=>{
       let newitem = MyCartItem.InitialObjMyCartItem();
 
@@ -47,7 +48,7 @@ async function getMycart(){
       // const permaQuery = query(permalinkRef, where("id", "==","cY3r7b1XkUfi9sq4GeTz"))
 
       const querySnapshot = await getDocs(permaQuery);
-      // console.log("asd",querySnapshot)
+      console.log("asd",querySnapshot)
       let tempVariant = [] as VariantType[]
       await querySnapshot.forEach((doc) => {
         let result: any = doc.data()

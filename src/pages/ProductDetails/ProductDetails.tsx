@@ -11,6 +11,8 @@ import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem"
 import { MyCartItemContext } from "../../components/context/MyCartItemContext"
 import saveMyCart from "../../apiService/saveMycart"
 import { CartBody } from "../../types/CartBody"
+import { doc, setDoc } from "firebase/firestore"
+import { db } from "../../firebase"
 
 export default function ProductDetails(){
     
@@ -164,12 +166,13 @@ export default function ProductDetails(){
     }
 
     
-    const addITemsCart = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
+    const addITemsCart = async (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
         e.preventDefault()
         setDisplayModal(!displayModal)
         
         //Update | Add UI
         let contextBody = MyCartItem.InitialObjMyCartItem()
+        contextBody.id = "user1"
         contextBody.name = dataDisplay[0].name
         contextBody.color = varaint[0].color
         contextBody.size = varaint[0].size
@@ -191,10 +194,10 @@ export default function ProductDetails(){
         body.id = 'user1'
         newContext.forEach(x=> {
             let item = CartBody.initializeCartItemBody()
-            item.id = newContext.length + ""
+            item.id = newContext.length
             item.skuCode = x.skuCode
             item.quantity = x.quantity
-            item.productPermalink = x.permalink
+            item.permalink = x.permalink
             item.price = x.price
             body.items.push(item)
         } )
@@ -202,6 +205,18 @@ export default function ProductDetails(){
         if(localStorage.getItem('Id') === undefined || localStorage.getItem('Id') === null){
             saveMyCart(body)
             console.log(body)
+        }else{
+            // let MyId:any = localStorage.getItem('Id')
+            // try {
+            //     await setDoc(doc(db, "myCart", MyId), {
+            //         id: "user1" ,
+            //         items: body.items
+            //     });
+            // } catch (error) {
+                
+            // }
+            console.log("body",body)
+            console.log("newContext",newContext)
         }
     }
     
