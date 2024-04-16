@@ -110,25 +110,27 @@ export default function ProductDetails(){
     function getColor(data: VariantType[]){
 
         let resultColor: colorSet[] = []
-        const tempDataColor = [...new Set(data.map((x: { color: any })=> x.color )) ]
+        const tempDataColor = [...new Set(data.map((xColor: { color: any })=> xColor.color )) ]
         tempDataColor.forEach(x=>
             resultColor.push( { "color": x } )
         )
       
         let resultColorCode: colorCodeSet[] = []
-        const tempDataColorCode = [...new Set(data.map((x: { colorCode: any })=> x.colorCode )) ]
-        tempDataColorCode.forEach(x=>
-            resultColorCode.push( { "colorCode": x } )
+        const tempDataColorCode = [...new Set(data.map((xColorCode: { colorCode: any })=> xColorCode.colorCode )) ]
+        tempDataColorCode.forEach(xColorCode=>
+            resultColorCode.push( { "colorCode": xColorCode } )
         )     
 
         let resultSize: sizeSet[] = []
-        const tempDataSize = [...new Set(data.map((x: { size: any })=> x.size )) ]
-        tempDataSize.forEach(x=>{
-            if(x.length >0){
-                resultSize.push( { "size": x } )
+        if(data.map(Object.keys).join().includes("size") !== false){
+            const tempDataSize = [...new Set(data.map((xSize: { size: any })=> xSize.size )) ]
+            tempDataSize.forEach(xSize=>{
+                if(xSize.length >0){
+                    resultSize.push( { "size": xSize } )
+                }
             }
-        }
         )
+        }
 
         const btnSize = "w-[100px] h-[82px] "
         const bgColor = "w-[54px] h-[54px] ml-auto mr-auto "
@@ -137,13 +139,13 @@ export default function ProductDetails(){
 
             <div className="flex ">
                 {/* {resultColorCode.map(x=><button style={{background: `${x.colorCode}`}}>1</button>)} */}
-                {resultColorCode.map(x=>
+                {resultColorCode.length > 0 ? resultColorCode.map(x=>
                     <div className="">
                         <button className= {x.colorCode === color ? btnSize + "border-2 border-rose-400": btnSize } onClick={(e)=>{handleVariant(e,x.colorCode,'color')}}>
                             <div className={bgColor} style={{background: `${x.colorCode}`}} ></div>
                         </button>
                     </div>
-                )}
+                ) : <></>}
             </div>
 
             <div className="flex text-center">
@@ -152,13 +154,13 @@ export default function ProductDetails(){
 
             <div className="flex ">
                 {/* {resultColorCode.map(x=><button style={{background: `${x.colorCode}`}}>1</button>)} */}
-                {resultSize.map(x=>
+                {data.map(Object.keys).join().includes("size") !== false ? resultSize.map(x=>
                     <div className="">
                         <button className= {x.size === size ? btnSize + "border-2 border-rose-400" : btnSize + "border-2 border-[#eeeeee]"} onClick={(e)=>{handleVariant(e,x.size,'size')}}>
                             {x.size}
                         </button>
                     </div>
-                )}
+                ): <></>}
             </div>
         </div>
     }
