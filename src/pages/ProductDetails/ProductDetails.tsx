@@ -192,9 +192,9 @@ export default function ProductDetails(){
         //Update | Add UI
         let body = CartBody.initializeCartBody()
         body.id = 'user1'
-        newContext.forEach(x=> {
+        newContext.forEach((x,index)=> {
             let item = CartBody.initializeCartItemBody()
-            item.id = newContext.length
+            item.id = index+1
             item.skuCode = x.skuCode
             item.quantity = x.quantity
             item.permalink = x.permalink
@@ -206,15 +206,15 @@ export default function ProductDetails(){
             saveMyCart(body)
             console.log(body)
         }else{
-            // let MyId:any = localStorage.getItem('Id')
-            // try {
-            //     await setDoc(doc(db, "myCart", MyId), {
-            //         id: "user1" ,
-            //         items: body.items
-            //     });
-            // } catch (error) {
+            let MyId:any = localStorage.getItem('Id')
+            try {
+                await setDoc(doc(db, "myCart", MyId), {
+                    id: "user1" ,
+                    items: body.items
+                });
+            } catch (error) {
                 
-            // }
+            }
             console.log("body",body)
             console.log("newContext",newContext)
         }
