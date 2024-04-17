@@ -193,7 +193,7 @@ export default function ProductDetails(){
         body.id = 'user1'
         newContext.forEach((x,index)=> {
             let item = CartBody.initializeCartItemBody()
-            item.id = index+1
+            item.id = index+1+''
             item.skuCode = x.skuCode
             item.quantity = x.quantity
             item.permalink = x.permalink
