@@ -18,6 +18,7 @@ export async function addNewCartOrExistingCart(body: CartBody){
 
     }else{
         let MyId:any = localStorage.getItem('Id')
+        console.log("body",body)
         try {
             await setDoc(doc(db, "myCart", MyId), {
                 id: "user1" ,
@@ -31,10 +32,11 @@ export async function addNewCartOrExistingCart(body: CartBody){
 }
 
 export async function updateMyCartItemAPI(filterItem: MyCartItem[] ) {
+    console.log("zxc",filterItem)
     let MyId:any = localStorage.getItem('Id')
+    console.log("zxc",MyId)
     await setDoc(doc(db, "myCart", MyId), {
         id: "user1" ,
         items: filterItem,
     });
-    console.log(filterItem)
 }

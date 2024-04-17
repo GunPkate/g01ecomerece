@@ -4,6 +4,7 @@ import { collection, doc, getDoc, getDocs, query, where} from "firebase/firestor
 import { db } from "../../firebase";
 import mockMyCart from "../../skuData/mockMyCart.json"
 import { VariantType } from "../../types/ProductDetails";
+import { updateMyCartItemAPI } from "../../apiService/MyCartAPI";
 
 export const MyCartItemContext = createContext<MyCartItemContextType | null>(null);
 
@@ -106,6 +107,7 @@ const MyCartItemProvider: FC<{ children: React.ReactNode }> = ({ children }) => 
     let tempData = myCartItems;
     let checkFilter = 0;
     let checkFilterTemp:VariantType[] = []
+    console.log(tempData.map(x=>x.id))
     tempData.forEach( x => 
       {
         if( x.skuCode === skuCode ) {
@@ -117,7 +119,6 @@ const MyCartItemProvider: FC<{ children: React.ReactNode }> = ({ children }) => 
               x.color = value
               x.size = checkFilterTemp[0].size
               x.skuCode = checkFilterTemp[0].skuCode
-              x.id = checkFilterTemp[0].skuCode
             }
 
           } 
@@ -129,7 +130,6 @@ const MyCartItemProvider: FC<{ children: React.ReactNode }> = ({ children }) => 
               x.size = value
               x.color = checkFilterTemp[0].color
               x.skuCode = checkFilterTemp[0].skuCode
-              x.id = checkFilterTemp[0].skuCode
             }
 
           }  
@@ -142,6 +142,7 @@ const MyCartItemProvider: FC<{ children: React.ReactNode }> = ({ children }) => 
       console.log("context X",tempData)
       console.log("setMyCartItems X",checkFilterTemp)
       setMyCartItems(tempData);
+      updateMyCartItemAPI(tempData)
     }else{
       alert(checkFilterTemp.length)
       console.log("checkFilterTemp X",checkFilterTemp)

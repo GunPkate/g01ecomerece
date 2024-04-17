@@ -4,7 +4,7 @@
 }
 
 export interface CartBodyItem {
-    id: number,
+    id: string,
     skuCode: string,
     quantity: number,
     permalink: string,
@@ -21,7 +21,7 @@ export class CartBody {
 
     static initializeCartItemBody() :CartBodyItem {
         return {
-            id: 0,
+            id: '',
             skuCode: '',
             quantity: 0,
             permalink: '',

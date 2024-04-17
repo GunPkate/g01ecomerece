@@ -171,7 +171,7 @@ export default function ProductDetails(){
         
         //Update | Add UI
         let contextBody = MyCartItem.InitialObjMyCartItem()
-        contextBody.id = "user1"
+        contextBody.id = myCartItems.length + 1 + ''
         contextBody.name = dataDisplay[0].name
         contextBody.color = varaint[0].color
         contextBody.size = varaint[0].size
