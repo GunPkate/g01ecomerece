@@ -82,13 +82,14 @@ export default function MyCart(){
         )     
 
         let resultSize: sizeSet[] = []
-        const tempDataSize = [...new Set(itemList.map((x: { size: any })=> x.size )) ]
-        tempDataSize.forEach(x=>{
-            if(x.length >0){
-                resultSize.push( { "size": x } )
-            }
+        if( itemList.map(Object.keys).join().includes("size") !== false  ){
+            const tempDataSize = [...new Set(itemList.map((x: { size: any })=> x.size )) ]
+            tempDataSize.forEach(x=>{
+                if(x.length >0){
+                    resultSize.push( { "size": x } )
+                }
+            })
         }
-        )
 
         const dropDownStyle = "w-full h-[54px] "
 
@@ -112,7 +113,9 @@ export default function MyCart(){
                     className={size.length > 0 && skuCodeCheck === skuCode ? dropDownStyle + "border-2 border-rose-300": dropDownStyle} 
                     value={sizeTemp}
                 >
-                    {resultSize.map((x)=>{  return <option  value={x.size}>{x.size}</option> } )} 
+                    {itemList.map(Object.keys).join().includes("size") !== false  ?
+                        resultSize.map((x)=>{  return <option  value={x.size}>{x.size}</option> } ) : <></>
+                    } 
                 </select>
             </div>
 
@@ -134,14 +137,17 @@ export default function MyCart(){
 
     async function handleDelete( item: MyCartItem) {
         let filterItem = myCartItems.filter(x=>x.skuCode !== item.skuCode)
-        let filterPermalink = filterItem[0].permalink
+        // let filterPermalink = ""
+        // if(filterItem.length > 0){
+        //     filterPermalink = filterItem[0].permalink
+        // }
         // let MyId  :any = localStorage.getItem("Id")
         // const mycartRef = doc(db,"myCart",MyId)
         // await updateDoc(mycartRef, {
         //     items: deleteField()
         // });
 
-        await updateMyCartItemAPI( filterItem, filterPermalink)
+        await updateMyCartItemAPI( filterItem )
         await updateMyCartItem(filterItem)
     }
 

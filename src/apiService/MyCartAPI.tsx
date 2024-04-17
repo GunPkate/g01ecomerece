@@ -30,12 +30,11 @@ export async function addNewCartOrExistingCart(body: CartBody){
     }
 }
 
-export async function updateMyCartItemAPI(filterItem: MyCartItem[], filterPermalink: string) {
+export async function updateMyCartItemAPI(filterItem: MyCartItem[] ) {
     let MyId:any = localStorage.getItem('Id')
     await setDoc(doc(db, "myCart", MyId), {
         id: "user1" ,
         items: filterItem,
-        permalink: filterPermalink
     });
     console.log(filterItem)
 }

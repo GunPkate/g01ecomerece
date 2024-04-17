@@ -11,8 +11,6 @@ import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem"
 import { MyCartItemContext } from "../../components/context/MyCartItemContext"
 import { addNewCartOrExistingCart } from "../../apiService/MyCartAPI"
 import { CartBody } from "../../types/CartBody"
-import { doc, setDoc } from "firebase/firestore"
-import { db } from "../../firebase"
 
 export default function ProductDetails(){
     
