@@ -4,8 +4,6 @@ import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem";
 import { MyCartItemContext } from "../../components/context/MyCartItemContext";
 import { VariantType, colorSet, colorCodeSet, sizeSet } from "../../types/ProductDetails";
 import { CartBody } from "../../types/CartBody";
-import { db } from "../../firebase";
-import { addDoc, collection, deleteField, doc, setDoc, updateDoc } from "firebase/firestore";
 import { addNewCartOrExistingCart, updateMyCartItemAPI } from "../../apiService/MyCartAPI";
 
 export default function MyCart(){
@@ -70,25 +68,27 @@ export default function MyCart(){
     function getColor(itemList: VariantType[], skuCode:string, colorTemp: string, sizeTemp: string, quantityTemp: number){
 
         let resultColor: colorSet[] = []
-        const tempDataColor = [...new Set(itemList.map((x: { color: any })=> x.color )) ]
-        tempDataColor.forEach(x=>
-            resultColor.push( { "color": x } )
+        const tempDataColor = [...new Set(itemList.map((xColor: { color: any })=> xColor.color )) ]
+        tempDataColor.forEach(xColor=>
+            resultColor.push( { "color": xColor } )
         )
       
         let resultColorCode: colorCodeSet[] = []
-        const tempDataColorCode = [...new Set(itemList.map((x: { colorCode: any })=> x.colorCode )) ]
-        tempDataColorCode.forEach(x=>
-            resultColorCode.push( { "colorCode": x } )
+        const tempDataColorCode = [...new Set(itemList.map((xColorCode: { colorCode: any })=> xColorCode.colorCode )) ]
+        tempDataColorCode.forEach(xColorCode=>
+            resultColorCode.push( { "colorCode": xColorCode } )
         )     
 
         let resultSize: sizeSet[] = []
         if( itemList.map(Object.keys).join().includes("size") !== false  ){
-            const tempDataSize = [...new Set(itemList.map((x: { size: any })=> x.size )) ]
-            tempDataSize.forEach(x=>{
-                if(x.length >0){
-                    resultSize.push( { "size": x } )
-                }
-            })
+            if(itemList.map(x=>x.size)[0] !== null || undefined){
+                const tempDataSize = [...new Set(itemList.map((xSize: { size: any })=> xSize.size )) ]
+                tempDataSize.forEach(xSize=>{
+                    if(xSize){
+                        resultSize.push( { "size": xSize } )
+                    }
+                })
+            }
         }
 
         const dropDownStyle = "w-full h-[54px] "
@@ -114,7 +114,13 @@ export default function MyCart(){
                     value={sizeTemp}
                 >
                     {itemList.map(Object.keys).join().includes("size") !== false  ?
-                        resultSize.map((x)=>{  return <option  value={x.size}>{x.size}</option> } ) : <></>
+                        resultSize.map((x)=>{ 
+                            if(x.size !== null || undefined){    
+                                return <option  value={x.size}>{x.size}</option> 
+                            }else{
+                                return <></>
+                            }
+                        }) : <></>
                     } 
                 </select>
             </div>
