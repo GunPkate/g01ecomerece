@@ -1,6 +1,6 @@
 import { addDoc, collection, doc, setDoc } from "firebase/firestore";
 import { db } from "../firebase";
-import { CartBody } from "../types/CartBody";
+import { CartBody, CartBodyItem } from "../types/CartBody";
 import { MyCartItem } from "../types/MyCartItem";
 
 export async function addNewCartOrExistingCart(body: CartBody){
@@ -33,10 +33,20 @@ export async function addNewCartOrExistingCart(body: CartBody){
 
 export async function updateMyCartItemAPI(filterItem: MyCartItem[] ) {
     console.log("zxc",filterItem)
+    let updateBody: CartBodyItem[] = []
+    filterItem.forEach(x=>{
+        let tempData = CartBody.initializeCartItemBody()
+        tempData.id = x.id
+        tempData.skuCode = x.skuCode
+        tempData.quantity = x.quantity
+        tempData.permalink = x.permalink
+        tempData.price = x.price
+        updateBody.push(tempData)
+    })
     let MyId:any = localStorage.getItem('Id')
     console.log("zxc",MyId)
     await setDoc(doc(db, "myCart", MyId), {
         id: "user1" ,
-        items: filterItem,
+        items: updateBody,
     });
 }
