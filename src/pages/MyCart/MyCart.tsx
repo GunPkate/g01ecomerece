@@ -6,7 +6,7 @@ import { VariantType, colorSet, colorCodeSet, sizeSet } from "../../types/Produc
 import { CartBody } from "../../types/CartBody";
 import { db } from "../../firebase";
 import { addDoc, collection, deleteField, doc, setDoc, updateDoc } from "firebase/firestore";
-import addNewCartOrExistingCart from "../../apiService/MyCartAPI";
+import { addNewCartOrExistingCart, updateMyCartItemAPI } from "../../apiService/MyCartAPI";
 
 export default function MyCart(){
     const { myCartItems, updateMyCartItem, updateSelectedCartItem } = useContext(MyCartItemContext) as MyCartItemContextType;
@@ -135,19 +135,14 @@ export default function MyCart(){
     async function handleDelete( item: MyCartItem) {
         let filterItem = myCartItems.filter(x=>x.skuCode !== item.skuCode)
         let filterPermalink = filterItem[0].permalink
-        let MyId  :any = localStorage.getItem("Id")
+        // let MyId  :any = localStorage.getItem("Id")
         // const mycartRef = doc(db,"myCart",MyId)
         // await updateDoc(mycartRef, {
         //     items: deleteField()
         // });
 
-        await setDoc(doc(db, "myCart", MyId), {
-            id: "user1" ,
-            items: filterItem,
-            permalink: filterPermalink
-        });
-        console.log(filterItem)
-        updateMyCartItem(filterItem)
+        await updateMyCartItemAPI( filterItem, filterPermalink)
+        await updateMyCartItem(filterItem)
     }
 
     function handleVariant(e: ChangeEvent, skuCode: string, type: string) {
