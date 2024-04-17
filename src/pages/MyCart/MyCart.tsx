@@ -200,7 +200,8 @@ export default function MyCart(){
         body.id = 'user1'
         myCartItems.forEach((x,index)=> {
             let item = CartBody.initializeCartItemBody()
-            item.id = index+1
+            item.id = index+1+''
+            item.name = x.name
             item.skuCode = x.skuCode
             item.quantity = x.quantity
             item.permalink = x.permalink

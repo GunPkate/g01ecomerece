@@ -22,7 +22,8 @@ export async function addNewCartOrExistingCart(body: CartBody){
         try {
             await setDoc(doc(db, "myCart", MyId), {
                 id: "user1" ,
-                items: body.items
+                items: body.items,
+                date: ''
             });
         } catch (error) {
             
@@ -37,6 +38,7 @@ export async function updateMyCartItemAPI(filterItem: MyCartItem[] ) {
     filterItem.forEach(x=>{
         let tempData = CartBody.initializeCartItemBody()
         tempData.id = x.id
+        tempData.name = x.name
         tempData.skuCode = x.skuCode
         tempData.quantity = x.quantity
         tempData.permalink = x.permalink
