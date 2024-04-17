@@ -21,6 +21,7 @@ export default function Modal ({display = false ,onClose, dataDisplay, qty }: {d
                             </div>
                         </div>
 
+                        {dataDisplay.length > 0 ?
                         <div className="flex m-6">
                             <img src={dataDisplay[0].imageUrls[0]} className="object-fit w-[160px] h-[160px]" alt="" />
 
@@ -31,6 +32,8 @@ export default function Modal ({display = false ,onClose, dataDisplay, qty }: {d
                                 <div> {dataDisplay[0].price * qty} THB </div>
                             </div>
                         </div>
+                        :<></>
+                        }
 
                         <div className="flex justify-between w-full p-6 pt-0">
                             <button className={buttonStyle + "bg-black text-white "}>View Cart</button>

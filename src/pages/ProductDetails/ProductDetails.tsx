@@ -40,6 +40,7 @@ export default function ProductDetails(){
     type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
     
     let dataDisplay: ProductByPermarlink[] = productByPermarlink.filter(x=>x.permalink==permalink)
+    dataDisplay[0].variants.sort((a,b) => a.skuCode > b.skuCode ? 0 : 1)
     // console.log(JSON.stringify(dataDisplay) )
 
     function handleVariant(e: ButtonEvent, data:any,type: string) {
@@ -48,7 +49,7 @@ export default function ProductDetails(){
             resetSelect()
         }
 
-        let resetFilter: VariantType[] = dataDisplay[0].variants 
+        let resetFilter: VariantType[] = dataDisplay[0].variants.sort((a,b) => a.skuCode > b.skuCode ? 0 : 1)
         let firstFilter: VariantType[] = []
         filterItem.length > 0 ? firstFilter = filterItem  : firstFilter = resetFilter
 

@@ -72,7 +72,7 @@ async function getMycart(id: string){
         newitem.name = result.name
         
       });
-      newitem.variants = tempVariant
+      newitem.variants = tempVariant.sort((a,b) => a.skuCode > b.skuCode ? 0 : 1)
 
       await defaultMyCartItem.push(newitem)
       console.log("1234",defaultMyCartItem)
