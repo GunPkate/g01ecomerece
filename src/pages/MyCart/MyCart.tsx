@@ -153,7 +153,7 @@ export default function MyCart(){
         //     items: deleteField()
         // });
 
-        await updateMyCartItemAPI( filterItem )
+        await updateMyCartItemAPI( filterItem, "" )
         await updateMyCartItem(filterItem)
     }
 
@@ -194,26 +194,31 @@ export default function MyCart(){
         setQty(parseInt(getValue))
     }
 
-    async function handleAddToCart(){
-        console.log(myCartItems)
-        let body = CartBody.initializeCartBody()
-        body.id = 'user1'
-        myCartItems.forEach((x,index)=> {
-            let item = CartBody.initializeCartItemBody()
-            item.id = index+1+''
-            item.name = x.name
-            item.skuCode = x.skuCode
-            item.quantity = x.quantity
-            item.permalink = x.permalink
-            item.price = x.price
-            body.items.push(item)
-        } )
+    async function handleCheckOut(){
+        let filterItem = myCartItems.filter(x=>x)
+        updateMyCartItemAPI(filterItem,"checkOut")
+        await updateMyCartItem([])
+        localStorage.removeItem("Id")
 
-        if(body.items.length > 0){
-            // for(let i = 0; i < body.items.length; i ++){             
-            console.log(body)
-            addNewCartOrExistingCart(body)
-        }
+        // console.log(myCartItems)
+        // let body = CartBody.initializeCartBody()
+        // body.id = 'user1'
+        // myCartItems.forEach((x,index)=> {
+        //     let item = CartBody.initializeCartItemBody()
+        //     item.id = index+1+''
+        //     item.name = x.name
+        //     item.skuCode = x.skuCode
+        //     item.quantity = x.quantity
+        //     item.permalink = x.permalink
+        //     item.price = x.price
+        //     body.items.push(item)
+        // } )
+
+        // if(body.items.length > 0){
+        //     // for(let i = 0; i < body.items.length; i ++){             
+        //     console.log(body)
+        //     addNewCartOrExistingCart(body)
+        // }
     }
 
     const btnSize = "w-full  "
@@ -304,7 +309,7 @@ export default function MyCart(){
                         </div>
                     </div>
                     <div>
-                        <button className={btnSize + "bg-black text-white"} onClick={()=>{handleAddToCart()}}>Check Out</button>
+                        <button className={btnSize + "bg-black text-white"} onClick={()=>{handleCheckOut()}}>Check Out</button>
                     </div>
                     <div>
                         <button className={btnSize + bgColor}>Continue Shopping</button>

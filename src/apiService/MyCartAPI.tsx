@@ -32,8 +32,8 @@ export async function addNewCartOrExistingCart(body: CartBody){
     }
 }
 
-export async function updateMyCartItemAPI(filterItem: MyCartItem[] ) {
-    console.log("zxc",filterItem)
+export async function updateMyCartItemAPI(filterItem: MyCartItem[] ,status: string) {
+    // console.log("zxc",filterItem)
     let updateBody: CartBodyItem[] = []
     filterItem.forEach(x=>{
         let tempData = CartBody.initializeCartItemBody()
@@ -50,5 +50,6 @@ export async function updateMyCartItemAPI(filterItem: MyCartItem[] ) {
     await setDoc(doc(db, "myCart", MyId), {
         id: "user1" ,
         items: updateBody,
+        date: status === 'checkOut' ? new Date(): ''
     });
 }

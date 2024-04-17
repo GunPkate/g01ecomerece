@@ -142,7 +142,7 @@ const MyCartItemProvider: FC<{ children: React.ReactNode }> = ({ children }) => 
       console.log("context X",tempData)
       console.log("setMyCartItems X",checkFilterTemp)
       setMyCartItems(tempData);
-      updateMyCartItemAPI(tempData)
+      updateMyCartItemAPI(tempData, "")
     }else{
       alert(checkFilterTemp.length)
       console.log("checkFilterTemp X",checkFilterTemp)
