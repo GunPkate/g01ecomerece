@@ -105,12 +105,13 @@ const MyCartItemProvider: FC<{ children: React.ReactNode }> = ({ children }) => 
   const updateSelectedCartItem =(skuCode:string, value: string, name: string) => {
     let tempData = myCartItems;
     let checkFilter = 0;
+    let checkFilterTemp:VariantType[] = []
     tempData.forEach( x => 
       {
         if( x.skuCode === skuCode ) {
           if(name === 'color') {
 
-            let checkFilterTemp = x.variants.filter(y=>y.color === value && y.size === x.size)
+            checkFilterTemp = x.variants.filter(y=>y.color === value && y.size === x.size)
             checkFilter = checkFilterTemp.length
             if(checkFilter === 1){
               x.color = value
@@ -118,11 +119,11 @@ const MyCartItemProvider: FC<{ children: React.ReactNode }> = ({ children }) => 
               x.skuCode = checkFilterTemp[0].skuCode
               x.id = checkFilterTemp[0].skuCode
             }
-            console.log("checkFilter",checkFilterTemp)
+
           } 
           if(name === 'size'){
             x.size = value
-            let checkFilterTemp = x.variants.filter(y=>y.size === value && y.color === x.color)
+            checkFilterTemp = x.variants.filter(y=>y.size === value && y.color === x.color)
             checkFilter = checkFilterTemp.length
             if(checkFilter === 1){
               x.size = value
@@ -130,14 +131,21 @@ const MyCartItemProvider: FC<{ children: React.ReactNode }> = ({ children }) => 
               x.skuCode = checkFilterTemp[0].skuCode
               x.id = checkFilterTemp[0].skuCode
             }
-            console.log("checkFilter",checkFilterTemp)
+
           }  
           if(name === 'qty')  x.quantity = parseInt(value)
         }
       }
     )
-    console.log("context X",tempData)
-    setMyCartItems(tempData);
+
+    if(checkFilterTemp.length === 1 || name === 'qty'){
+      console.log("context X",tempData)
+      console.log("setMyCartItems X",checkFilterTemp)
+      setMyCartItems(tempData);
+    }else{
+      alert(checkFilterTemp.length)
+      console.log("checkFilterTemp X",checkFilterTemp)
+    }
   };
   return <MyCartItemContext.Provider value={{ myCartItems, updateMyCartItem: updateMyCartItem, updateSelectedCartItem: updateSelectedCartItem }}>{children}</MyCartItemContext.Provider>;
 
