@@ -6,7 +6,7 @@ import { VariantType, colorSet, colorCodeSet, sizeSet } from "../../types/Produc
 import { CartBody } from "../../types/CartBody";
 import { db } from "../../firebase";
 import { addDoc, collection, deleteField, doc, setDoc, updateDoc } from "firebase/firestore";
-import saveMyCart from "../../apiService/saveMycart";
+import addNewCartOrExistingCart from "../../apiService/MyCartAPI";
 
 export default function MyCart(){
     const { myCartItems, updateMyCartItem, updateSelectedCartItem } = useContext(MyCartItemContext) as MyCartItemContextType;
@@ -204,7 +204,7 @@ export default function MyCart(){
         if(body.items.length > 0){
             // for(let i = 0; i < body.items.length; i ++){             
             console.log(body)
-            saveMyCart(body)
+            addNewCartOrExistingCart(body)
         }
     }
 

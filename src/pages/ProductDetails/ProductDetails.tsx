@@ -9,7 +9,7 @@ import Modal from "../../components/Modal"
 import { ProductByPermarlink, VariantType, colorCodeSet, colorSet, sizeSet } from "../../types/ProductDetails"
 import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem"
 import { MyCartItemContext } from "../../components/context/MyCartItemContext"
-import saveMyCart from "../../apiService/saveMycart"
+import addNewCartOrExistingCart from "../../apiService/MyCartAPI"
 import { CartBody } from "../../types/CartBody"
 import { doc, setDoc } from "firebase/firestore"
 import { db } from "../../firebase"
@@ -167,7 +167,7 @@ export default function ProductDetails(){
     }
 
     
-    const addITemsCart = async (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
+    const addItemsCart = async (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
         e.preventDefault()
         setDisplayModal(!displayModal)
         
@@ -203,22 +203,7 @@ export default function ProductDetails(){
             body.items.push(item)
         } )
 
-        if(localStorage.getItem('Id') === undefined || localStorage.getItem('Id') === null){
-            saveMyCart(body)
-            console.log(body)
-        }else{
-            let MyId:any = localStorage.getItem('Id')
-            try {
-                await setDoc(doc(db, "myCart", MyId), {
-                    id: "user1" ,
-                    items: body.items
-                });
-            } catch (error) {
-                
-            }
-            console.log("body",body)
-            console.log("newContext",newContext)
-        }
+        addNewCartOrExistingCart(body)
     }
     
 
@@ -284,7 +269,7 @@ export default function ProductDetails(){
                 <div className="text-red-600"> {validate} </div>
                 {qty !==0 && color.length >0 && varaint.length > 0?
                     <button className="bg-black w-full text-white">
-                        <div onClick={(e)=>{addITemsCart(e)}}>
+                        <div onClick={(e)=>{addItemsCart(e)}}>
                             Add to Cart
                         </div>
                     </button>
