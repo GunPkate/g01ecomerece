@@ -3,8 +3,9 @@ import { db } from "../firebase";
 import { CartBody, CartBodyItem } from "../types/CartBody";
 import { MyCartItem } from "../types/MyCartItem";
 import { VariantType } from "../types/ProductDetails";
+import { getAuth } from "firebase/auth";
 
-export async function addNewCartOrExistingCart(body: CartBody){
+export async function addNewCartOrExistingCart(body: CartBody, user: any){
 
     if(localStorage.getItem('Id') === undefined || localStorage.getItem('Id') === null){
         try {
@@ -22,7 +23,7 @@ export async function addNewCartOrExistingCart(body: CartBody){
         console.log("body",body)
         try {
             await setDoc(doc(db, "myCart", MyId), {
-                id: "user1" ,
+                id: user ,
                 items: body.items,
                 date: ''
             });
@@ -35,6 +36,8 @@ export async function addNewCartOrExistingCart(body: CartBody){
 
 export async function updateMyCartItemAPI(filterItem: MyCartItem[] ,status: string) {
     // console.log("zxc",filterItem)
+    const auth = getAuth();
+    const user = auth.currentUser;
     let updateBody: CartBodyItem[] = []
     filterItem.forEach(x=>{
         let tempData = CartBody.initializeCartItemBody()
@@ -49,7 +52,7 @@ export async function updateMyCartItemAPI(filterItem: MyCartItem[] ,status: stri
     let MyId:any = localStorage.getItem('Id')
     // console.log("zxc",MyId)
     await setDoc(doc(db, "myCart", MyId), {
-        id: "user1" ,
+        id: user ,
         items: updateBody,
         date: status === 'checkOut' ? new Date(): ''
     });

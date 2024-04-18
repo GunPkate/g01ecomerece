@@ -13,6 +13,7 @@ import { addNewCartOrExistingCart } from "../../apiService/MyCartAPI"
 import { CartBody } from "../../types/CartBody"
 import { collection, query, where, getDocs } from "firebase/firestore"
 import { db } from "../../firebase"
+import { getAuth } from "firebase/auth"
 
 export default function ProductDetails(){
     
@@ -171,7 +172,10 @@ export default function ProductDetails(){
     const addItemsCart = async (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
         e.preventDefault()
         setDisplayModal(!displayModal)
-        
+
+        const auth = getAuth();
+        const user: any = auth.currentUser;
+
         //Update | Add UI
         let contextBody = MyCartItem.InitialObjMyCartItem()
         contextBody.id = myCartItems.length + 1 + ''
@@ -206,7 +210,7 @@ export default function ProductDetails(){
 
         //Update | Add UI
         let body = CartBody.initializeCartBody()
-        body.id = 'user1'
+        body.id = user
         newContext.forEach((x,index)=> {
             let item = CartBody.initializeCartItemBody()
             item.id = index+1+''
@@ -218,7 +222,7 @@ export default function ProductDetails(){
             body.items.push(item)
         } )
 
-        addNewCartOrExistingCart(body)
+        addNewCartOrExistingCart(body , user)
     }
     
 

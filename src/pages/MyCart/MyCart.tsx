@@ -4,8 +4,12 @@ import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem";
 import { MyCartItemContext } from "../../components/context/MyCartItemContext";
 import { VariantType, colorSet, colorCodeSet, sizeSet } from "../../types/ProductDetails";
 import { addNewCartOrExistingCart, updateMyCartItemAPI, updateRemainingStock } from "../../apiService/MyCartAPI";
+import { getAuth } from "firebase/auth";
 
 export default function MyCart(){
+    const auth = getAuth();
+    const user = auth.currentUser;
+
     const { myCartItems, updateMyCartItem, updateSelectedCartItem } = useContext(MyCartItemContext) as MyCartItemContextType;
     
     const [color,setColor] = useState('')
@@ -231,6 +235,7 @@ export default function MyCart(){
     const bgColor = "border-2 border-rose-500 "
     const cardStyleInput = "bg-red-300 w-full min-h-[800px] "
     // const itemAlert = "fixed inset-0 bg-red-100 opacity-100 w-[900px] h-[200px] top-[60px] "
+    if(true){
 
     return <>
         <div className={`lg:mx-[8.34%] mx-[0.834%]`}>
@@ -325,4 +330,13 @@ export default function MyCart(){
 
         </div>
     </>
+
+    console.log(user)
+    }else {
+        return <>
+        <div className="flex justify-center ">
+            Only Member an manage Mycart
+        </div>
+        </>
+    }
 }
