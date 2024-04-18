@@ -55,7 +55,9 @@ export async function updateMyCartItemAPI(filterItem: MyCartItem[] ,status: stri
     });
 }
 
-export async function updateRemainingStock(updateVariant :VariantType){
+export async function updateRemainingStock(variants: VariantType[]){
+    console.log("23",variants)
+// export async function updateRemainingStock(updateVariant :VariantType){
     // await setDoc(doc(db, "productByPermarlink", MyId), {
     //     id: "user1" ,
     //     items: updateBody,

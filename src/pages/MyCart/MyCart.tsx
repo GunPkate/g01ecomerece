@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem";
 import { MyCartItemContext } from "../../components/context/MyCartItemContext";
 import { VariantType, colorSet, colorCodeSet, sizeSet } from "../../types/ProductDetails";
-import { addNewCartOrExistingCart, updateMyCartItemAPI } from "../../apiService/MyCartAPI";
+import { addNewCartOrExistingCart, updateMyCartItemAPI, updateRemainingStock } from "../../apiService/MyCartAPI";
 
 export default function MyCart(){
     const { myCartItems, updateMyCartItem, updateSelectedCartItem } = useContext(MyCartItemContext) as MyCartItemContextType;
@@ -195,58 +195,35 @@ export default function MyCart(){
 
     async function handleCheckOut(){
         let filterItem = myCartItems.filter(x=>x)
-
+        let updateSuccess = '';
         // console.log(filterItem)
-        // console.log("Before",filterItem[0].variants.map(p=>p.skuCode+ " " +p.remains).join())
-        console.log(localStorage.getItem('permalinkId'))
-        console.log(localStorage.getItem('skuStock'))
-        // let stockTemp:any = localStorage.getItem('permalinkId')?.split(",")
+        // console.log(localStorage.getItem('permalinkId'))
+        // console.log(localStorage.getItem('skuStock'))
 
-        // if(stockTemp?.length >0){
-        //     for(let i = 0; i <stockTemp?.length){
-                
-        //         let checkStockData = {
-        //             skuCode:                
-        //         }
-        //     }
+        for (let i = 0; i < filterItem.length; i++) {
+            filterItem[i].variants.forEach( y => {
+                if(filterItem[i].skuCode === y.skuCode && y.remains >= filterItem[i].quantity){      
+                    y.remains = y.remains - filterItem[i].quantity
+                    updateRemainingStock(filterItem[i].variants)
+                    updateSuccess = 'success'
+                }else if(filterItem[i].skuCode === y.skuCode && y.remains < filterItem[i].quantity){
+                    updateSuccess = 'fail'
+                    alert( `${filterItem[0].name} ${y.color} ${y.skuCode} Out of stock`);
+                }
+            });           
+        }
+
+        // if( updateSuccess === 'success' ){
+        //     resetAll();
         // }
 
-        filterItem.forEach( x =>{
-            filterItem[0].variants.forEach( y => {
-                if(x.skuCode === y.skuCode && y.remains >= x.quantity){
-
-                    
-                    y.remains = y.remains - x.quantity
-
-                    // await updateMyCartItemAPI(filterItem,"checkOut")
-                    // await updateMyCartItem([])
-                    // localStorage.removeItem("Id")
-                }else if(y.remains < x.quantity){
-                    alert( `${filterItem[0].name} ${y.color} ${y.skuCode} Out of stock`)
-                }
-            });
-        })
         console.log("After",filterItem[0].variants.map(p=>p.skuCode+ " " +p.remains).join())
 
-        // console.log(myCartItems)
-        // let body = CartBody.initializeCartBody()
-        // body.id = 'user1'
-        // myCartItems.forEach((x,index)=> {
-        //     let item = CartBody.initializeCartItemBody()
-        //     item.id = index+1+''
-        //     item.name = x.name
-        //     item.skuCode = x.skuCode
-        //     item.quantity = x.quantity
-        //     item.permalink = x.permalink
-        //     item.price = x.price
-        //     body.items.push(item)
-        // } )
-
-        // if(body.items.length > 0){
-        //     // for(let i = 0; i < body.items.length; i ++){             
-        //     console.log(body)
-        //     addNewCartOrExistingCart(body)
-        // }
+        async function resetAll(){
+            await updateMyCartItemAPI(filterItem,"checkOut")
+            await updateMyCartItem([])
+            localStorage.removeItem("Id")
+        }
     }
 
     const btnSize = "w-full  "
