@@ -22,7 +22,6 @@ async function getMycart(id: string){
 
   try {
   let stockId: string[] = []
-  let skuStock: string[] = []
 
   const mycartRef = doc(db,"myCart",id)
   const docSnap = await getDoc(mycartRef);
@@ -83,7 +82,6 @@ async function getMycart(id: string){
       newitem.variants = tempVariant.sort((a,b) => a.skuCode > b.skuCode ? 0 : 1)
 
       localStorage.setItem('permalinkId',stockId.join())
-      localStorage.setItem('skuStock',skuStock.join())
 
       await defaultMyCartItem.push(newitem)
       // console.log("1234",defaultMyCartItem)

@@ -198,7 +198,6 @@ export default function MyCart(){
         let updateSuccess = '';
         // console.log(filterItem)
         // console.log(localStorage.getItem('permalinkId'))
-        // console.log(localStorage.getItem('skuStock'))
         let stockId: any = localStorage.getItem('permalinkId')?.split(",")
 
         for (let i = 0; i < filterItem.length; i++) {
@@ -224,6 +223,7 @@ export default function MyCart(){
             await updateMyCartItemAPI(filterItem,"checkOut")
             await updateMyCartItem([])
             localStorage.removeItem("Id")
+            localStorage.removeItem("permalinkId")
         }
     }
 

@@ -11,6 +11,8 @@ import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem"
 import { MyCartItemContext } from "../../components/context/MyCartItemContext"
 import { addNewCartOrExistingCart } from "../../apiService/MyCartAPI"
 import { CartBody } from "../../types/CartBody"
+import { collection, query, where, getDocs } from "firebase/firestore"
+import { db } from "../../firebase"
 
 export default function ProductDetails(){
     
@@ -183,10 +185,23 @@ export default function ProductDetails(){
         contextBody.variants = dataDisplay[0].variants
 
         console.log("uniqueData",varaint)
-        console.log("Body",contextBody)
+        // console.log("Body",contextBody)
         let newContext = myCartItems;
         newContext.push(contextBody)
-        console.log("Context",myCartItems)
+        // console.log("Context",myCartItems)
+
+
+        const permalinkRef = await collection(db,"productByPermarlink")
+        const permaQuery = await query(permalinkRef, where("permalink", "==",dataDisplay[0].permalink)) 
+        const querySnapshot = await getDocs(permaQuery);
+        let stockId:any = localStorage.getItem('permalinkId')
+        if(stockId === null || undefined){
+            querySnapshot.forEach(x=> stockId = x.id)
+        }else{
+            querySnapshot.forEach(x=> stockId += ','+x.id)
+        }
+        localStorage.setItem('permalinkId',stockId)
+        // console.log(stockId)
 
         //Update | Add UI
         let body = CartBody.initializeCartBody()
