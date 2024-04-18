@@ -70,11 +70,6 @@ export async function updateRemainingStock(stockId: any, updateVariants: Variant
        }
     )
 
-
-    console.log(stockId,newRemain)
-
-
-
     await updateDoc(doc(db, "productByPermarlink", stockId), {
         // variants: [ ]
         variants: newVariant

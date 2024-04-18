@@ -218,7 +218,7 @@ export default function MyCart(){
             resetAll();
         }
 
-        console.log("After",filterItem[0].variants.map(p=>p.skuCode+ " " +p.remains).join())
+        // console.log("After",filterItem[0].variants.map(p=>p.skuCode+ " " +p.remains).join())
 
         async function resetAll(){
             await updateMyCartItemAPI(filterItem,"checkOut")
