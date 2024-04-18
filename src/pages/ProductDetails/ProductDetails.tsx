@@ -280,8 +280,8 @@ export default function ProductDetails(){
                     <select name="qty" className="w-[158px] w-[82px]" onChange={(e)=>{handleQty(e)}} id="">
                         {   
                             [...Array(10)].map((x,index) => {
-                                if(index+1 < stock) return <option >{index+1}</option>
-                                if(index+1 >= stock) return <option disabled>{index+1}</option>
+                                if(index+1 <= stock) return <option >{index+1}</option>
+                                if(index+1 > stock) return <option disabled>{index+1}</option>
                             } )
                         }
                     </select>
