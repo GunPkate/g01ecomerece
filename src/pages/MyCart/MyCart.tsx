@@ -199,12 +199,13 @@ export default function MyCart(){
         // console.log(filterItem)
         // console.log(localStorage.getItem('permalinkId'))
         // console.log(localStorage.getItem('skuStock'))
+        let stockId: any = localStorage.getItem('permalinkId')?.split(",")
 
         for (let i = 0; i < filterItem.length; i++) {
             filterItem[i].variants.forEach( y => {
                 if(filterItem[i].skuCode === y.skuCode && y.remains >= filterItem[i].quantity){      
                     y.remains = y.remains - filterItem[i].quantity
-                    updateRemainingStock(filterItem[i].variants)
+                    updateRemainingStock(stockId[i],filterItem[i].variants,y.remains)
                     updateSuccess = 'success'
                 }else if(filterItem[i].skuCode === y.skuCode && y.remains < filterItem[i].quantity){
                     updateSuccess = 'fail'
@@ -213,9 +214,9 @@ export default function MyCart(){
             });           
         }
 
-        // if( updateSuccess === 'success' ){
-        //     resetAll();
-        // }
+        if( updateSuccess === 'success' ){
+            resetAll();
+        }
 
         console.log("After",filterItem[0].variants.map(p=>p.skuCode+ " " +p.remains).join())
 

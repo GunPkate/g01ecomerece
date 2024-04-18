@@ -1,4 +1,4 @@
-import { addDoc, collection, doc, setDoc } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { CartBody, CartBodyItem } from "../types/CartBody";
 import { MyCartItem } from "../types/MyCartItem";
@@ -55,12 +55,32 @@ export async function updateMyCartItemAPI(filterItem: MyCartItem[] ,status: stri
     });
 }
 
-export async function updateRemainingStock(variants: VariantType[]){
-    console.log("23",variants)
-// export async function updateRemainingStock(updateVariant :VariantType){
-    // await setDoc(doc(db, "productByPermarlink", MyId), {
-    //     id: "user1" ,
-    //     items: updateBody,
-    //     date: status === 'checkOut' ? new Date(): ''
-    // });
+export async function updateRemainingStock(stockId: any, updateVariants: VariantType[], newRemain: number){
+    
+    let newVariant: { skuCode: string; color: string; remains: number; colorCode: string; }[] = [];
+    updateVariants.forEach( x => 
+       {
+           let element = {
+               "skuCode": x.skuCode,
+               "color": x.color,
+               "remains": newRemain,
+               "colorCode": x.colorCode,
+           }
+           newVariant.push(element)
+       }
+    )
+
+
+    console.log(stockId,newRemain)
+
+
+
+    await updateDoc(doc(db, "productByPermarlink", stockId), {
+        // variants: [ ]
+        variants: newVariant
+    });
+
+
+    // console.log(stockRef.id)
+    // console.log(stockRef)
 }

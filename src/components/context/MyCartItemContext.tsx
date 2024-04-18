@@ -86,7 +86,7 @@ async function getMycart(id: string){
       localStorage.setItem('skuStock',skuStock.join())
 
       await defaultMyCartItem.push(newitem)
-      console.log("1234",defaultMyCartItem)
+      // console.log("1234",defaultMyCartItem)
       return defaultMyCartItem
     })
   } else {
