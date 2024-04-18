@@ -2,6 +2,7 @@ import { addDoc, collection, doc, setDoc } from "firebase/firestore";
 import { db } from "../firebase";
 import { CartBody, CartBodyItem } from "../types/CartBody";
 import { MyCartItem } from "../types/MyCartItem";
+import { VariantType } from "../types/ProductDetails";
 
 export async function addNewCartOrExistingCart(body: CartBody){
 
@@ -46,10 +47,18 @@ export async function updateMyCartItemAPI(filterItem: MyCartItem[] ,status: stri
         updateBody.push(tempData)
     })
     let MyId:any = localStorage.getItem('Id')
-    console.log("zxc",MyId)
+    // console.log("zxc",MyId)
     await setDoc(doc(db, "myCart", MyId), {
         id: "user1" ,
         items: updateBody,
         date: status === 'checkOut' ? new Date(): ''
     });
+}
+
+export async function updateRemainingStock(updateVariant :VariantType){
+    // await setDoc(doc(db, "productByPermarlink", MyId), {
+    //     id: "user1" ,
+    //     items: updateBody,
+    //     date: status === 'checkOut' ? new Date(): ''
+    // });
 }

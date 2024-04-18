@@ -3,7 +3,6 @@ import { useContext, useState } from "react";
 import { MyCartItem, MyCartItemContextType } from "../../types/MyCartItem";
 import { MyCartItemContext } from "../../components/context/MyCartItemContext";
 import { VariantType, colorSet, colorCodeSet, sizeSet } from "../../types/ProductDetails";
-import { CartBody } from "../../types/CartBody";
 import { addNewCartOrExistingCart, updateMyCartItemAPI } from "../../apiService/MyCartAPI";
 
 export default function MyCart(){
@@ -196,9 +195,38 @@ export default function MyCart(){
 
     async function handleCheckOut(){
         let filterItem = myCartItems.filter(x=>x)
-        updateMyCartItemAPI(filterItem,"checkOut")
-        await updateMyCartItem([])
-        localStorage.removeItem("Id")
+
+        // console.log(filterItem)
+        // console.log("Before",filterItem[0].variants.map(p=>p.skuCode+ " " +p.remains).join())
+        console.log(localStorage.getItem('permalinkId'))
+        console.log(localStorage.getItem('skuStock'))
+        // let stockTemp:any = localStorage.getItem('permalinkId')?.split(",")
+
+        // if(stockTemp?.length >0){
+        //     for(let i = 0; i <stockTemp?.length){
+                
+        //         let checkStockData = {
+        //             skuCode:                
+        //         }
+        //     }
+        // }
+
+        filterItem.forEach( x =>{
+            filterItem[0].variants.forEach( y => {
+                if(x.skuCode === y.skuCode && y.remains >= x.quantity){
+
+                    
+                    y.remains = y.remains - x.quantity
+
+                    // await updateMyCartItemAPI(filterItem,"checkOut")
+                    // await updateMyCartItem([])
+                    // localStorage.removeItem("Id")
+                }else if(y.remains < x.quantity){
+                    alert( `${filterItem[0].name} ${y.color} ${y.skuCode} Out of stock`)
+                }
+            });
+        })
+        console.log("After",filterItem[0].variants.map(p=>p.skuCode+ " " +p.remains).join())
 
         // console.log(myCartItems)
         // let body = CartBody.initializeCartBody()
@@ -224,7 +252,6 @@ export default function MyCart(){
     const btnSize = "w-full  "
     const bgColor = "border-2 border-rose-500 "
     const cardStyleInput = "bg-red-300 w-full min-h-[800px] "
-    const itemAlert = "fixed inset-0 bg-red-100 opacity-100 "
     // const itemAlert = "fixed inset-0 bg-red-100 opacity-100 w-[900px] h-[200px] top-[60px] "
 
     return <>
