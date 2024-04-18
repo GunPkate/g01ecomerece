@@ -52,7 +52,7 @@ export async function updateMyCartItemAPI(filterItem: MyCartItem[] ,status: stri
     let MyId:any = localStorage.getItem('Id')
     // console.log("zxc",MyId)
     await setDoc(doc(db, "myCart", MyId), {
-        id: user ,
+        id: user?.email ,
         items: updateBody,
         date: status === 'checkOut' ? new Date(): ''
     });

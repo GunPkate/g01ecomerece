@@ -235,7 +235,7 @@ export default function MyCart(){
     const bgColor = "border-2 border-rose-500 "
     const cardStyleInput = "bg-red-300 w-full min-h-[800px] "
     // const itemAlert = "fixed inset-0 bg-red-100 opacity-100 w-[900px] h-[200px] top-[60px] "
-    if(true){
+    if(user){
 
     return <>
         <div className={`lg:mx-[8.34%] mx-[0.834%]`}>

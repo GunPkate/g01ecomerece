@@ -57,9 +57,13 @@ export default function Navbar(){
                                 {/* <span> &nbsp; {userTokens.length > 0 ? userTokens[0].email : "x"}</span> */}
                             </>
                         </>
-                        :<button className={btnStyle} onClick={()=>{ handleLogOut() }}>
+                        :
+                        <div className="my-auto">
+                        {userTokens[0].email}
+                        <button className={btnStyle} onClick={()=>{ handleLogOut() }}>
                             Log out
                         </button>
+                        </div>
 
                     }
                     <Link className=" my-auto" to={"/mycart"}>

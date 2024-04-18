@@ -210,7 +210,7 @@ export default function ProductDetails(){
 
         //Update | Add UI
         let body = CartBody.initializeCartBody()
-        body.id = user
+        body.id = user.email
         newContext.forEach((x,index)=> {
             let item = CartBody.initializeCartItemBody()
             item.id = index+1+''
@@ -222,7 +222,7 @@ export default function ProductDetails(){
             body.items.push(item)
         } )
 
-        addNewCartOrExistingCart(body , user)
+        addNewCartOrExistingCart(body , user.email)
     }
     
 
