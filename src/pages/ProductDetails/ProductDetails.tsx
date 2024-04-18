@@ -23,6 +23,7 @@ export default function ProductDetails(){
     const discountStyle = "bg-red-500 text-white text-2xl p-2 "
     //Filter only
     const [varaint,setVariant] = useState<Array<VariantType>>([])
+    const [stock,setStock] = useState(0)
     const [filterItem,setFilterItem] = useState<Array<VariantType>>([])
     
     const [color,setColor] = useState('')
@@ -68,7 +69,7 @@ export default function ProductDetails(){
 
         if(firstFilter.length === 1){
             setVariant(firstFilter)
-
+            setStock(firstFilter[0].remains)
             setFilterItem([])
             setValidate( " Color: "+ firstFilter[0].color + " Size: " + firstFilter[0].size + " In Stock: " + firstFilter[0].remains)
         }
@@ -270,11 +271,14 @@ export default function ProductDetails(){
 
                 <div>
                     <div>
-                        Qty
+                        Qty {stock > 0 ? stock : ''}
                     </div>
                     <select name="qty" className="w-[158px] w-[82px]" onChange={(e)=>{handleQty(e)}} id="">
                         {   
-                            [...Array(10)].map((x,index) => <option>{index+1}</option>)
+                            [...Array(10)].map((x,index) => {
+                                if(index+1 < stock) return <option >{index+1}</option>
+                                if(index+1 >= stock) return <option disabled>{index+1}</option>
+                            } )
                         }
                     </select>
                 </div>
