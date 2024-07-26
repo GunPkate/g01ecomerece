@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { auth } from "../firebase"
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
 import { FirebaseError } from "firebase/app"
-import { UserTokenContextType, UserToken } from "../../src/types/usertoken";
+import { UserTokenContextType, UserToken } from "../types/usertoken";
 import { UserTokenContext } from "../components/context/UserTokenContext";
 
 
