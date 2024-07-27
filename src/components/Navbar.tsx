@@ -29,7 +29,7 @@ export default function Navbar(){
     return (
     <>
         <div className="bg-black text-white ">
-            <div className="flex flex-inline h-[56px] lg:h-[60px] justify-between mx-[160px]  ">
+            <div className="flex flex-inline h-[56px] lg:h-[60px] justify-between mx-[8.33vw]  ">
                 <div className="my-auto">
                     <span className="flex inline-flex ml-2">
                         <Link to={`/`} >

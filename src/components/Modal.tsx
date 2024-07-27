@@ -23,7 +23,7 @@ export default function Modal ({display = false ,onClose, dataDisplay, qty }: {d
 
                         {dataDisplay.length > 0 ?
                         <div className="flex m-6">
-                            <img src={dataDisplay[0].imageUrls[0]} className="object-fit w-[160px] h-[160px]" alt="" />
+                            <img src={dataDisplay[0].imageUrls[0]} className="object-fit w-[8.33vw] h-[8.33vw]" alt="" />
 
                             <div className="flex justify-between w-full my-auto ml-[40px]">
                                 <div> {dataDisplay[0].name} 

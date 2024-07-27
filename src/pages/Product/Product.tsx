@@ -8,7 +8,7 @@ export default function Product(){
     return <>
         <Navbar/>
         <div  className={ contentBodyStyle }>
-            <div className="mx-[160px] mt-[160px] lg:flex justify-between">
+            <div className="mx-[8.33vw] mt-[8.33vw] lg:flex justify-between">
             <div className="block w-[280px] mr-[30px]">
                 <div>1</div>
                 <div>1</div>

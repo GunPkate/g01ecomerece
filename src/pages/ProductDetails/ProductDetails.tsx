@@ -229,7 +229,7 @@ export default function ProductDetails(){
     return (<>
     <Navbar/>
         <div  className={ contentBodyStyle }>
-        <div className="mx-[16px] lg:mx-[160px] mt-[110px] lg:flex justify-between">
+        <div className="mx-[16px] lg:mx-[8.33vw] mt-[110px] lg:flex justify-between">
             {/* Image Section */}
             <div className="relative w-full">
                 <div>
